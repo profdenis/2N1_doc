@@ -1,3 +1,5 @@
+# Éviter `public` si possible
+
 ## Pourquoi Éviter les Attributs Publics
 
 Les attributs publics posent plusieurs problèmes importants :

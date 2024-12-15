@@ -1,4 +1,4 @@
-# Mots-clés `this` et `super`
+# Le mot-clé `this`
 
 Voici une version améliorée de la classe Personne utilisant la classe `LocalDate` de Java pour gérer les dates.
 

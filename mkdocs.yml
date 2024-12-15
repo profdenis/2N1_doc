@@ -1,4 +1,5 @@
 site_name: Cours de programmation OO 1
+repo_url: https://github.com/profdenis/2N1_doc
 
 theme: 
   name: readthedocs
@@ -8,3 +9,21 @@ theme:
 
 extra_css:
   - style.css
+
+markdown_extensions:
+  smarty: {}
+  toc:
+    permalink: true
+  sane_lists: {}
+  admonition: {}
+  codehilite: {}
+  pymdownx.superfences: {}
+  pymdownx.fancylists: {}
+  pymdownx.saneheaders: {}
+  pymdownx.mark: {}
+  pymdownx.tabbed: {}
+  pymdownx.tasklist: {}
+  pymdownx.tilde: {}
+  pymdownx.details: {}
+
+
