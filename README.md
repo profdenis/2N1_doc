@@ -1,8 +1,8 @@
-# 3N3_doc
+# 2N1_doc
 
 ## Notes de cours
 
-### 420-3N3-DM Exploitation d'un système de gestion de bases de données
+### 420-2N1-DM Programmation orientée objet 1
 
 ### Auteur : Denis Rinfret
 

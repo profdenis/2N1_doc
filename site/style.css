@@ -7,7 +7,7 @@ details {
 }
 
 details[open] > summary::before {
-  content: "😁";
+  content: "\25BC";
 }
 
 details summary {

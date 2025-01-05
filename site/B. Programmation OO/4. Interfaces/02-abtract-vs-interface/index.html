@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>🔸2🔸Classes Abstraites vs. les Interfaces - Cours de programmation OO 1</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../style.css" rel="stylesheet" />
+        <link href="../../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\ud83d\udd382\ud83d\udd38Classes Abstraites vs. les Interfaces";
+        var mkdocs_page_input_path = "B. Programmation OO/4. Interfaces/02-abtract-vs-interface.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Cours de programmation OO 1
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Cours de programmation orientée objet</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">A. Les bases en Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >1. Les bases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/01-Premier_programme/">🔸1🔸Premier programme en Java</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/02-Variables_et_types/">🔸2🔸Variables et types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/03-Conditionnelles/">🔸3🔸Conditionnelles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/04-Boucles/">🔸4🔸Boucles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/05-stdin/">🔸5🔸stdin</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >2. Méthodes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/06-Methodes/">🔸6🔸Méthodes</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/07-Integer/">🔸7🔸Peut-on modifier la valeur à l&rsquo;intérieur d&rsquo;un Integer ?</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/08-Purete_d_une_methode/">🔸8🔸Pureté d&rsquo;une méthode</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/09-Recursivite/">🔸9🔸Récursivité</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >3. Tableaux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/3.%20Tableaux/10-Tableaux/">🔸10🔸Tableaux</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/3.%20Tableaux/11-ArrayList/">🔸11🔸ArrayList</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">B. Programmation OO</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >1. Les bases en OO</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/01-bases/">🔸1🔸Programmation OO</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/02-static/">🔸2🔸Mot-clé static</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/03-eviter_public/">🔸3🔸Éviter public si possible</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/04-validation/">🔸4🔸Validation dans les mutateurs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/05-this/">🔸5🔸Le mot-clé this</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/06-portees/">🔸6🔸Mots-clés de portée</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >2. Héritage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20H%C3%A9ritage/01-heritage/">🔸1🔸L&rsquo;héritage</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20H%C3%A9ritage/02-this_super/">🔸2🔸Les mots-clé this et super</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20H%C3%A9ritage/03-toString/">🔸3🔸Méthode toString et introduction au polymorphisme</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20H%C3%A9ritage/04-polymorphisme/">🔸4🔸Définition du polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >3. Classes et méthodes abstraites</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../3.%20Classes%20et%20m%C3%A9thodes%20abstraites/01-abstract/">🔸1🔸Mot-clé abstract</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3.%20Classes%20et%20m%C3%A9thodes%20abstraites/02-exemples/">🔸2🔸Exemples pour les jeux vidéos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3.%20Classes%20et%20m%C3%A9thodes%20abstraites/03-exemples/">🔸3🔸Exemples pour une banque</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >4. Interfaces</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../01-interfaces/">🔸1🔸Interfaces</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">🔸2🔸Classes Abstraites vs. les Interfaces</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#classes-abstraites-la-relation-est-un">Classes Abstraites : La Relation &ldquo;Est-un&rdquo;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interfaces-la-relation-peut-faire">Interfaces : La Relation &ldquo;Peut-faire&rdquo;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#points-cles-a-retenir">Points Clés à Retenir</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../03-exemples/">🔸3🔸Exemples</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >5. Diagrammes de classe</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../5.%20Diagrammes%20de%20classe/01-notation/">🔸1🔸Notation UML</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../5.%20Diagrammes%20de%20classe/02-exemples/">🔸2🔸Exemples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C. Figures géométriques</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/01-introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 1</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%201/01-introduction/">Introduction</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 2</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%202/01-introduction/">Introduction</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Cours de programmation OO 1</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">B. Programmation OO</li>
+          <li class="breadcrumb-item">4. Interfaces</li>
+      <li class="breadcrumb-item active">🔸2🔸Classes Abstraites vs. les Interfaces</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/B. Programmation OO/4. Interfaces/02-abtract-vs-interface.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="2classes-abstraites-vs-les-interfaces">🔸2🔸Classes Abstraites vs. les Interfaces<a class="headerlink" href="#2classes-abstraites-vs-les-interfaces" title="Permanent link">&para;</a></h1>
+<h2 id="classes-abstraites-la-relation-est-un">Classes Abstraites : La Relation &ldquo;Est-un&rdquo;<a class="headerlink" href="#classes-abstraites-la-relation-est-un" title="Permanent link">&para;</a></h2>
+<p>Les classes abstraites sont utilisées pour définir la <strong>nature fondamentale</strong> des objets dans une hiérarchie.</p>
+<p><strong>Quand utiliser une classe abstraite:</strong>
+- Lorsque vous voulez créer une catégorie générale d&rsquo;objets
+- Quand plusieurs classes partagent des caractéristiques et des comportements communs
+- Pour établir une hiérarchie basée sur l&rsquo;identité des objets</p>
+<p><strong>Exemple:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Vehicule</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">marque</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">annee</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">demarrer</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">klaxonner</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Beep beep!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Voiture</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Vehicule</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">demarrer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La voiture démarre&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<h2 id="interfaces-la-relation-peut-faire">Interfaces : La Relation &ldquo;Peut-faire&rdquo;<a class="headerlink" href="#interfaces-la-relation-peut-faire" title="Permanent link">&para;</a></h2>
+<p>Les interfaces définissent des <strong>capacités</strong> ou des <strong>comportements</strong> que les classes peuvent adopter.</p>
+<p><strong>Quand utiliser une interface:</strong>
+- Pour définir un ensemble de méthodes que plusieurs classes non liées peuvent implémenter
+- Quand vous voulez spécifier un comportement sans vous soucier de qui l&rsquo;implémente
+- Pour permettre à une classe d&rsquo;avoir plusieurs comportements</p>
+<p><strong>Exemple:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Rechargeable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">recharger</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Smartphone</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Appareil</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Rechargeable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recharger</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Le smartphone se recharge&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">VoitureElectrique</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Voiture</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Rechargeable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recharger</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La voiture électrique se recharge&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<h2 id="points-cles-a-retenir">Points Clés à Retenir<a class="headerlink" href="#points-cles-a-retenir" title="Permanent link">&para;</a></h2>
+<ol type="1">
+<li><strong>Classes Abstraites:</strong></li>
+</ol>
+<ul>
+<li>Définissent &ldquo;ce qu&rsquo;est&rdquo; un objet</li>
+<li>Créent une taxonomie ou une hiérarchie</li>
+<li>Peuvent contenir des attributs et des méthodes concrètes</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Interfaces:</strong></li>
+</ol>
+<ul>
+<li>Définissent &ldquo;ce que peut faire&rdquo; un objet</li>
+<li>Permettent de partager des comportements entre classes non liées</li>
+<li>Ne contiennent que des signatures de méthodes (sauf méthodes default en Java 8+)</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Choix de Conception:</strong></li>
+</ol>
+<ul>
+<li>Utilisez une classe abstraite quand vous voulez définir une catégorie d&rsquo;objets</li>
+<li>Utilisez une interface quand vous voulez définir une capacité que plusieurs types d&rsquo;objets peuvent avoir</li>
+</ul>
+<p>En comprenant cette distinction, vous serez mieux équipés pour concevoir des systèmes orientés objet flexibles et bien
+structurés.</p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em> 
+<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
+structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../01-interfaces/" class="btn btn-neutral float-left" title="🔸1🔸Interfaces"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../03-exemples/" class="btn btn-neutral float-right" title="🔸3🔸Exemples">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/profdenis/2N1_doc" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../01-interfaces/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../03-exemples/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../../assets/mkdocs_puml/interaction.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
