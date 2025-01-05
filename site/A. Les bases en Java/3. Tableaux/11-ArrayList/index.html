@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>🔸11🔸ArrayList - Cours de programmation OO 1</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../style.css" rel="stylesheet" />
+        <link href="../../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\ud83d\udd3811\ud83d\udd38ArrayList";
+        var mkdocs_page_input_path = "A. Les bases en Java/3. Tableaux/11-ArrayList.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Cours de programmation OO 1
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Cours de programmation orientée objet</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">A. Les bases en Java</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >1. Les bases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases/01-Premier_programme/">🔸1🔸Premier programme en Java</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases/02-Variables_et_types/">🔸2🔸Variables et types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases/03-Conditionnelles/">🔸3🔸Conditionnelles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases/04-Boucles/">🔸4🔸Boucles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases/05-stdin/">🔸5🔸stdin</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >2. Méthodes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20M%C3%A9thodes/06-Methodes/">🔸6🔸Méthodes</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20M%C3%A9thodes/07-Integer/">🔸7🔸Peut-on modifier la valeur à l&rsquo;intérieur d&rsquo;un Integer ?</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20M%C3%A9thodes/08-Purete_d_une_methode/">🔸8🔸Pureté d&rsquo;une méthode</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20M%C3%A9thodes/09-Recursivite/">🔸9🔸Récursivité</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >3. Tableaux</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../10-Tableaux/">🔸10🔸Tableaux</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">🔸11🔸ArrayList</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arraylist-en-java">ArrayList en Java</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comparaison-avec-les-tableaux">Comparaison avec les tableaux</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#avantages-des-tableaux">Avantages des tableaux</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#avantages-des-arraylist">Avantages des ArrayList</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exemple-pratique">Exemple pratique</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cas-dutilisation-recommandes">Cas d&rsquo;utilisation recommandés</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#citations">Citations</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">B. Programmation OO</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >1. Les bases en OO</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/01-bases/">🔸1🔸Programmation OO</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/02-static/">🔸2🔸Mot-clé static</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/03-eviter_public/">🔸3🔸Éviter public si possible</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/04-validation/">🔸4🔸Validation dans les mutateurs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/05-this/">🔸5🔸Le mot-clé this</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/06-portees/">🔸6🔸Mots-clés de portée</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >2. Héritage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/2.%20H%C3%A9ritage/01-heritage/">🔸1🔸L&rsquo;héritage</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/2.%20H%C3%A9ritage/02-this_super/">🔸2🔸Les mots-clé this et super</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/2.%20H%C3%A9ritage/03-toString/">🔸3🔸Méthode toString et introduction au polymorphisme</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/2.%20H%C3%A9ritage/04-polymorphisme/">🔸4🔸Définition du polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >3. Classes et méthodes abstraites</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/3.%20Classes%20et%20m%C3%A9thodes%20abstraites/01-abstract/">🔸1🔸Mot-clé abstract</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/3.%20Classes%20et%20m%C3%A9thodes%20abstraites/02-exemples/">🔸2🔸Exemples pour les jeux vidéos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/3.%20Classes%20et%20m%C3%A9thodes%20abstraites/03-exemples/">🔸3🔸Exemples pour une banque</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >4. Interfaces</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/4.%20Interfaces/01-interfaces/">🔸1🔸Interfaces</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/4.%20Interfaces/02-abtract-vs-interface/">🔸2🔸Classes Abstraites vs. les Interfaces</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/4.%20Interfaces/03-exemples/">🔸3🔸Exemples</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >5. Diagrammes de classe</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/5.%20Diagrammes%20de%20classe/01-notation/">🔸1🔸Notation UML</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/5.%20Diagrammes%20de%20classe/02-exemples/">🔸2🔸Exemples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C. Figures géométriques</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/01-introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 1</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%201/01-introduction/">Introduction</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 2</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%202/01-introduction/">Introduction</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Cours de programmation OO 1</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">A. Les bases en Java</li>
+          <li class="breadcrumb-item">3. Tableaux</li>
+      <li class="breadcrumb-item active">🔸11🔸ArrayList</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/A. Les bases en Java/3. Tableaux/11-ArrayList.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="11arraylist">🔸11🔸ArrayList<a class="headerlink" href="#11arraylist" title="Permanent link">&para;</a></h1>
+<h2 id="arraylist-en-java">ArrayList en Java<a class="headerlink" href="#arraylist-en-java" title="Permanent link">&para;</a></h2>
+<p>Une <code>ArrayList</code> est une implémentation redimensionnable des tableaux qui fait partie du <em>framework</em> <code>Collections</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExempleListes</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Création d&#39;une ArrayList typée</span><span class="w"></span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">noms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Ajout d&#39;éléments</span><span class="w"></span>
+<span class="w">        </span><span class="n">noms</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">noms</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">noms</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Charlie&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Ajout à un index spécifique</span><span class="w"></span>
+<span class="w">        </span><span class="n">noms</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;David&quot;</span><span class="p">);</span><span class="w">    </span><span class="c1">// Insère à l&#39;index 1</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Modification d&#39;un élément</span><span class="w"></span>
+<span class="w">        </span><span class="n">noms</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alicia&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// Remplace &quot;Alice&quot; par &quot;Alicia&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Suppression d&#39;éléments</span><span class="w"></span>
+<span class="w">        </span><span class="n">noms</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">);</span><span class="w">      </span><span class="c1">// Par valeur</span><span class="w"></span>
+<span class="w">        </span><span class="n">noms</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">          </span><span class="c1">// Par index</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="comparaison-avec-les-tableaux">Comparaison avec les tableaux<a class="headerlink" href="#comparaison-avec-les-tableaux" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Caractéristique</th>
+<th>Tableau</th>
+<th>ArrayList</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Taille</td>
+<td>Fixe</td>
+<td>Dynamique</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Plus rapide</td>
+<td>Plus lent</td>
+</tr>
+<tr>
+<td>Syntaxe</td>
+<td>nombres</td>
+<td>nombres.get(0)</td>
+</tr>
+<tr>
+<td>Types supportés</td>
+<td>Primitifs et objets</td>
+<td>Objets uniquement</td>
+</tr>
+<tr>
+<td>Mémoire</td>
+<td>Plus efficace</td>
+<td>Overhead supplémentaire</td>
+</tr>
+</tbody>
+</table>
+<h2 id="avantages-des-tableaux">Avantages des tableaux<a class="headerlink" href="#avantages-des-tableaux" title="Permanent link">&para;</a></h2>
+<ol type="1">
+<li>Performance optimale pour les opérations de lecture/écriture</li>
+<li>Syntaxe plus simple et directe</li>
+<li>Peuvent contenir des types primitifs</li>
+<li>Moins de consommation mémoire</li>
+</ol>
+<h2 id="avantages-des-arraylist">Avantages des ArrayList<a class="headerlink" href="#avantages-des-arraylist" title="Permanent link">&para;</a></h2>
+<ol type="1">
+<li>Taille dynamique</li>
+<li>Méthodes utilitaires intégrées (add, remove, contains, etc.)</li>
+<li>Facilité de manipulation des éléments</li>
+<li>Conversion facile vers/depuis les tableaux</li>
+</ol>
+<h2 id="exemple-pratique">Exemple pratique<a class="headerlink" href="#exemple-pratique" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ComparaisonStructures</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Tableau</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">tableauNombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">tableauNombres</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">tableauNombres</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">tableauNombres</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// ArrayList</span><span class="w"></span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listeNombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">listeNombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">listeNombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">listeNombres</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Conversion ArrayList vers tableau</span><span class="w"></span>
+<span class="w">        </span><span class="n">Integer</span><span class="o">[]</span><span class="w"> </span><span class="n">tableauDepuisListe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listeNombres</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Integer</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Conversion tableau vers ArrayList</span><span class="w"></span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listeDepuisTableau</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">tableauDepuisListe</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Parcours avec for-each (fonctionne pour les deux)</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">tableauNombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">listeNombres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="cas-dutilisation-recommandes">Cas d&rsquo;utilisation recommandés<a class="headerlink" href="#cas-dutilisation-recommandes" title="Permanent link">&para;</a></h2>
+<p><strong>Utiliser un tableau quand</strong> :</p>
+<ul>
+<li>La taille est fixe et connue</li>
+<li>Les performances sont critiques</li>
+<li>On travaille avec des types primitifs</li>
+<li>On fait beaucoup d&rsquo;accès aléatoires</li>
+</ul>
+<p><strong>Utiliser une ArrayList quand</strong> :</p>
+<ul>
+<li>La taille est variable</li>
+<li>On a besoin d&rsquo;ajouter/supprimer fréquemment</li>
+<li>On veut des méthodes utilitaires intégrées</li>
+<li>La flexibilité est plus importante que la performance</li>
+</ul>
+<h2 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[1] https://beginnersbook.com/2013/12/java-arraylist/</li>
+<li>[2] https://www.programiz.com/java-programming/arraylist</li>
+<li>[3] https://www.geeksforgeeks.org/arraylist-in-java/</li>
+<li>[4] https://www.w3schools.com/java/java_arraylist.asp</li>
+</ul>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em> 
+<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
+structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../10-Tableaux/" class="btn btn-neutral float-left" title="🔸10🔸Tableaux"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/01-bases/" class="btn btn-neutral float-right" title="🔸1🔸Programmation OO">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/profdenis/2N1_doc" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../10-Tableaux/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/01-bases/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../../assets/mkdocs_puml/interaction.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

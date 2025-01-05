@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>🔸2🔸Exemples - Cours de programmation OO 1</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../style.css" rel="stylesheet" />
+        <link href="../../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\ud83d\udd382\ud83d\udd38Exemples";
+        var mkdocs_page_input_path = "B. Programmation OO/5. Diagrammes de classe/02-exemples.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Cours de programmation OO 1
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Cours de programmation orientée objet</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">A. Les bases en Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >1. Les bases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/01-Premier_programme/">🔸1🔸Premier programme en Java</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/02-Variables_et_types/">🔸2🔸Variables et types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/03-Conditionnelles/">🔸3🔸Conditionnelles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/04-Boucles/">🔸4🔸Boucles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/05-stdin/">🔸5🔸stdin</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >2. Méthodes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/06-Methodes/">🔸6🔸Méthodes</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/07-Integer/">🔸7🔸Peut-on modifier la valeur à l&rsquo;intérieur d&rsquo;un Integer ?</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/08-Purete_d_une_methode/">🔸8🔸Pureté d&rsquo;une méthode</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/09-Recursivite/">🔸9🔸Récursivité</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >3. Tableaux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/3.%20Tableaux/10-Tableaux/">🔸10🔸Tableaux</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/3.%20Tableaux/11-ArrayList/">🔸11🔸ArrayList</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">B. Programmation OO</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >1. Les bases en OO</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/01-bases/">🔸1🔸Programmation OO</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/02-static/">🔸2🔸Mot-clé static</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/03-eviter_public/">🔸3🔸Éviter public si possible</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/04-validation/">🔸4🔸Validation dans les mutateurs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/05-this/">🔸5🔸Le mot-clé this</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../1.%20Les%20bases%20en%20OO/06-portees/">🔸6🔸Mots-clés de portée</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >2. Héritage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20H%C3%A9ritage/01-heritage/">🔸1🔸L&rsquo;héritage</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20H%C3%A9ritage/02-this_super/">🔸2🔸Les mots-clé this et super</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20H%C3%A9ritage/03-toString/">🔸3🔸Méthode toString et introduction au polymorphisme</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20H%C3%A9ritage/04-polymorphisme/">🔸4🔸Définition du polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >3. Classes et méthodes abstraites</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../3.%20Classes%20et%20m%C3%A9thodes%20abstraites/01-abstract/">🔸1🔸Mot-clé abstract</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3.%20Classes%20et%20m%C3%A9thodes%20abstraites/02-exemples/">🔸2🔸Exemples pour les jeux vidéos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../3.%20Classes%20et%20m%C3%A9thodes%20abstraites/03-exemples/">🔸3🔸Exemples pour une banque</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >4. Interfaces</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../4.%20Interfaces/01-interfaces/">🔸1🔸Interfaces</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../4.%20Interfaces/02-abtract-vs-interface/">🔸2🔸Classes Abstraites vs. les Interfaces</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../4.%20Interfaces/03-exemples/">🔸3🔸Exemples</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >5. Diagrammes de classe</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../01-notation/">🔸1🔸Notation UML</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">🔸2🔸Exemples</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#exemple-1">Exemple 1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exemple-2">Exemple 2</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exemple-3">Exemple 3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#legende-du-diagramme">Légende du diagramme</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C. Figures géométriques</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/01-introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 1</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%201/01-introduction/">Introduction</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 2</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%202/01-introduction/">Introduction</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Cours de programmation OO 1</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">B. Programmation OO</li>
+          <li class="breadcrumb-item">5. Diagrammes de classe</li>
+      <li class="breadcrumb-item active">🔸2🔸Exemples</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/B. Programmation OO/5. Diagrammes de classe/02-exemples.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="2exemples">🔸2🔸Exemples<a class="headerlink" href="#2exemples" title="Permanent link">&para;</a></h1>
+<h2 id="exemple-1">Exemple 1<a class="headerlink" href="#exemple-1" title="Permanent link">&para;</a></h2>
+<p>Voici le diagramme de classes pour 
+<a href="http://127.0.0.1:8000/B.%20Programmation%20OO/2.%20H%C3%A9ritage/01-heritage/">l&rsquo;exemple</a> <code>Personne</code>, <code>Etudiant</code> et 
+<code>Professeur</code> :</p>
+<div class='puml-container'><div class="puml light" style="display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="479px" preserveAspectRatio="xMidYMid meet" style="width:1355px;height:479px;background:#FFFFFF;" version="1.1" viewBox="0 0 1355 479" width="1355px" zoomAndPan="magnify" class="diagram"><defs/><g><g id="elem_Personne"><rect codeLine="3" fill="#F1F1F1" height="227.2656" id="Personne" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="358.2881" x="502.21" y="7"/><ellipse cx="644.5889" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M647.5577,28.6406 Q646.9795,28.9375 646.3389,29.0781 Q645.6983,29.2344 644.9952,29.2344 Q642.4952,29.2344 641.167,27.5938 Q639.8545,25.9375 639.8545,22.8125 Q639.8545,19.6875 641.167,18.0313 Q642.4952,16.375 644.9952,16.375 Q645.6983,16.375 646.3389,16.5313 Q646.9952,16.6875 647.5577,16.9844 L647.5577,19.7031 Q646.9327,19.125 646.3389,18.8594 Q645.7452,18.5781 645.1202,18.5781 Q643.7764,18.5781 643.0889,19.6563 Q642.4014,20.7188 642.4014,22.8125 Q642.4014,24.9063 643.0889,25.9844 Q643.7764,27.0469 645.1202,27.0469 Q645.7452,27.0469 646.3389,26.7813 Q646.9327,26.5 647.5577,25.9219 L647.5577,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.0303" x="665.0889" y="27.8467">Personne</text><line style="stroke:#181818;stroke-width:0.5;" x1="503.21" x2="859.4981" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.0762" x="508.21" y="55.9951">-nom: String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.332" x="508.21" y="72.292">-prenom: String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58.5498" x="508.21" y="88.5889">-age: int</text><line style="stroke:#181818;stroke-width:0.5;" x1="503.21" x2="859.4981" y1="95.8906" y2="95.8906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="346.2881" x="508.21" y="112.8857">+Personne(nom: String, prenom: String, age: int)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.2676" x="508.21" y="129.1826">+getNom(): String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150.4795" x="508.21" y="145.4795">+getPrenom(): String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100.1396" x="508.21" y="161.7764">+getAge(): int</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="197.5449" x="508.21" y="178.0732">+setNom(nom: String): void</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="242.0127" x="508.21" y="194.3701">+setPrenom(prenom: String): void</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163.4199" x="508.21" y="210.667">+setAge(age: int): void</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.4385" x="508.21" y="226.9639">+toString(): String</text></g><g id="elem_Etudiant"><rect codeLine="17" fill="#F1F1F1" height="178.375" id="Etudiant" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="660.71" x="7" y="294.26"/><ellipse cx="303.6421" cy="310.26" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M306.6108,315.9006 Q306.0327,316.1975 305.3921,316.3381 Q304.7515,316.4944 304.0483,316.4944 Q301.5483,316.4944 300.2202,314.8538 Q298.9077,313.1975 298.9077,310.0725 Q298.9077,306.9475 300.2202,305.2913 Q301.5483,303.635 304.0483,303.635 Q304.7515,303.635 305.3921,303.7913 Q306.0483,303.9475 306.6108,304.2444 L306.6108,306.9631 Q305.9858,306.385 305.3921,306.1194 Q304.7983,305.8381 304.1733,305.8381 Q302.8296,305.8381 302.1421,306.9163 Q301.4546,307.9788 301.4546,310.0725 Q301.4546,312.1663 302.1421,313.2444 Q302.8296,314.3069 304.1733,314.3069 Q304.7983,314.3069 305.3921,314.0413 Q305.9858,313.76 306.6108,313.1819 L306.6108,315.9006 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58.9258" x="324.1421" y="315.1067">Etudiant</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="666.71" y1="326.26" y2="326.26"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162.5107" x="13" y="343.2551">-numeroDossier: String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="13" y="359.552">-programme: String</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="666.71" y1="366.8538" y2="366.8538"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="648.71" x="13" y="383.8489">+Etudiant(nom: String, prenom: String, age: int, numeroDossier: String, programme: String)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="204.7021" x="13" y="400.1457">+getNumeroDossier(): String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178.4658" x="13" y="416.4426">+getProgramme(): String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="348.4141" x="13" y="432.7395">+setNumeroDossier(numeroDossier: String): void</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="297.9854" x="13" y="449.0364">+setProgramme(programme: String): void</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.4385" x="13" y="465.3332">+toString(): String</text></g><g id="elem_Professeur"><rect codeLine="28" fill="#F1F1F1" height="178.375" id="Professeur" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="645.3701" x="702.67" y="294.26"/><ellipse cx="984.0372" cy="310.26" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M987.0059,315.9006 Q986.4278,316.1975 985.7872,316.3381 Q985.1466,316.4944 984.4434,316.4944 Q981.9434,316.4944 980.6153,314.8538 Q979.3028,313.1975 979.3028,310.0725 Q979.3028,306.9475 980.6153,305.2913 Q981.9434,303.635 984.4434,303.635 Q985.1466,303.635 985.7872,303.7913 Q986.4434,303.9475 987.0059,304.2444 L987.0059,306.9631 Q986.3809,306.385 985.7872,306.1194 Q985.1934,305.8381 984.5684,305.8381 Q983.2247,305.8381 982.5372,306.9163 Q981.8497,307.9788 981.8497,310.0725 Q981.8497,312.1663 982.5372,313.2444 Q983.2247,314.3069 984.5684,314.3069 Q985.1934,314.3069 985.7872,314.0413 Q986.3809,313.76 987.0059,313.1819 L987.0059,315.9006 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74.1357" x="1004.5372" y="315.1067">Professeur</text><line style="stroke:#181818;stroke-width:0.5;" x1="703.67" x2="1347.0401" y1="326.26" y2="326.26"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.4375" x="708.67" y="343.2551">-departement: String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122.8418" x="708.67" y="359.552">-specialite: String</text><line style="stroke:#181818;stroke-width:0.5;" x1="703.67" x2="1347.0401" y1="366.8538" y2="366.8538"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="633.3701" x="708.67" y="383.8489">+Professeur(nom: String, prenom: String, age: int, departement: String, specialite: String)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="189.9229" x="708.67" y="400.1457">+getDepartement(): String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="165.0264" x="708.67" y="416.4426">+getSpecialite(): String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="318.5615" x="708.67" y="432.7395">+setDepartement(departement: String): void</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="269.0693" x="708.67" y="449.0364">+setSpecialite(specialite: String): void</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.4385" x="708.67" y="465.3332">+toString(): String</text></g><g id="link_Personne_Etudiant"><path codeLine="39" d="M518.1279,245.3868 C491.8879,265.2868 479.26,274.86 454.07,293.96 " fill="none" id="Personne-backto-Etudiant" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="532.47,234.51,514.5023,240.6061,521.7535,250.1675,532.47,234.51" style="stroke:#181818;stroke-width:1;"/></g><g id="link_Personne_Professeur"><path codeLine="40" d="M844.5821,245.3868 C870.8221,265.2868 883.45,274.86 908.64,293.96 " fill="none" id="Personne-backto-Professeur" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="830.24,234.51,840.9565,250.1675,848.2077,240.6061,830.24,234.51" style="stroke:#181818;stroke-width:1;"/></g></g></svg></div></div>
+
+<details class="important">
+<summary>Source PlantUML</summary>
+<div class="highlight"><pre><span></span><code>@startuml
+skinparam classAttributeIconSize 0
+
+class Personne {
+  -nom: String
+  -prenom: String
+  -age: int
+  +Personne(nom: String, prenom: String, age: int)
+  +getNom(): String
+  +getPrenom(): String
+  +getAge(): int
+  +setNom(nom: String): void
+  +setPrenom(prenom: String): void
+  +setAge(age: int): void
+  +toString(): String
+}
+
+class Etudiant {
+  -numeroDossier: String
+  -programme: String
+  +Etudiant(nom: String, prenom: String, age: int, numeroDossier: String, programme: String)
+  +getNumeroDossier(): String
+  +getProgramme(): String
+  +setNumeroDossier(numeroDossier: String): void
+  +setProgramme(programme: String): void
+  +toString(): String
+}
+
+class Professeur {
+  -departement: String
+  -specialite: String
+  +Professeur(nom: String, prenom: String, age: int, departement: String, specialite: String)
+  +getDepartement(): String
+  +getSpecialite(): String
+  +setDepartement(departement: String): void
+  +setSpecialite(specialite: String): void
+  +toString(): String
+}
+
+Personne &lt;|-- Etudiant
+Personne &lt;|-- Professeur
+
+@enduml
+</code></pre></div>
+</details>
+<p>Le diagramme montre maintenant la hiérarchie complète où :</p>
+<ul>
+<li><code>Personne</code> est la classe parent (superclasse)</li>
+<li><code>Etudiant</code> et <code>Professeur</code> sont des classes enfants (sous-classes)</li>
+<li>Les deux flèches d&rsquo;héritage <code>&lt;|--</code> indiquent que tant <code>Etudiant</code> que <code>Professeur</code> héritent de <code>Personne</code></li>
+<li>Chaque classe conserve ses propres attributs et méthodes spécifiques</li>
+<li>Les méthodes <code>toString()</code> dans <code>Etudiant</code> et <code>Professeur</code> sont des surcharges de la méthode de la classe <code>Personne</code></li>
+</ul>
+<h2 id="exemple-2">Exemple 2<a class="headerlink" href="#exemple-2" title="Permanent link">&para;</a></h2>
+<p>Voici un autre 
+<a href="http://127.0.0.1:8000/B.%20Programmation%20OO/3.%20Classes%20et%20m%C3%A9thodes%20abstraites/03-exemples/">exemple</a> 
+de diagramme de classes pour les transactions bancaires :</p>
+<div class='puml-container'><div class="puml light" style="display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="524px" preserveAspectRatio="xMidYMid meet" style="width:2364px;height:524px;background:#FFFFFF;" version="1.1" viewBox="0 0 2364 524" width="2364px" zoomAndPan="magnify" class="diagram"><defs/><g><g id="elem_Transaction"><rect codeLine="3" fill="#F1F1F1" height="145.7813" id="Transaction" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="392.8916" x="855.43" y="164.6"/><ellipse cx="1006.5521" cy="180.6" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M1006.6614,175.9438 L1005.5052,181.0219 L1007.8333,181.0219 L1006.6614,175.9438 Z M1005.1771,173.7094 L1008.1614,173.7094 L1011.5208,186.1 L1009.0677,186.1 L1008.3021,183.0375 L1005.0208,183.0375 L1004.2708,186.1 L1001.8333,186.1 L1005.1771,173.7094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="82.1475" x="1027.0521" y="185.4467">Transaction</text><line style="stroke:#181818;stroke-width:0.5;" x1="856.43" x2="1247.3216" y1="196.6" y2="196.6"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160.5693" x="861.43" y="213.5951">-String numeroCompte</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123.4023" x="861.43" y="229.892">#double montant</text><line style="stroke:#181818;stroke-width:0.5;" x1="856.43" x2="1247.3216" y1="237.1938" y2="237.1938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="380.8916" x="861.43" y="254.1889">+Transaction(String numeroCompte, double montant)</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="118.6719" x="861.43" y="270.4857">+void executer()</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="110.1885" x="861.43" y="286.7826">+void annuler()</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="158.9082" x="861.43" y="303.0795">+String genererRecu()</text></g><g id="elem_Retrait"><rect codeLine="12" fill="#F1F1F1" height="129.4844" id="Retrait" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="465.7422" x="7" y="379.53"/><ellipse cx="211.8491" cy="395.53" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M214.8179,401.1706 Q214.2397,401.4675 213.5991,401.6081 Q212.9585,401.7644 212.2554,401.7644 Q209.7554,401.7644 208.4272,400.1238 Q207.1147,398.4675 207.1147,395.3425 Q207.1147,392.2175 208.4272,390.5613 Q209.7554,388.905 212.2554,388.905 Q212.9585,388.905 213.5991,389.0613 Q214.2554,389.2175 214.8179,389.5144 L214.8179,392.2331 Q214.1929,391.655 213.5991,391.3894 Q213.0054,391.1081 212.3804,391.1081 Q211.0366,391.1081 210.3491,392.1863 Q209.6616,393.2488 209.6616,395.3425 Q209.6616,397.4363 210.3491,398.5144 Q211.0366,399.5769 212.3804,399.5769 Q213.0054,399.5769 213.5991,399.3113 Q214.1929,399.03 214.8179,398.4519 L214.8179,401.1706 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47.5439" x="232.3491" y="400.3767">Retrait</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="471.7422" y1="411.53" y2="411.53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.6055" x="13" y="428.5251">-String guichet</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="471.7422" y1="435.8269" y2="435.8269"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="453.7422" x="13" y="452.822">+Retrait(String numeroCompte, double montant, String guichet)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.6719" x="13" y="469.1189">+void executer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.1885" x="13" y="485.4157">+void annuler()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158.9082" x="13" y="501.7126">+String genererRecu()</text></g><g id="elem_Depot"><rect codeLine="20" fill="#F1F1F1" height="129.4844" id="Depot" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="481.8203" x="507.96" y="379.53"/><ellipse cx="723.4527" cy="395.53" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M726.4214,401.1706 Q725.8433,401.4675 725.2027,401.6081 Q724.5621,401.7644 723.8589,401.7644 Q721.3589,401.7644 720.0308,400.1238 Q718.7183,398.4675 718.7183,395.3425 Q718.7183,392.2175 720.0308,390.5613 Q721.3589,388.905 723.8589,388.905 Q724.5621,388.905 725.2027,389.0613 Q725.8589,389.2175 726.4214,389.5144 L726.4214,392.2331 Q725.7964,391.655 725.2027,391.3894 Q724.6089,391.1081 723.9839,391.1081 Q722.6402,391.1081 721.9527,392.1863 Q721.2652,393.2488 721.2652,395.3425 Q721.2652,397.4363 721.9527,398.5144 Q722.6402,399.5769 723.9839,399.5769 Q724.6089,399.5769 725.2027,399.3113 Q725.7964,399.03 726.4214,398.4519 L726.4214,401.1706 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42.335" x="743.9527" y="400.3767">Depot</text><line style="stroke:#181818;stroke-width:0.5;" x1="508.96" x2="988.7803" y1="411.53" y2="411.53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124.8926" x="513.96" y="428.5251">-String typeDepot</text><line style="stroke:#181818;stroke-width:0.5;" x1="508.96" x2="988.7803" y1="435.8269" y2="435.8269"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="469.8203" x="513.96" y="452.822">+Depot(String numeroCompte, double montant, String typeDepot)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.6719" x="513.96" y="469.1189">+void executer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.1885" x="513.96" y="485.4157">+void annuler()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158.9082" x="513.96" y="501.7126">+String genererRecu()</text></g><g id="elem_Virement"><rect codeLine="28" fill="#F1F1F1" height="145.7813" id="Virement" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="660.7031" x="1024.52" y="371.38"/><ellipse cx="1318.397" cy="387.38" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M1321.3657,393.0206 Q1320.7876,393.3175 1320.147,393.4581 Q1319.5063,393.6144 1318.8032,393.6144 Q1316.3032,393.6144 1314.9751,391.9738 Q1313.6626,390.3175 1313.6626,387.1925 Q1313.6626,384.0675 1314.9751,382.4113 Q1316.3032,380.755 1318.8032,380.755 Q1319.5063,380.755 1320.147,380.9113 Q1320.8032,381.0675 1321.3657,381.3644 L1321.3657,384.0831 Q1320.7407,383.505 1320.147,383.2394 Q1319.5532,382.9581 1318.9282,382.9581 Q1317.5845,382.9581 1316.897,384.0363 Q1316.2095,385.0988 1316.2095,387.1925 Q1316.2095,389.2863 1316.897,390.3644 Q1317.5845,391.4269 1318.9282,391.4269 Q1319.5532,391.4269 1320.147,391.1613 Q1320.7407,390.88 1321.3657,390.3019 L1321.3657,393.0206 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.4492" x="1338.897" y="392.2267">Virement</text><line style="stroke:#181818;stroke-width:0.5;" x1="1025.52" x2="1684.2231" y1="403.38" y2="403.38"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190.0186" x="1030.52" y="420.3751">-String compteDestinataire</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.7939" x="1030.52" y="436.672">-String motif</text><line style="stroke:#181818;stroke-width:0.5;" x1="1025.52" x2="1684.2231" y1="443.9738" y2="443.9738"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="648.7031" x="1030.52" y="460.9689">+Virement(String numeroCompte, String compteDestinataire, double montant, String motif)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.6719" x="1030.52" y="477.2657">+void executer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.1885" x="1030.52" y="493.5626">+void annuler()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158.9082" x="1030.52" y="509.8595">+String genererRecu()</text></g><g id="elem_Paiement"><rect codeLine="37" fill="#F1F1F1" height="145.7813" id="Paiement" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="636.8389" x="1720.45" y="371.38"/><ellipse cx="2001.5506" cy="387.38" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M2004.5193,393.0206 Q2003.9412,393.3175 2003.3006,393.4581 Q2002.66,393.6144 2001.9568,393.6144 Q1999.4568,393.6144 1998.1287,391.9738 Q1996.8162,390.3175 1996.8162,387.1925 Q1996.8162,384.0675 1998.1287,382.4113 Q1999.4568,380.755 2001.9568,380.755 Q2002.66,380.755 2003.3006,380.9113 Q2003.9568,381.0675 2004.5193,381.3644 L2004.5193,384.0831 Q2003.8943,383.505 2003.3006,383.2394 Q2002.7068,382.9581 2002.0818,382.9581 Q2000.7381,382.9581 2000.0506,384.0363 Q1999.3631,385.0988 1999.3631,387.1925 Q1999.3631,389.2863 2000.0506,390.3644 Q2000.7381,391.4269 2002.0818,391.4269 Q2002.7068,391.4269 2003.3006,391.1613 Q2003.8943,390.88 2004.5193,390.3019 L2004.5193,393.0206 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.1377" x="2022.0506" y="392.2267">Paiement</text><line style="stroke:#181818;stroke-width:0.5;" x1="1721.45" x2="2356.2889" y1="403.38" y2="403.38"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133.5127" x="1726.45" y="420.3751">-String beneficiaire</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.7471" x="1726.45" y="436.672">-String reference</text><line style="stroke:#181818;stroke-width:0.5;" x1="1721.45" x2="2356.2889" y1="443.9738" y2="443.9738"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="624.8389" x="1726.45" y="460.9689">+Paiement(String numeroCompte, double montant, String beneficiaire, String reference)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.6719" x="1726.45" y="477.2657">+void executer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.1885" x="1726.45" y="493.5626">+void annuler()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158.9082" x="1726.45" y="509.8595">+String genererRecu()</text></g><g id="elem_GestionnaireTransactions"><rect codeLine="46" fill="#F1F1F1" height="80.5938" id="GestionnaireTransactions" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="378.502" x="862.62" y="7"/><ellipse cx="958.2582" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M961.2269,28.6406 Q960.6488,28.9375 960.0082,29.0781 Q959.3676,29.2344 958.6644,29.2344 Q956.1644,29.2344 954.8363,27.5938 Q953.5238,25.9375 953.5238,22.8125 Q953.5238,19.6875 954.8363,18.0313 Q956.1644,16.375 958.6644,16.375 Q959.3676,16.375 960.0082,16.5313 Q960.6644,16.6875 961.2269,16.9844 L961.2269,19.7031 Q960.6019,19.125 960.0082,18.8594 Q959.4144,18.5781 958.7894,18.5781 Q957.4457,18.5781 956.7582,19.6563 Q956.0707,20.7188 956.0707,22.8125 Q956.0707,24.9063 956.7582,25.9844 Q957.4457,27.0469 958.7894,27.0469 Q959.4144,27.0469 960.0082,26.7813 Q960.6019,26.5 961.2269,25.9219 L961.2269,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178.7256" x="978.7582" y="27.8467">GestionnaireTransactions</text><line style="stroke:#181818;stroke-width:0.5;" x1="863.62" x2="1240.122" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="863.62" x2="1240.122" y1="47" y2="47"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="366.502" x="868.62" y="63.9951">+void executerTransaction(Transaction transaction)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="179.3818" x="868.62" y="80.292">+void main(String[] args)</text></g><g id="link_Transaction_Retrait"><path codeLine="51" d="M837.4393,286.8203 C729.5993,311.6603 611.31,339.88 490.87,371.38 C481.33,373.87 471.6,376.46 461.78,379.11 " fill="none" id="Transaction-backto-Retrait" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="854.98,282.78,836.0925,280.9734,838.7861,292.6672,854.98,282.78" style="stroke:#181818;stroke-width:1;"/></g><g id="link_Transaction_Depot"><path codeLine="52" d="M930.1273,320.7702 C897.0773,343.1102 875.82,357.47 843.64,379.22 " fill="none" id="Transaction-backto-Depot" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="945.04,310.69,926.7672,315.7993,933.4873,325.7411,945.04,310.69" style="stroke:#181818;stroke-width:1;"/></g><g id="link_Transaction_Virement"><path codeLine="53" d="M1173.614,320.7683 C1202.574,340.3383 1219.02,351.45 1247.99,371.03 " fill="none" id="Transaction-backto-Virement" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="1158.7,310.69,1170.2546,325.7396,1176.9735,315.797,1158.7,310.69" style="stroke:#181818;stroke-width:1;"/></g><g id="link_Transaction_Paiement"><path codeLine="54" d="M1266.1817,281.7034 C1395.3817,307.8734 1550.44,339.51 1702.87,371.38 C1708.56,372.57 1714.31,373.77 1720.1,374.99 " fill="none" id="Transaction-backto-Paiement" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="1248.54,278.13,1264.9906,287.584,1267.3729,275.8228,1248.54,278.13" style="stroke:#181818;stroke-width:1;"/></g><g id="link_GestionnaireTransactions_Transaction"><path codeLine="55" d="M1051.87,87.75 C1051.87,109.95 1051.87,132.37 1051.87,158.4 " fill="none" id="GestionnaireTransactions-to-Transaction" style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="1051.87,164.4,1055.87,155.4,1051.87,159.4,1047.87,155.4,1051.87,164.4" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38.9429" x="1052.87" y="130.6669">utilise</text></g></g></svg></div></div>
+
+<details class="important">
+<summary>Source PlantUML</summary>
+<div class="highlight"><pre><span></span><code>@startuml
+skinparam classAttributeIconSize 0
+
+abstract class Transaction {
+    - String numeroCompte
+    # double montant
+    + Transaction(String numeroCompte, double montant)
+    + {abstract} void executer()
+    + {abstract} void annuler()
+    + {abstract} String genererRecu()
+}
+
+class Retrait {
+    - String guichet
+    + Retrait(String numeroCompte, double montant, String guichet)
+    + void executer()
+    + void annuler()
+    + String genererRecu()
+}
+
+class Depot {
+    - String typeDepot
+    + Depot(String numeroCompte, double montant, String typeDepot)
+    + void executer()
+    + void annuler()
+    + String genererRecu()
+}
+
+class Virement {
+    - String compteDestinataire
+    - String motif
+    + Virement(String numeroCompte, String compteDestinataire, double montant, String motif)
+    + void executer()
+    + void annuler()
+    + String genererRecu()
+}
+
+class Paiement {
+    - String beneficiaire
+    - String reference
+    + Paiement(String numeroCompte, double montant, String beneficiaire, String reference)
+    + void executer()
+    + void annuler()
+    + String genererRecu()
+}
+
+class GestionnaireTransactions {
+    + {static} void executerTransaction(Transaction transaction)
+    + {static} void main(String[] args)
+}
+
+Transaction &lt;|-- Retrait
+Transaction &lt;|-- Depot
+Transaction &lt;|-- Virement
+Transaction &lt;|-- Paiement
+GestionnaireTransactions ..&gt; Transaction : utilise
+
+@enduml
+</code></pre></div>
+</details>
+<p>Le diagramme montre maintenant :</p>
+<ul>
+<li>La classe abstraite <code>Transaction</code> avec ses méthodes abstraites</li>
+<li>Les quatre classes dérivées: <code>Retrait</code>, <code>Depot</code>, <code>Virement</code> et <code>Paiement</code></li>
+<li>Chaque classe dérivée avec ses attributs et méthodes spécifiques</li>
+<li>La classe <code>GestionnaireTransactions</code> qui utilise les transactions (relation de dépendance)</li>
+<li>Les relations d&rsquo;héritage entre <code>Transaction</code> et ses classes dérivées</li>
+<li>La relation de dépendance (ligne pointillée) entre <code>GestionnaireTransactions</code> et <code>Transaction</code></li>
+</ul>
+<h2 id="exemple-3">Exemple 3<a class="headerlink" href="#exemple-3" title="Permanent link">&para;</a></h2>
+<p>Voici un exemple de diagramme de classes pour
+<a href="http://127.0.0.1:8000/B.%20Programmation%20OO/4.%20Interfaces/03-exemples/#exemple-avec-des-animaux">l&rsquo;exemple</a> 
+des animaux :</p>
+<div class='puml-container'><div class="puml light" style="display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="267px" preserveAspectRatio="xMidYMid meet" style="width:420px;height:267px;background:#FFFFFF;" version="1.1" viewBox="0 0 420 267" width="420px" zoomAndPan="magnify" class="diagram"><defs/><g><g id="elem_Animal"><rect codeLine="3" fill="#F1F1F1" height="113.1875" id="Animal" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="123.2959" x="151.07" y="7"/><ellipse cx="185.3523" cy="23" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M185.4617,18.3438 L184.3054,23.4219 L186.6336,23.4219 L185.4617,18.3438 Z M183.9773,16.1094 L186.9617,16.1094 L190.3211,28.5 L187.8679,28.5 L187.1023,25.4375 L183.8211,25.4375 L183.0711,28.5 L180.6336,28.5 L183.9773,16.1094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="48.4463" x="203.6373" y="27.8467">Animal</text><line style="stroke:#181818;stroke-width:0.5;" x1="152.07" x2="273.3659" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.0381" x="157.07" y="55.9951">#String nom</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60.5117" x="157.07" y="72.292">#int age</text><line style="stroke:#181818;stroke-width:0.5;" x1="152.07" x2="273.3659" y1="79.5938" y2="79.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="111.2959" x="157.07" y="96.5889">+void respirer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.2227" x="157.07" y="112.8857">+void dormir()</text></g><g id="elem_Nageable"><rect codeLine="10" fill="#F1F1F1" height="64.2969" id="Nageable" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109.4395" x="7" y="31.44"/><ellipse cx="26.9135" cy="47.44" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M22.8354,43.2056 L22.8354,41.0494 L30.226,41.0494 L30.226,43.2056 L27.7573,43.2056 L27.7573,51.2838 L30.226,51.2838 L30.226,53.44 L22.8354,53.44 L22.8354,51.2838 L25.3042,51.2838 L25.3042,43.2056 L22.8354,43.2056 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="66.5205" x="42.0054" y="52.2867">Nageable</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="115.4395" y1="63.44" y2="63.44"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="115.4395" y1="71.44" y2="71.44"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97.4395" x="13" y="88.4351">+void nager()</text></g><g id="elem_Volant"><rect codeLine="14" fill="#F1F1F1" height="64.2969" id="Volant" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="103.8408" x="309.8" y="31.44"/><ellipse cx="336.8902" cy="47.44" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M332.8121,43.2056 L332.8121,41.0494 L340.2027,41.0494 L340.2027,43.2056 L337.734,43.2056 L337.734,51.2838 L340.2027,51.2838 L340.2027,53.44 L332.8121,53.44 L332.8121,51.2838 L335.2809,51.2838 L335.2809,43.2056 L332.8121,43.2056 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="44.9736" x="353.577" y="52.2867">Volant</text><line style="stroke:#181818;stroke-width:0.5;" x1="310.8" x2="412.6408" y1="63.44" y2="63.44"/><line style="stroke:#181818;stroke-width:0.5;" x1="310.8" x2="412.6408" y1="71.44" y2="71.44"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.8408" x="315.8" y="88.4351">+void voler()</text></g><g id="elem_Dauphin"><rect codeLine="18" fill="#F1F1F1" height="80.5938" id="Dauphin" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="123.2959" x="68.07" y="180.19"/><ellipse cx="97.7135" cy="196.19" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M100.6822,201.8306 Q100.1041,202.1275 99.4635,202.2681 Q98.8228,202.4244 98.1197,202.4244 Q95.6197,202.4244 94.2916,200.7838 Q92.9791,199.1275 92.9791,196.0025 Q92.9791,192.8775 94.2916,191.2213 Q95.6197,189.565 98.1197,189.565 Q98.8228,189.565 99.4635,189.7213 Q100.1197,189.8775 100.6822,190.1744 L100.6822,192.8931 Q100.0572,192.315 99.4635,192.0494 Q98.8697,191.7681 98.2447,191.7681 Q96.901,191.7681 96.2135,192.8463 Q95.526,193.9088 95.526,196.0025 Q95.526,198.0963 96.2135,199.1744 Q96.901,200.2369 98.2447,200.2369 Q98.8697,200.2369 99.4635,199.9713 Q100.0572,199.69 100.6822,199.1119 L100.6822,201.8306 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58.7549" x="114.9676" y="201.0367">Dauphin</text><line style="stroke:#181818;stroke-width:0.5;" x1="69.07" x2="190.3659" y1="212.19" y2="212.19"/><line style="stroke:#181818;stroke-width:0.5;" x1="69.07" x2="190.3659" y1="220.19" y2="220.19"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.2959" x="74.07" y="237.1851">+void respirer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97.4395" x="74.07" y="253.482">+void nager()</text></g><g id="elem_Chauve_Souris"><rect codeLine="23" fill="#F1F1F1" height="80.5938" id="Chauve_Souris" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="135.2637" x="260.09" y="180.19"/><ellipse cx="275.09" cy="196.19" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M278.0588,201.8306 Q277.4806,202.1275 276.84,202.2681 Q276.1994,202.4244 275.4963,202.4244 Q272.9963,202.4244 271.6681,200.7838 Q270.3556,199.1275 270.3556,196.0025 Q270.3556,192.8775 271.6681,191.2213 Q272.9963,189.565 275.4963,189.565 Q276.1994,189.565 276.84,189.7213 Q277.4963,189.8775 278.0588,190.1744 L278.0588,192.8931 Q277.4338,192.315 276.84,192.0494 Q276.2463,191.7681 275.6213,191.7681 Q274.2775,191.7681 273.59,192.8463 Q272.9025,193.9088 272.9025,196.0025 Q272.9025,198.0963 273.59,199.1744 Q274.2775,200.2369 275.6213,200.2369 Q276.2463,200.2369 276.84,199.9713 Q277.4338,199.69 278.0588,199.1119 L278.0588,201.8306 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.2637" x="289.09" y="201.0367">Chauve_Souris</text><line style="stroke:#181818;stroke-width:0.5;" x1="261.09" x2="394.3537" y1="212.19" y2="212.19"/><line style="stroke:#181818;stroke-width:0.5;" x1="261.09" x2="394.3537" y1="220.19" y2="220.19"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.2959" x="266.09" y="237.1851">+void respirer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.8408" x="266.09" y="253.482">+void voler()</text></g><g id="link_Animal_Dauphin"><path codeLine="28" d="M174.2536,136.3785 C163.6736,156.1385 160.49,162.06 150.8,180.15 " fill="none" id="Animal-backto-Dauphin" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="182.75,120.51,168.9641,133.5464,179.5431,139.2107,182.75,120.51" style="stroke:#181818;stroke-width:1;"/></g><g id="link_Animal_Chauve_Souris"><path codeLine="29" d="M264.9697,134.9625 C279.6397,154.7225 285.08,162.06 298.51,180.15 " fill="none" id="Animal-backto-Chauve_Souris" style="stroke:#181818;stroke-width:1;"/><polygon fill="none" points="254.24,120.51,260.1522,138.539,269.7872,131.3859,254.24,120.51" style="stroke:#181818;stroke-width:1;"/></g><g id="link_Nageable_Dauphin"><path codeLine="30" d="M82.714,112.4224 C93.344,136.6424 100.9,153.84 112.35,179.92 " fill="none" id="Nageable-backto-Dauphin" style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="75.48,95.94,77.2199,114.8337,88.2081,110.011,75.48,95.94" style="stroke:#181818;stroke-width:1;"/></g><g id="link_Volant_Chauve_Souris"><path codeLine="31" d="M350.9783,113.5209 C345.6583,137.7409 342.13,153.84 336.41,179.92 " fill="none" id="Volant-backto-Chauve_Souris" style="stroke:#181818;stroke-width:1;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="354.84,95.94,345.118,112.2336,356.8386,114.8081,354.84,95.94" style="stroke:#181818;stroke-width:1;"/></g></g></svg></div></div>
+
+<details class="important">
+<summary>Source PlantUML</summary>
+<div class="highlight"><pre><span></span><code>@startuml
+skinparam classAttributeIconSize 0
+
+abstract class Animal {
+  # String nom
+  # int age
+  + {abstract} void respirer()
+  + void dormir()
+}
+
+interface Nageable {
+  + void nager()
+}
+
+interface Volant {
+  + void voler()
+}
+
+class Dauphin {
+  + void respirer()
+  + void nager()
+}
+
+class Chauve_Souris {
+  + void respirer()
+  + void voler()
+}
+
+Animal &lt;|-- Dauphin
+Animal &lt;|-- Chauve_Souris
+Nageable &lt;|.. Dauphin
+Volant &lt;|.. Chauve_Souris
+
+@enduml
+</code></pre></div>
+</details>
+<h2 id="legende-du-diagramme">Légende du diagramme<a class="headerlink" href="#legende-du-diagramme" title="Permanent link">&para;</a></h2>
+<p><strong>Notation utilisée :</strong></p>
+<ul>
+<li>Les flèches pleines (&lt;|&ndash;) indiquent l&rsquo;héritage de classe</li>
+<li>Les flèches en pointillés (&lt;|..) représentent l&rsquo;implémentation d&rsquo;interface</li>
+<li>Le # désigne les membres protégés</li>
+<li>Le + désigne les membres publics</li>
+<li>{abstract} indique une méthode abstraite</li>
+</ul>
+<p>Le diagramme illustre la structure complète avec une classe abstraite <code>Animal</code>, deux interfaces <code>Nageable</code> et <code>Volant</code>,
+et deux classes concrètes <code>Dauphin</code> et <code>Chauve_Souris</code> qui étendent <code>Animal</code> et implémentent chacune une interface 
+spécifique.</p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em> 
+<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
+structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../01-notation/" class="btn btn-neutral float-left" title="🔸1🔸Notation UML"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/01-introduction/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/profdenis/2N1_doc" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../01-notation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../../C.%20Figures%20g%C3%A9om%C3%A9triques/01-introduction/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../../assets/mkdocs_puml/interaction.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
