@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Introduction - Cours de programmation OO 1</title>
+    <title>La classe Main - Cours de programmation OO 1</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -15,8 +15,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Introduction";
-        var mkdocs_page_input_path = "C. Figures g\u00e9om\u00e9triques/Version 1/01-introduction.md";
+        var mkdocs_page_name = "La classe Main";
+        var mkdocs_page_input_path = "C. Figures g\u00e9om\u00e9triques/Version 1/02-main.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -144,9 +144,13 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" >Version 1</a>
     <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Introduction</a>
+                <li class="toctree-l2"><a class="reference internal" href="../01-shapes/">La classe Shapes</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">La classe Main</a>
     <ul class="current">
     </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../03-image/">La classe Image</a>
                 </li>
     </ul>
                   </li>
@@ -173,9 +177,9 @@
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">C. Figures géométriques</li>
           <li class="breadcrumb-item">Version 1</li>
-      <li class="breadcrumb-item active">Introduction</li>
+      <li class="breadcrumb-item active">La classe Main</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/C. Figures géométriques/Version 1/01-introduction.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/C. Figures géométriques/Version 1/02-main.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -183,18 +187,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
-<ul>
-<li>Github: <a href="https://github.com/profdenis/Shapes">https://github.com/profdenis/Shapes</a></li>
-<li>HTTPS: <a href="https://github.com/profdenis/Shapes.git">https://github.com/profdenis/Shapes.git</a></li>
-<li>SSH: <code>git@github.com:profdenis/Shapes.git</code></li>
-</ul>
+                <h1 id="la-classe-main">La classe <code>Main</code><a class="headerlink" href="#la-classe-main" title="Permanent link">&para;</a></h1>
+<p>Le code dans la classe <code>Main</code> utilise la classe <code>Shapes</code> pour dessiner différentes formes géométriques. Toutes les
+méthodes de la classe <code>Shapes</code> sont statiques, ce qui signifie qu&rsquo;elles appartiennent à la classe elle-même et non à une
+instance spécifique de la classe. C&rsquo;est pourquoi on appelle les méthodes directement avec <code>Shapes.nomDeLaMethode()</code> au
+lieu de créer un objet <code>Shapes</code> avec <code>Shapes monObjet = new Shapes();</code> puis appeler la méthode avec
+<code>monObjet.nomDeLaMethode()</code>.</p>
+<p>Utiliser uniquement des méthodes statiques dans une classe comme <code>Shapes</code> est contraire aux principes de la
+programmation orientée objet. L&rsquo;un des fondements de la POO est l&rsquo;utilisation d&rsquo;objets, qui combinent données (
+attributs) et comportement (méthodes). En rendant toutes les méthodes statiques, on ne crée pas d&rsquo;objets <code>Shapes</code> et on
+se prive des avantages de l&rsquo;encapsulation et de la possibilité d&rsquo;avoir plusieurs instances de <code>Shapes</code> avec des états
+différents.</p>
+<p>Il est important de noter que cette approche est une simplification pour l&rsquo;exemple et que les versions ultérieures du
+code, présentées plus tard dans le cours, utiliseront les principes de la POO de manière plus appropriée.</p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em> 
+<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
+structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
+</div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../01-introduction/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../Version%202/01-introduction/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../01-shapes/" class="btn btn-neutral float-left" title="La classe Shapes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../03-image/" class="btn btn-neutral float-right" title="La classe Image">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -221,10 +239,10 @@
         </span>
     
     
-      <span><a href="../../01-introduction/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../01-shapes/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../Version%202/01-introduction/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../03-image/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

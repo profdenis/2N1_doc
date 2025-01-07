@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Introduction - Cours de programmation OO 1</title>
+    <title>La classe Image - Cours de programmation OO 1</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -15,8 +15,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Introduction";
-        var mkdocs_page_input_path = "C. Figures g\u00e9om\u00e9triques/Version 2/01-introduction.md";
+        var mkdocs_page_name = "La classe Image";
+        var mkdocs_page_input_path = "C. Figures g\u00e9om\u00e9triques/Version 1/03-image.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -142,21 +142,21 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../../01-introduction/">Introduction</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" >Version 1</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Version%201/01-shapes/">La classe Shapes</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Version 1</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../01-shapes/">La classe Shapes</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../Version%201/02-main/">La classe Main</a>
+                <li class="toctree-l2"><a class="reference internal" href="../02-main/">La classe Main</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../Version%201/03-image/">La classe Image</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">La classe Image</a>
+    <ul class="current">
+    </ul>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" >Version 2</a>
-    <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Introduction</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" >Version 2</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%202/01-introduction/">Introduction</a>
                 </li>
     </ul>
                   </li>
@@ -176,10 +176,10 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">C. Figures géométriques</li>
-          <li class="breadcrumb-item">Version 2</li>
-      <li class="breadcrumb-item active">Introduction</li>
+          <li class="breadcrumb-item">Version 1</li>
+      <li class="breadcrumb-item active">La classe Image</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/C. Figures géométriques/Version 2/01-introduction.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/C. Figures géométriques/Version 1/03-image.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -187,17 +187,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+                <h1 id="la-classe-image">La classe <code>Image</code><a class="headerlink" href="#la-classe-image" title="Permanent link">&para;</a></h1>
+<p>La classe <code>Image</code> est une encapsulation simplifiée de la classe <code>java.awt.image.BufferedImage</code> pour faciliter le dessin
+de formes géométriques et leur sauvegarde dans un fichier. Elle offre une interface plus intuitive pour manipuler une
+image en mémoire.</p>
+<p>Voici les principaux aspects de la classe :</p>
 <ul>
-<li>Github: <a href="https://github.com/profdenis/Shapes">https://github.com/profdenis/Shapes</a></li>
-<li>HTTPS: <a href="https://github.com/profdenis/Shapes.git">https://github.com/profdenis/Shapes.git</a></li>
-<li>SSH: <code>git@github.com:profdenis/Shapes.git</code></li>
+<li>
+<p><strong>Dimensions et couleur de fond :</strong> Elle définit la largeur (<code>width</code>), la hauteur (<code>height</code>) et la couleur de fond
+  (<code>backgroundColor</code>) de l&rsquo;image. Des valeurs par défaut sont fournies (<code>defaultWidth</code>, <code>defaultHeight</code>,
+  <code>defaultBackgroundColor</code>). Plusieurs constructeurs permettent de créer une image avec différentes combinaisons de ces
+  paramètres.</p>
+</li>
+<li>
+<p><strong><code>BufferedImage</code> :</strong> L&rsquo;attribut <code>bufferedImage</code> est une instance de <code>java.awt.image.BufferedImage</code>, qui est la
+  représentation sous-jacente de l&rsquo;image en mémoire.</p>
+</li>
+<li>
+<p><strong><code>Clear()</code> :</strong> Cette méthode remplit l&rsquo;image avec la couleur spécifiée, permettant d&rsquo;effacer le contenu précédent.</p>
+</li>
+<li>
+<p><strong><code>GetPixel()</code> et <code>SetPixel()</code> :</strong> Ces méthodes permettent respectivement de lire et de modifier la couleur d&rsquo;un pixel
+  spécifique de l&rsquo;image. La méthode <code>GetPixel()</code> retourne la couleur de fond par défaut si les coordonnées sont hors
+  limites, au lieu de générer une erreur.</p>
+</li>
+<li>
+<p><strong><code>Save()</code> :</strong> Cette méthode enregistre l&rsquo;image dans un fichier au format PNG. Elle gère les exceptions <code>IOException</code>
+  qui pourraient survenir lors de l&rsquo;écriture du fichier.</p>
+</li>
 </ul>
+<p>En résumé, la classe <code>Image</code> simplifie l&rsquo;utilisation de <code>BufferedImage</code> en fournissant une interface plus simple pour
+créer, manipuler et enregistrer des images. Elle masque la complexité de <code>BufferedImage</code> et offre des fonctionnalités de
+base pour le dessin, comme la définition de pixels et l&rsquo;effacement de l&rsquo;image.</p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em> 
+<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
+structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
+</div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../Version%201/03-image/" class="btn btn-neutral float-left" title="La classe Image"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../02-main/" class="btn btn-neutral float-left" title="La classe Main"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Version%202/01-introduction/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -224,8 +258,10 @@
         </span>
     
     
-      <span><a href="../../Version%201/03-image/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../02-main/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../../Version%202/01-introduction/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

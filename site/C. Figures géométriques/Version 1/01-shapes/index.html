@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>La classe Shapes - Cours de programmation OO 1</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../style.css" rel="stylesheet" />
+        <link href="../../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "La classe Shapes";
+        var mkdocs_page_input_path = "C. Figures g\u00e9om\u00e9triques/Version 1/01-shapes.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Cours de programmation OO 1
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Cours de programmation orientée objet</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">A. Les bases en Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >1. Les bases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/01-Premier_programme/">🔸1🔸Premier programme en Java</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/02-Variables_et_types/">🔸2🔸Variables et types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/03-Conditionnelles/">🔸3🔸Conditionnelles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/04-Boucles/">🔸4🔸Boucles</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/1.%20Les%20bases/05-stdin/">🔸5🔸stdin</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >2. Méthodes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/06-Methodes/">🔸6🔸Méthodes</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/07-Integer/">🔸7🔸Peut-on modifier la valeur à l&rsquo;intérieur d&rsquo;un Integer ?</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/08-Purete_d_une_methode/">🔸8🔸Pureté d&rsquo;une méthode</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/2.%20M%C3%A9thodes/09-Recursivite/">🔸9🔸Récursivité</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >3. Tableaux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/3.%20Tableaux/10-Tableaux/">🔸10🔸Tableaux</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../A.%20Les%20bases%20en%20Java/3.%20Tableaux/11-ArrayList/">🔸11🔸ArrayList</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">B. Programmation OO</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >1. Les bases en OO</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/01-bases/">🔸1🔸Programmation OO</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/02-static/">🔸2🔸Mot-clé static</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/03-eviter_public/">🔸3🔸Éviter public si possible</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/04-validation/">🔸4🔸Validation dans les mutateurs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/05-this/">🔸5🔸Le mot-clé this</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/06-portees/">🔸6🔸Mots-clés de portée</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >2. Héritage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/2.%20H%C3%A9ritage/01-heritage/">🔸1🔸L&rsquo;héritage</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/2.%20H%C3%A9ritage/02-this_super/">🔸2🔸Les mots-clé this et super</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/2.%20H%C3%A9ritage/03-toString/">🔸3🔸Méthode toString et introduction au polymorphisme</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/2.%20H%C3%A9ritage/04-polymorphisme/">🔸4🔸Définition du polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >3. Classes et méthodes abstraites</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/3.%20Classes%20et%20m%C3%A9thodes%20abstraites/01-abstract/">🔸1🔸Mot-clé abstract</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/3.%20Classes%20et%20m%C3%A9thodes%20abstraites/02-exemples/">🔸2🔸Exemples pour les jeux vidéos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/3.%20Classes%20et%20m%C3%A9thodes%20abstraites/03-exemples/">🔸3🔸Exemples pour une banque</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >4. Interfaces</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/4.%20Interfaces/01-interfaces/">🔸1🔸Interfaces</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/4.%20Interfaces/02-abtract-vs-interface/">🔸2🔸Classes Abstraites vs. les Interfaces</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/4.%20Interfaces/03-exemples/">🔸3🔸Exemples</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >5. Diagrammes de classe</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/5.%20Diagrammes%20de%20classe/01-notation/">🔸1🔸Notation UML</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../B.%20Programmation%20OO/5.%20Diagrammes%20de%20classe/02-exemples/">🔸2🔸Exemples</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">C. Figures géométriques</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Version 1</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">La classe Shapes</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#methode-drawline">Méthode drawLine</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#methodes-drawclosertohorizontal-et-drawclosertovertical">Méthodes drawCloserToHorizontal et drawCloserToVertical</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methode-drawpolyline">Méthode drawPolyLine</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#utilisation-de-drawpolyline-dans-drawpolygon">Utilisation de drawPolyLine dans drawPolygon</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methode-drawcircle">Méthode drawCircle</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../02-main/">La classe Main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../03-image/">La classe Image</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 2</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%202/01-introduction/">Introduction</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Cours de programmation OO 1</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">C. Figures géométriques</li>
+          <li class="breadcrumb-item">Version 1</li>
+      <li class="breadcrumb-item active">La classe Shapes</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/C. Figures géométriques/Version 1/01-shapes.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="la-classe-shapes">La classe <code>Shapes</code><a class="headerlink" href="#la-classe-shapes" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Github: <a href="https://github.com/profdenis/Shapes/tree/master/src/v1">https://github.com/profdenis/Shapes/tree/master/src/v1</a></li>
+</ul>
+<p>La classe <code>Shapes</code> fournit des méthodes statiques pour dessiner différentes formes sur une image. Elle utilise une image
+<code>Image</code> de taille 400x400 pixels et une couleur par défaut <code>Color.BLACK</code>.</p>
+<p>Voici une explication des méthodes :</p>
+<ul>
+<li>
+<p><strong>Méthodes de dessin de points et de lignes :</strong></p>
+<ul>
+<li><code>drawPoint(x, y)</code> et <code>drawPoint(x, y, color)</code> : Dessine un point aux coordonnées <code>(x, y)</code> avec la couleur spécifiée
+  ou la couleur par défaut.</li>
+<li><code>drawHorizontalLine(x1, y1, width)</code> et <code>drawHorizontalLine(x1, y1, width, color)</code> : Dessine une ligne horizontale à
+  partir de <code>(x1, y1)</code> sur une largeur donnée.</li>
+<li><code>drawVerticalLine(x1, y1, height)</code> et <code>drawVerticalLine(x1, y1, height, color)</code> : Dessine une ligne verticale à 
+  partir de <code>(x1, y1)</code> sur une hauteur donnée.</li>
+<li><code>drawLine(x1, y1, x2, y2)</code> et <code>drawLine(x1, y1, x2, y2, color)</code> : Dessine une ligne entre les points <code>(x1, y1)</code> et
+  <code>(x2, y2)</code>. Elle gère les cas particuliers des lignes verticales et optimise le dessin en fonction de la pente de la
+  ligne.</li>
+</ul>
+</li>
+<li>
+<p><strong>Méthodes de dessin de formes :</strong></p>
+<ul>
+<li><code>drawTriangle(x1, y1, x2, y2, x3, y3)</code> et <code>drawTriangle(x1, y1, x2, y2, x3, y3, color)</code> : Dessine un triangle en
+  reliant les trois points donnés.</li>
+<li><code>drawRectangle(x, y, width, height)</code> et <code>drawRectangle(x, y, width, height, color)</code> : Dessine un rectangle avec le
+  coin supérieur gauche à (x, y), la largeur et la hauteur spécifiées.</li>
+<li><code>drawSquare(x, y, width)</code> et <code>drawSquare(x, y, width, color)</code> : Dessine un carré avec le coin supérieur gauche à
+  <code>(x, y)</code> et le côté de longueur <code>width</code>.</li>
+<li><code>drawPolyLine(x[], y[])</code> et <code>drawPolyLine(int[] x, int[] y, Color color)</code> : Dessine une ligne brisée en reliant les
+  points spécifiés par les tableaux <code>x</code> et <code>y</code>.</li>
+<li><code>drawPolygon(x[], y[])</code> et <code>drawPolygon(int[] x, int[] y, Color color)</code> : Dessine un polygone en reliant les points
+  spécifiés par les tableaux x et y et en fermant le polygone.</li>
+<li><code>drawCircle(x, y, radius)</code> et <code>drawCircle(x, y, radius, color)</code> : Dessine un cercle de centre <code>(x, y)</code> et de rayon
+  <code>radius</code>. Il utilise une méthode optimisée pour dessiner des points sur le cercle en utilisant la symétrie et les
+  propriétés du cercle.</li>
+</ul>
+</li>
+</ul>
+<p>Chaque méthode de dessin a une version avec et sans le paramètre <code>color</code>. Si la couleur n&rsquo;est pas spécifiée, la couleur
+par défaut (<code>Color.BLACK</code>) est utilisée. Toutes les méthodes modifient directement l&rsquo;image <code>image</code> statique.</p>
+<h2 id="methode-drawline">Méthode <code>drawLine</code><a class="headerlink" href="#methode-drawline" title="Permanent link">&para;</a></h2>
+<p>La méthode <code>drawLine(int x1, int y1, int x2, int y2, Color color)</code> dessine une ligne entre les points <code>(x1, y1)</code> et 
+<code>(x2, y2)</code> avec la couleur spécifiée. Voici une explication détaillée :</p>
+<ol type="1">
+<li>
+<p><strong>Cas particulier : ligne verticale</strong>
+   Si <code>x1</code> est égal à <code>x2</code>, la ligne est verticale. Dans ce cas, la méthode <code>drawVerticalLine</code> est appelée pour dessiner
+   la ligne. Ceci est important, car le calcul de la pente dans le cas général impliquerait une division par zéro.</p>
+</li>
+<li>
+<p><strong>Calcul de la pente et de l&rsquo;ordonnée à l&rsquo;origine</strong>
+   Si la ligne n&rsquo;est pas verticale, la pente (<code>slope</code>) et l&rsquo;ordonnée à l&rsquo;origine (<code>intercept</code>) sont calculées. Le calcul
+   de la pente est effectué avec un cast en <code>double</code> pour l&rsquo;un des termes afin d&rsquo;éviter une division entière qui
+   pourrait entraîner une perte de précision.</p>
+</li>
+<li>
+<p><strong>Optimisation basée sur la pente</strong>
+   La méthode utilise une optimisation pour minimiser l&rsquo;effet d&rsquo;escalier (<em>aliasing</em>) :</p>
+<ul>
+<li><strong>Si la valeur absolue de la pente est inférieure à 1</strong>, la ligne est plus proche de l&rsquo;horizontale. Dans ce cas,
+  la méthode <code>drawCloserToHorizontal</code> est appelée. Cette méthode itère sur les coordonnées x et calcule la
+  coordonnée y correspondante en utilisant l&rsquo;équation de la droite : <code>y = slope * x + intercept</code>.</li>
+<li><strong>Si la valeur absolue de la pente est supérieure ou égale à 1</strong>, la ligne est plus proche de la verticale. Dans
+  ce cas, la méthode <code>drawCloserToVertical</code> est appelée. Cette méthode itère sur les coordonnées y et calcule la
+  coordonnée x correspondante en utilisant l&rsquo;équation : <code>x = (y - intercept) / slope</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>drawCloserToHorizontal</code></strong>
+   Cette méthode parcourt les valeurs de x entre <code>minX</code> et <code>maxX</code> (les valeurs minimales et maximales de x1 et x2). Pour
+   chaque valeur de x, elle calcule la valeur de y correspondante à l&rsquo;aide de l&rsquo;équation de la droite et arrondit à
+   l&rsquo;entier le plus proche. Ensuite, elle appelle <code>image.SetPixel(x, y, color)</code> pour dessiner le point.</p>
+</li>
+<li>
+<p><strong><code>drawCloserToVertical</code></strong>
+   Cette méthode est similaire à <code>drawCloserToHorizontal</code>, mais elle itère sur les valeurs de y entre <code>minY</code> et <code>maxY</code>.
+   Pour chaque valeur de y, elle calcule la valeur de x, l&rsquo;arrondit et dessine le point.</p>
+</li>
+</ol>
+<p>En résumé, la méthode <code>drawLine</code> gère les cas particuliers des lignes verticales, calcule la pente et l&rsquo;ordonnée à 
+l&rsquo;origine, puis choisit la méthode de dessin la plus appropriée en fonction de la pente pour minimiser l&rsquo;effet d&rsquo;escalier
+et dessiner une ligne plus lisse.</p>
+<h3 id="methodes-drawclosertohorizontal-et-drawclosertovertical">Méthodes <code>drawCloserToHorizontal</code> et <code>drawCloserToVertical</code><a class="headerlink" href="#methodes-drawclosertohorizontal-et-drawclosertovertical" title="Permanent link">&para;</a></h3>
+<ol type="1">
+<li>
+<p><strong><code>drawCloserToHorizontal</code></strong>
+   Cette méthode parcourt les valeurs de x entre <code>minX</code> et <code>maxX</code> (les valeurs minimales et maximales de x1 et x2). Pour
+   chaque valeur de x, elle calcule la valeur de y correspondante à l&rsquo;aide de l&rsquo;équation de la droite et arrondit à
+   l&rsquo;entier le plus proche. Ensuite, elle appelle <code>image.SetPixel(x, y, color)</code> pour dessiner le point.</p>
+</li>
+<li>
+<p><strong><code>drawCloserToVertical</code></strong>
+   Cette méthode est similaire à <code>drawCloserToHorizontal</code>, mais elle itère sur les valeurs de y entre <code>minY</code> et <code>maxY</code>.
+   Pour chaque valeur de y, elle calcule la valeur de x, l&rsquo;arrondit et dessine le point.</p>
+</li>
+</ol>
+<p>Les variables <code>minX</code>, <code>maxX</code>, <code>minY</code> et <code>maxY</code> dans les méthodes <code>drawCloserToHorizontal</code> et <code>drawCloserToVertical</code> sont
+essentielles pour déterminer les bornes de l&rsquo;itération et garantir que la ligne est dessinée correctement, quel que soit
+l&rsquo;ordre des points fournis.</p>
+<p>Voici pourquoi elles sont utiles :</p>
+<ul>
+<li>
+<p><strong>Indépendance de l&rsquo;ordre des points :</strong> L&rsquo;utilisateur peut appeler <code>drawLine</code> avec (x1, y1) et (x2, y2) dans n&rsquo;importe
+  quel ordre.  <code>minX</code> et <code>maxX</code> (ou <code>minY</code> et <code>maxY</code>) garantissent que la boucle <code>for</code> itère toujours du plus petit au
+  plus grand, quel que soit l&rsquo;ordre des points d&rsquo;entrée. Sans ces variables, si x1 &gt; x2, la boucle <code>for</code> dans
+  <code>drawCloserToHorizontal</code> ne s&rsquo;exécuterait pas, et aucune ligne ne serait dessinée.</p>
+</li>
+<li>
+<p><strong>Détermination des bornes de la ligne :</strong> Ces variables définissent les limites du segment de droite à dessiner. Elles
+  garantissent que tous les pixels entre les deux points spécifiés sont parcourus et potentiellement colorés. Sans ces
+  limites, la ligne pourrait être dessinée au-delà des points d&rsquo;extrémité souhaités ou être incomplète.</p>
+</li>
+<li>
+<p><strong>Optimisation des performances :</strong> En déterminant les bornes minimales et maximales, la boucle <code>for</code> itère uniquement
+  sur les valeurs nécessaires pour dessiner la ligne. Cela évite des itérations inutiles et optimise les performances du
+  dessin, en particulier pour les longues lignes.</p>
+</li>
+</ul>
+<p>En résumé, ces variables locales permettent de gérer l&rsquo;ordre des points d&rsquo;entrée, de définir les bornes correctes du
+segment de droite et d&rsquo;optimiser les performances du dessin. Elles sont donc cruciales pour le bon fonctionnement des
+méthodes <code>drawCloserToHorizontal</code> et <code>drawCloserToVertical</code>.</p>
+<h2 id="methode-drawpolyline">Méthode <code>drawPolyLine</code><a class="headerlink" href="#methode-drawpolyline" title="Permanent link">&para;</a></h2>
+<p>La méthode <code>drawPolyLine(int[] x, int[] y, Color color)</code> dessine une ligne brisée en reliant les points spécifiés par
+les tableaux <code>x</code> et <code>y</code> avec la couleur donnée. La boucle <code>for</code> dans cette méthode est au cœur de son fonctionnement :</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">x</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Voici une explication détaillée :</p>
+<ol type="1">
+<li>
+<p><strong>Initialisation :</strong> <code>int i = 1;</code>  La boucle commence à l&rsquo;indice 1, et non à 0.</p>
+</li>
+<li>
+<p><strong>Condition :</strong> <code>i &lt; x.length;</code> La boucle continue tant que <code>i</code> est strictement inférieur à la longueur du tableau
+   <code>x</code>. Ceci est important, car la boucle accède aux éléments <code>x[i]</code> et <code>x[i-1]</code>.</p>
+</li>
+<li>
+<p><strong>Incrémentation :</strong> <code>i++;</code>  À chaque itération, <code>i</code> est incrémenté de 1.</p>
+</li>
+<li>
+<p><strong>Corps de la boucle :</strong> <code>drawLine(x[i - 1], y[i - 1], x[i], y[i], color);</code>  Le corps de la boucle appelle la méthode
+   <code>drawLine</code> pour tracer un segment entre deux points consécutifs de la ligne brisée. Plus précisément :</p>
+<ul>
+<li><code>x[i-1]</code> et <code>y[i-1]</code> sont les coordonnées du point précédent.</li>
+<li><code>x[i]</code> et <code>y[i]</code> sont les coordonnées du point actuel.</li>
+</ul>
+</li>
+</ol>
+<p>En résumé, la boucle itère sur les tableaux de coordonnées <code>x</code> et <code>y</code> et dessine des segments de droite entre chaque
+paire de points consécutifs, créant ainsi la ligne brisée.</p>
+<h3 id="utilisation-de-drawpolyline-dans-drawpolygon">Utilisation de <code>drawPolyLine</code> dans <code>drawPolygon</code><a class="headerlink" href="#utilisation-de-drawpolyline-dans-drawpolygon" title="Permanent link">&para;</a></h3>
+<p>La méthode <code>drawPolygon(int[] x, int[] y, Color color)</code> utilise <code>drawPolyLine</code> pour dessiner un polygone fermé. Voici
+comment :</p>
+<div class="highlight"><pre><span></span><code><span class="n">drawPolyLine</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="n">drawLine</span><span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">[</span><span class="n">x</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">y</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<ol type="1">
+<li>
+<p><strong>Appel à <code>drawPolyLine</code> :</strong> La méthode appelle d&rsquo;abord <code>drawPolyLine</code> pour dessiner les côtés du polygone, sauf le
+   dernier côté qui ferme le polygone.</p>
+</li>
+<li>
+<p><strong>Fermeture du polygone :</strong> Ensuite, elle appelle <code>drawLine</code> pour dessiner le dernier segment entre le dernier point
+   (<code>x[x.length - 1]</code>, <code>y[y.length - 1]</code>) et le premier point (<code>x[0]</code>, <code>y[0]</code>), fermant ainsi le polygone.</p>
+</li>
+</ol>
+<p>En combinant ces deux appels, <code>drawPolygon</code> dessine efficacement un polygone fermé en utilisant la fonctionnalité de
+<code>drawPolyLine</code> pour dessiner la majorité des côtés.</p>
+<h2 id="methode-drawcircle">Méthode drawCircle<a class="headerlink" href="#methode-drawcircle" title="Permanent link">&para;</a></h2>
+<p>La méthode <code>drawCircle(int x, int y, int radius, Color color)</code> dessine un cercle de centre (x, y) et de rayon <code>radius</code>
+avec la couleur spécifiée. Elle utilise une approche optimisée basée sur la symétrie des cercles pour dessiner les
+points.</p>
+<p>Voici une explication détaillée :</p>
+<ol type="1">
+<li>
+<p><strong>Calcul de <code>cos45</code> :</strong>
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">cos45</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">cos</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
+   Cette ligne calcule la valeur de x (ou y) lorsqu&rsquo;on est à 45 degrés sur le cercle. Elle est utilisée pour optimiser
+   la boucle, en itérant seulement sur le premier octant du cercle (0 à 45 degrés). Les autres points sont calculés par
+   symétrie.</p>
+</li>
+<li>
+<p><strong>Boucle principale :</strong>
+   <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">cos45</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+   La boucle itère de 0 jusqu&rsquo;à <code>cos45</code>.  <code>i</code> représente la coordonnée x par rapport au centre du cercle.</p>
+</li>
+<li>
+<p><strong>Calcul de <code>j</code> :</strong>
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
+   À chaque itération, <code>j</code> est calculé.  <code>j</code> représente la coordonnée y par rapport au centre du cercle. Le calcul est
+   basé sur le théorème de Pythagore (x² + y² = r²), où <code>i</code> est la coordonnée x, <code>j</code> est la coordonnée y et <code>radius</code> est
+   le rayon.</p>
+</li>
+<li>
+<p><strong>Dessin des points par symétrie :</strong>
+   Les lignes suivantes dessinent 8 points à chaque itération en exploitant la symétrie du cercle :
+   <div class="highlight"><pre><span></span><code><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 1</span><span class="w"></span>
+<span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 2: symétrie du point 1 par rapport à l&#39;axe Y</span><span class="w"></span>
+<span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 3: symétrie du point 1 par rapport à l&#39;axe X</span><span class="w"></span>
+<span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 4: symétrie du point 3 par rapport à l&#39;axe Y</span><span class="w"></span>
+<span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 5: symétrie du point 1 par rapport à la diagonale 45°</span><span class="w"></span>
+<span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 6: symétrie du point 5 par rapport à l&#39;axe X</span><span class="w"></span>
+<span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 7: symétrie du point 5 par rapport à l&#39;axe Y</span><span class="w"></span>
+<span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 8: symétrie du point 7 par rapport à l&#39;axe X</span><span class="w"></span>
+</code></pre></div>
+   En dessinant 8 points à la fois, la méthode optimise le processus de dessin du cercle.</p>
+</li>
+</ol>
+<p>En résumé, la méthode <code>drawCircle</code> utilise une approche efficace pour dessiner un cercle en itérant sur un seul octant
+et en utilisant la symétrie pour calculer et dessiner les autres points. Cela minimise les calculs et améliore les
+performances.</p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em> 
+<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
+structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../01-introduction/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../02-main/" class="btn btn-neutral float-right" title="La classe Main">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/profdenis/2N1_doc" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../01-introduction/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../02-main/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../../assets/mkdocs_puml/interaction.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
