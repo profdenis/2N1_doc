@@ -158,7 +158,34 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../../Version%202/01-introduction/">Introduction</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%202/02-main/">La classe Main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Package shapes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/03-lignes/">Classes VLine, HLine et Line</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/04-rectangle/">Classes Rectangle et Square</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/05-polygon/">Classes PolyLine et Polygon</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/06-cercle/">Classe Circle</a>
+                </li>
     </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">D. Menu</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/01-menu-v1/">La classe Menu, version 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/02-menu-v2/">La classe Menu, version 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/03-menu-v3/">La classe Menu, version 3</a>
                   </li>
               </ul>
       </div>
@@ -188,32 +215,126 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="la-classe-image">La classe <code>Image</code><a class="headerlink" href="#la-classe-image" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Github: <a href="https://github.com/profdenis/Shapes/tree/master/src/v1/Image.java">Image.java</a></li>
+</ul>
+<details class="note">
+<summary>Code</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">v1</span><span class="p">;</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">javax.imageio.ImageIO</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.image.BufferedImage</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Image</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">defaultWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">defaultHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">defaultBackgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">WHITE</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">backgroundColor</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">BufferedImage</span><span class="w"> </span><span class="n">bufferedImage</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Image</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">defaultWidth</span><span class="p">,</span><span class="w"> </span><span class="n">defaultHeight</span><span class="p">,</span><span class="w"> </span><span class="n">defaultBackgroundColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Image</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//noinspection SuspiciousNameCombination</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">defaultBackgroundColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Image</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">defaultBackgroundColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Image</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">backgroundColor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">backgroundColor</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">bufferedImage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedImage</span><span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">BufferedImage</span><span class="p">.</span><span class="na">TYPE_INT_ARGB</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">Clear</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">backgroundColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Clear</span><span class="p">(</span><span class="n">Color</span><span class="w"> </span><span class="n">clearColor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">SetPixel</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">clearColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="nf">GetPixel</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">GetPixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// throw exception?</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">backgroundColor</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">SetPixel</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">drawColor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">bufferedImage</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">.</span><span class="na">getRGB</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Save</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">File</span><span class="w"> </span><span class="n">outputFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">ImageIO</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">bufferedImage</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PNG&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">outputFile</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</details>
 <p>La classe <code>Image</code> est une encapsulation simplifiée de la classe <code>java.awt.image.BufferedImage</code> pour faciliter le dessin
 de formes géométriques et leur sauvegarde dans un fichier. Elle offre une interface plus intuitive pour manipuler une
 image en mémoire.</p>
 <p>Voici les principaux aspects de la classe :</p>
 <ul>
 <li>
-<p><strong>Dimensions et couleur de fond :</strong> Elle définit la largeur (<code>width</code>), la hauteur (<code>height</code>) et la couleur de fond
-  (<code>backgroundColor</code>) de l&rsquo;image. Des valeurs par défaut sont fournies (<code>defaultWidth</code>, <code>defaultHeight</code>,
-  <code>defaultBackgroundColor</code>). Plusieurs constructeurs permettent de créer une image avec différentes combinaisons de ces
-  paramètres.</p>
+<p><strong>Dimensions et couleur de fond</strong> </p>
+<ul>
+<li>Elle définit la largeur (<code>width</code>), la hauteur (<code>height</code>) et la couleur de fond
+    (<code>backgroundColor</code>) de l&rsquo;image. Des valeurs par défaut sont fournies (<code>defaultWidth</code>, <code>defaultHeight</code>,
+    <code>defaultBackgroundColor</code>). Plusieurs constructeurs permettent de créer une image avec différentes combinaisons de ces
+    paramètres.</li>
+</ul>
 </li>
 <li>
-<p><strong><code>BufferedImage</code> :</strong> L&rsquo;attribut <code>bufferedImage</code> est une instance de <code>java.awt.image.BufferedImage</code>, qui est la
-  représentation sous-jacente de l&rsquo;image en mémoire.</p>
+<p><code>BufferedImage</code> </p>
+<ul>
+<li>L&rsquo;attribut <code>bufferedImage</code> est une instance de <code>java.awt.image.BufferedImage</code>, qui est la
+    représentation sous-jacente de l&rsquo;image en mémoire.</li>
+</ul>
 </li>
 <li>
-<p><strong><code>Clear()</code> :</strong> Cette méthode remplit l&rsquo;image avec la couleur spécifiée, permettant d&rsquo;effacer le contenu précédent.</p>
+<p><code>Clear()</code></p>
+<ul>
+<li>Cette méthode remplit l&rsquo;image avec la couleur spécifiée, permettant d&rsquo;effacer le contenu précédent.</li>
+</ul>
 </li>
 <li>
-<p><strong><code>GetPixel()</code> et <code>SetPixel()</code> :</strong> Ces méthodes permettent respectivement de lire et de modifier la couleur d&rsquo;un pixel
-  spécifique de l&rsquo;image. La méthode <code>GetPixel()</code> retourne la couleur de fond par défaut si les coordonnées sont hors
-  limites, au lieu de générer une erreur.</p>
+<p><code>GetPixel()</code> et <code>SetPixel()</code> </p>
+<ul>
+<li>Ces méthodes permettent respectivement de lire et de modifier la couleur d&rsquo;un pixel
+    spécifique de l&rsquo;image. La méthode <code>GetPixel()</code> retourne la couleur de fond par défaut si les coordonnées sont hors
+    limites, au lieu de générer une erreur.</li>
+</ul>
 </li>
 <li>
-<p><strong><code>Save()</code> :</strong> Cette méthode enregistre l&rsquo;image dans un fichier au format PNG. Elle gère les exceptions <code>IOException</code>
-  qui pourraient survenir lors de l&rsquo;écriture du fichier.</p>
+<p><code>Save()</code></p>
+<ul>
+<li>Cette méthode enregistre l&rsquo;image dans un fichier au format PNG. Elle gère les exceptions <code>IOException</code>
+    qui pourraient survenir lors de l&rsquo;écriture du fichier.</li>
+</ul>
 </li>
 </ul>
 <p>En résumé, la classe <code>Image</code> simplifie l&rsquo;utilisation de <code>BufferedImage</code> en fournissant une interface plus simple pour

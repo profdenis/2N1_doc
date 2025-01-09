@@ -148,7 +148,25 @@
     <ul class="current">
     <li class="toctree-l3"><a class="reference internal" href="#methode-drawline">Méthode drawLine</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#methodes-drawclosertohorizontal-et-drawclosertovertical">Méthodes drawCloserToHorizontal et drawCloserToVertical</a>
+    <li class="toctree-l4"><a class="reference internal" href="#cas-particulier-ligne-verticale">Cas particulier : ligne verticale</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#calcul-de-la-pente-et-de-lordonnee-a-lorigine">Calcul de la pente et de l&rsquo;ordonnée à l&rsquo;origine</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#optimisation-basee-sur-la-pente">Optimisation basée sur la pente</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#drawclosertohorizontal">drawCloserToHorizontal</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#drawclosertovertical">drawCloserToVertical</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#resume">Résumé</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methodes-drawclosertohorizontal-et-drawclosertovertical">Méthodes drawCloserToHorizontal et drawCloserToVertical</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#drawclosertohorizontal_1">drawCloserToHorizontal</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#drawclosertovertical_1">drawCloserToVertical</a>
     </li>
         </ul>
     </li>
@@ -172,7 +190,34 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../../Version%202/01-introduction/">Introduction</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%202/02-main/">La classe Main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Package shapes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/03-lignes/">Classes VLine, HLine et Line</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/04-rectangle/">Classes Rectangle et Square</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/05-polygon/">Classes PolyLine et Polygon</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/06-cercle/">Classe Circle</a>
+                </li>
     </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">D. Menu</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/01-menu-v1/">La classe Menu, version 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/02-menu-v2/">La classe Menu, version 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/03-menu-v3/">La classe Menu, version 3</a>
                   </li>
               </ul>
       </div>
@@ -203,8 +248,167 @@
               
                 <h1 id="la-classe-shapes">La classe <code>Shapes</code><a class="headerlink" href="#la-classe-shapes" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Github: <a href="https://github.com/profdenis/Shapes/tree/master/src/v1">https://github.com/profdenis/Shapes/tree/master/src/v1</a></li>
+<li>Github: <a href="https://github.com/profdenis/Shapes/tree/master/src/v1/Shapes.java">Shapes.java</a></li>
 </ul>
+<details class="note">
+<summary>Code</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">v1</span><span class="p">;</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.Color</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Shapes</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">defaultColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">BLACK</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Image</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawPoint</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawPoint</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">defaultColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawPoint</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawHorizontalLine</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawHorizontalLine</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">defaultColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawHorizontalLine</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">drawPoint</span><span class="p">(</span><span class="n">x1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawVerticalLine</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">drawPoint</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">defaultColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawVerticalLine</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">drawPoint</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawLine</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">,</span><span class="w"> </span><span class="n">defaultColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawLine</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y2</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// ligne verticale, il faut éviter une division par 0</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">x2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">drawVerticalLine</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">),</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">y2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// éviter une division int/int qui entraînerait une imprécision</span><span class="w"></span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">x2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x1</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">intercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x2</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">drawCloserToHorizontal</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">slope</span><span class="p">,</span><span class="w"> </span><span class="n">intercept</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">drawCloserToVertical</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">,</span><span class="w"> </span><span class="n">intercept</span><span class="p">,</span><span class="w"> </span><span class="n">slope</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawCloserToVertical</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">startY</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">endY</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">intercept</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">slope</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">minY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">startY</span><span class="p">,</span><span class="w"> </span><span class="n">endY</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">startY</span><span class="p">,</span><span class="w"> </span><span class="n">endY</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minY</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">maxY</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">((</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">intercept</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">slope</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawCloserToHorizontal</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">startX</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">endX</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">slope</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">intercept</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">minX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">startX</span><span class="p">,</span><span class="w"> </span><span class="n">endX</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">startX</span><span class="p">,</span><span class="w"> </span><span class="n">endX</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minX</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">maxX</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">intercept</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawTriangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x3</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawTriangle</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">,</span><span class="w"> </span><span class="n">x3</span><span class="p">,</span><span class="w"> </span><span class="n">y3</span><span class="p">,</span><span class="w"> </span><span class="n">defaultColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawTriangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x3</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y3</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">,</span><span class="w"> </span><span class="n">x3</span><span class="p">,</span><span class="w"> </span><span class="n">y3</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x3</span><span class="p">,</span><span class="w"> </span><span class="n">y3</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawRectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawRectangle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">defaultColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawRectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawSquare</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawSquare</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">defaultColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawSquare</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//noinspection SuspiciousNameCombination</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawRectangle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawPolyLine</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawPolyLine</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">defaultColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawPolyLine</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawPolygon</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawPolygon</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">defaultColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawPolygon</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawPolyLine</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">[</span><span class="n">x</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">y</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawCircle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">radius</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawCircle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="n">defaultColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawCircle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">cos45</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">cos</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">cos45</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 1</span><span class="w"></span>
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 2: symétrie du point 1 par rapport à l&#39;axe Y</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 3: symétrie du point 1 par rapport à l&#39;axe X</span><span class="w"></span>
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 4: symétrie du point 3 par rapport à l&#39;axe Y</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 5: symétrie du point 1 par rapport à la diagonale 45°</span><span class="w"></span>
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 6: symétrie du point 5 par rapport à l&#39;axe X</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 7: symétrie du point 5 par rapport à l&#39;axe Y</span><span class="w"></span>
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 8: symétrie du point 7 par rapport à l&#39;axe X</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</details>
 <p>La classe <code>Shapes</code> fournit des méthodes statiques pour dessiner différentes formes sur une image. Elle utilise une image
 <code>Image</code> de taille 400x400 pixels et une couleur par défaut <code>Color.BLACK</code>.</p>
 <p>Voici une explication des méthodes :</p>
@@ -212,14 +416,17 @@
 <li>
 <p><strong>Méthodes de dessin de points et de lignes :</strong></p>
 <ul>
-<li><code>drawPoint(x, y)</code> et <code>drawPoint(x, y, color)</code> : Dessine un point aux coordonnées <code>(x, y)</code> avec la couleur spécifiée
+<li><code>drawPoint(x, y)</code> et <code>drawPoint(x, y, color)</code> : Dessine un point aux coordonnées <code>(x, y)</code> avec la couleur
+  spécifiée
   ou la couleur par défaut.</li>
-<li><code>drawHorizontalLine(x1, y1, width)</code> et <code>drawHorizontalLine(x1, y1, width, color)</code> : Dessine une ligne horizontale à
+<li><code>drawHorizontalLine(x1, y1, width)</code> et <code>drawHorizontalLine(x1, y1, width, color)</code> : Dessine une ligne horizontale
+  à
   partir de <code>(x1, y1)</code> sur une largeur donnée.</li>
-<li><code>drawVerticalLine(x1, y1, height)</code> et <code>drawVerticalLine(x1, y1, height, color)</code> : Dessine une ligne verticale à 
+<li><code>drawVerticalLine(x1, y1, height)</code> et <code>drawVerticalLine(x1, y1, height, color)</code> : Dessine une ligne verticale à
   partir de <code>(x1, y1)</code> sur une hauteur donnée.</li>
 <li><code>drawLine(x1, y1, x2, y2)</code> et <code>drawLine(x1, y1, x2, y2, color)</code> : Dessine une ligne entre les points <code>(x1, y1)</code> et
-  <code>(x2, y2)</code>. Elle gère les cas particuliers des lignes verticales et optimise le dessin en fonction de la pente de la
+  <code>(x2, y2)</code>. Elle gère les cas particuliers des lignes verticales et optimise le dessin en fonction de la pente de
+  la
   ligne.</li>
 </ul>
 </li>
@@ -232,9 +439,11 @@
   coin supérieur gauche à (x, y), la largeur et la hauteur spécifiées.</li>
 <li><code>drawSquare(x, y, width)</code> et <code>drawSquare(x, y, width, color)</code> : Dessine un carré avec le coin supérieur gauche à
   <code>(x, y)</code> et le côté de longueur <code>width</code>.</li>
-<li><code>drawPolyLine(x[], y[])</code> et <code>drawPolyLine(int[] x, int[] y, Color color)</code> : Dessine une ligne brisée en reliant les
+<li><code>drawPolyLine(x[], y[])</code> et <code>drawPolyLine(int[] x, int[] y, Color color)</code> : Dessine une ligne brisée en reliant
+  les
   points spécifiés par les tableaux <code>x</code> et <code>y</code>.</li>
-<li><code>drawPolygon(x[], y[])</code> et <code>drawPolygon(int[] x, int[] y, Color color)</code> : Dessine un polygone en reliant les points
+<li><code>drawPolygon(x[], y[])</code> et <code>drawPolygon(int[] x, int[] y, Color color)</code> : Dessine un polygone en reliant les
+  points
   spécifiés par les tableaux x et y et en fermant le polygone.</li>
 <li><code>drawCircle(x, y, radius)</code> et <code>drawCircle(x, y, radius, color)</code> : Dessine un cercle de centre <code>(x, y)</code> et de rayon
   <code>radius</code>. Il utilise une méthode optimisée pour dessiner des points sur le cercle en utilisant la symétrie et les
@@ -245,76 +454,60 @@
 <p>Chaque méthode de dessin a une version avec et sans le paramètre <code>color</code>. Si la couleur n&rsquo;est pas spécifiée, la couleur
 par défaut (<code>Color.BLACK</code>) est utilisée. Toutes les méthodes modifient directement l&rsquo;image <code>image</code> statique.</p>
 <h2 id="methode-drawline">Méthode <code>drawLine</code><a class="headerlink" href="#methode-drawline" title="Permanent link">&para;</a></h2>
-<p>La méthode <code>drawLine(int x1, int y1, int x2, int y2, Color color)</code> dessine une ligne entre les points <code>(x1, y1)</code> et 
+<p>La méthode <code>drawLine(int x1, int y1, int x2, int y2, Color color)</code> dessine une ligne entre les points <code>(x1, y1)</code> et
 <code>(x2, y2)</code> avec la couleur spécifiée. Voici une explication détaillée :</p>
-<ol type="1">
-<li>
-<p><strong>Cas particulier : ligne verticale</strong>
-   Si <code>x1</code> est égal à <code>x2</code>, la ligne est verticale. Dans ce cas, la méthode <code>drawVerticalLine</code> est appelée pour dessiner
-   la ligne. Ceci est important, car le calcul de la pente dans le cas général impliquerait une division par zéro.</p>
-</li>
-<li>
-<p><strong>Calcul de la pente et de l&rsquo;ordonnée à l&rsquo;origine</strong>
-   Si la ligne n&rsquo;est pas verticale, la pente (<code>slope</code>) et l&rsquo;ordonnée à l&rsquo;origine (<code>intercept</code>) sont calculées. Le calcul
-   de la pente est effectué avec un cast en <code>double</code> pour l&rsquo;un des termes afin d&rsquo;éviter une division entière qui
-   pourrait entraîner une perte de précision.</p>
-</li>
-<li>
-<p><strong>Optimisation basée sur la pente</strong>
-   La méthode utilise une optimisation pour minimiser l&rsquo;effet d&rsquo;escalier (<em>aliasing</em>) :</p>
+<h3 id="cas-particulier-ligne-verticale">Cas particulier : ligne verticale<a class="headerlink" href="#cas-particulier-ligne-verticale" title="Permanent link">&para;</a></h3>
+<p>Si <code>x1</code> est égal à <code>x2</code>, la ligne est verticale. Dans ce cas, la méthode <code>drawVerticalLine</code> est appelée pour
+dessiner la ligne. Ceci est important, car le calcul de la pente dans le cas général impliquerait une division par
+zéro.</p>
+<h3 id="calcul-de-la-pente-et-de-lordonnee-a-lorigine">Calcul de la pente et de l&rsquo;ordonnée à l&rsquo;origine<a class="headerlink" href="#calcul-de-la-pente-et-de-lordonnee-a-lorigine" title="Permanent link">&para;</a></h3>
+<p>Si la ligne n&rsquo;est pas verticale, la pente (<code>slope</code>) et
+l&rsquo;ordonnée à l&rsquo;origine (<code>intercept</code>) sont calculées. Le calcul de la pente est effectué avec un cast en <code>double</code> pour
+l&rsquo;un des termes afin d&rsquo;éviter une division entière qui pourrait entraîner une perte de précision.</p>
+<h3 id="optimisation-basee-sur-la-pente">Optimisation basée sur la pente<a class="headerlink" href="#optimisation-basee-sur-la-pente" title="Permanent link">&para;</a></h3>
+<p>La méthode utilise une optimisation pour minimiser l&rsquo;effet d&rsquo;escalier (<em>aliasing</em>) :</p>
 <ul>
-<li><strong>Si la valeur absolue de la pente est inférieure à 1</strong>, la ligne est plus proche de l&rsquo;horizontale. Dans ce cas,
-  la méthode <code>drawCloserToHorizontal</code> est appelée. Cette méthode itère sur les coordonnées x et calcule la
-  coordonnée y correspondante en utilisant l&rsquo;équation de la droite : <code>y = slope * x + intercept</code>.</li>
-<li><strong>Si la valeur absolue de la pente est supérieure ou égale à 1</strong>, la ligne est plus proche de la verticale. Dans
-  ce cas, la méthode <code>drawCloserToVertical</code> est appelée. Cette méthode itère sur les coordonnées y et calcule la
-  coordonnée x correspondante en utilisant l&rsquo;équation : <code>x = (y - intercept) / slope</code>.</li>
+<li><strong>Si la valeur absolue de la pente est inférieure à 1</strong>, la ligne est plus proche de l&rsquo;horizontale. Dans ce cas, la
+  méthode <code>drawCloserToHorizontal</code> est appelée. Cette méthode itère sur les coordonnées x et calcule la coordonnée y
+  correspondante en utilisant l&rsquo;équation de la droite : <code>y = slope * x + intercept</code>.</li>
+<li><strong>Si la valeur absolue de la pente est supérieure ou égale à 1</strong>, la ligne est plus proche de la verticale. Dans ce
+  cas, la méthode <code>drawCloserToVertical</code> est appelée. Cette méthode itère sur les coordonnées y et calcule la coordonnée
+  x correspondante en utilisant l&rsquo;équation : <code>x = (y - intercept) / slope</code>.</li>
 </ul>
-</li>
-<li>
-<p><strong><code>drawCloserToHorizontal</code></strong>
-   Cette méthode parcourt les valeurs de x entre <code>minX</code> et <code>maxX</code> (les valeurs minimales et maximales de x1 et x2). Pour
-   chaque valeur de x, elle calcule la valeur de y correspondante à l&rsquo;aide de l&rsquo;équation de la droite et arrondit à
-   l&rsquo;entier le plus proche. Ensuite, elle appelle <code>image.SetPixel(x, y, color)</code> pour dessiner le point.</p>
-</li>
-<li>
-<p><strong><code>drawCloserToVertical</code></strong>
-   Cette méthode est similaire à <code>drawCloserToHorizontal</code>, mais elle itère sur les valeurs de y entre <code>minY</code> et <code>maxY</code>.
-   Pour chaque valeur de y, elle calcule la valeur de x, l&rsquo;arrondit et dessine le point.</p>
-</li>
-</ol>
-<p>En résumé, la méthode <code>drawLine</code> gère les cas particuliers des lignes verticales, calcule la pente et l&rsquo;ordonnée à 
-l&rsquo;origine, puis choisit la méthode de dessin la plus appropriée en fonction de la pente pour minimiser l&rsquo;effet d&rsquo;escalier
-et dessiner une ligne plus lisse.</p>
-<h3 id="methodes-drawclosertohorizontal-et-drawclosertovertical">Méthodes <code>drawCloserToHorizontal</code> et <code>drawCloserToVertical</code><a class="headerlink" href="#methodes-drawclosertohorizontal-et-drawclosertovertical" title="Permanent link">&para;</a></h3>
-<ol type="1">
-<li>
-<p><strong><code>drawCloserToHorizontal</code></strong>
-   Cette méthode parcourt les valeurs de x entre <code>minX</code> et <code>maxX</code> (les valeurs minimales et maximales de x1 et x2). Pour
-   chaque valeur de x, elle calcule la valeur de y correspondante à l&rsquo;aide de l&rsquo;équation de la droite et arrondit à
-   l&rsquo;entier le plus proche. Ensuite, elle appelle <code>image.SetPixel(x, y, color)</code> pour dessiner le point.</p>
-</li>
-<li>
-<p><strong><code>drawCloserToVertical</code></strong>
-   Cette méthode est similaire à <code>drawCloserToHorizontal</code>, mais elle itère sur les valeurs de y entre <code>minY</code> et <code>maxY</code>.
-   Pour chaque valeur de y, elle calcule la valeur de x, l&rsquo;arrondit et dessine le point.</p>
-</li>
-</ol>
+<h3 id="drawclosertohorizontal"><code>drawCloserToHorizontal</code><a class="headerlink" href="#drawclosertohorizontal" title="Permanent link">&para;</a></h3>
+<p>Cette méthode parcourt les valeurs de x entre <code>minX</code> et <code>maxX</code> (les valeurs minimales et maximales de x1 et x2). Pour
+chaque valeur de x, elle calcule la valeur de y correspondante à l&rsquo;aide de l&rsquo;équation de la droite et arrondit à
+l&rsquo;entier le plus proche. Ensuite, elle appelle <code>image.SetPixel(x, y, color)</code> pour dessiner le point.</p>
+<h3 id="drawclosertovertical"><code>drawCloserToVertical</code><a class="headerlink" href="#drawclosertovertical" title="Permanent link">&para;</a></h3>
+<p>Cette méthode est similaire à <code>drawCloserToHorizontal</code>, mais elle itère sur les valeurs de y entre <code>minY</code> et <code>maxY</code>.
+Pour chaque valeur de y, elle calcule la valeur de x, l&rsquo;arrondit et dessine le point.</p>
+<h3 id="resume">Résumé<a class="headerlink" href="#resume" title="Permanent link">&para;</a></h3>
+<p>En résumé, la méthode <code>drawLine</code> gère les cas particuliers des lignes verticales, calcule la pente et l&rsquo;ordonnée à
+l&rsquo;origine, puis choisit la méthode de dessin la plus appropriée en fonction de la pente pour minimiser l&rsquo;effet
+d&rsquo;escalier et dessiner une ligne plus lisse.</p>
+<h2 id="methodes-drawclosertohorizontal-et-drawclosertovertical">Méthodes <code>drawCloserToHorizontal</code> et <code>drawCloserToVertical</code><a class="headerlink" href="#methodes-drawclosertohorizontal-et-drawclosertovertical" title="Permanent link">&para;</a></h2>
+<h3 id="drawclosertohorizontal_1"><code>drawCloserToHorizontal</code><a class="headerlink" href="#drawclosertohorizontal_1" title="Permanent link">&para;</a></h3>
+<p>Cette méthode parcourt les valeurs de x entre <code>minX</code> et <code>maxX</code> (les valeurs minimales et maximales de x1 et x2). Pour
+chaque valeur de x, elle calcule la valeur de y correspondante à l&rsquo;aide de l&rsquo;équation de la droite et arrondit à
+l&rsquo;entier le plus proche. Ensuite, elle appelle <code>image.SetPixel(x, y, color)</code> pour dessiner le point.</p>
+<h3 id="drawclosertovertical_1"><code>drawCloserToVertical</code><a class="headerlink" href="#drawclosertovertical_1" title="Permanent link">&para;</a></h3>
+<p>Cette méthode est similaire à <code>drawCloserToHorizontal</code>, mais elle itère sur les valeurs de y entre <code>minY</code> et <code>maxY</code>.
+Pour chaque valeur de y, elle calcule la valeur de x, l&rsquo;arrondit et dessine le point.</p>
 <p>Les variables <code>minX</code>, <code>maxX</code>, <code>minY</code> et <code>maxY</code> dans les méthodes <code>drawCloserToHorizontal</code> et <code>drawCloserToVertical</code> sont
 essentielles pour déterminer les bornes de l&rsquo;itération et garantir que la ligne est dessinée correctement, quel que soit
 l&rsquo;ordre des points fournis.</p>
 <p>Voici pourquoi elles sont utiles :</p>
 <ul>
 <li>
-<p><strong>Indépendance de l&rsquo;ordre des points :</strong> L&rsquo;utilisateur peut appeler <code>drawLine</code> avec (x1, y1) et (x2, y2) dans n&rsquo;importe
-  quel ordre.  <code>minX</code> et <code>maxX</code> (ou <code>minY</code> et <code>maxY</code>) garantissent que la boucle <code>for</code> itère toujours du plus petit au
-  plus grand, quel que soit l&rsquo;ordre des points d&rsquo;entrée. Sans ces variables, si x1 &gt; x2, la boucle <code>for</code> dans
+<p><strong>Indépendance de l&rsquo;ordre des points :</strong> L&rsquo;utilisateur peut appeler <code>drawLine</code> avec <code>(x1, y1)</code> et <code>(x2, y2)</code> dans
+  n&rsquo;importe quel ordre.  <code>minX</code> et <code>maxX</code> (ou <code>minY</code> et <code>maxY</code>) garantissent que la boucle <code>for</code> itère toujours du plus
+  petit au plus grand, quel que soit l&rsquo;ordre des points d&rsquo;entrée. Sans ces variables, si <code>x1 &gt; x2</code>, la boucle <code>for</code> dans
   <code>drawCloserToHorizontal</code> ne s&rsquo;exécuterait pas, et aucune ligne ne serait dessinée.</p>
 </li>
 <li>
-<p><strong>Détermination des bornes de la ligne :</strong> Ces variables définissent les limites du segment de droite à dessiner. Elles
-  garantissent que tous les pixels entre les deux points spécifiés sont parcourus et potentiellement colorés. Sans ces
-  limites, la ligne pourrait être dessinée au-delà des points d&rsquo;extrémité souhaités ou être incomplète.</p>
+<p><strong>Détermination des bornes de la ligne :</strong> Ces variables définissent les limites du segment de droite à dessiner.
+  Elles garantissent que tous les pixels entre les deux points spécifiés sont parcourus et potentiellement colorés. Sans
+  ces limites, la ligne pourrait être dessinée au-delà des points d&rsquo;extrémité souhaités ou être incomplète.</p>
 </li>
 <li>
 <p><strong>Optimisation des performances :</strong> En déterminant les bornes minimales et maximales, la boucle <code>for</code> itère uniquement
@@ -328,25 +521,29 @@ méthodes <code>drawCloserToHorizontal</code> et <code>drawCloserToVertical</cod
 <h2 id="methode-drawpolyline">Méthode <code>drawPolyLine</code><a class="headerlink" href="#methode-drawpolyline" title="Permanent link">&para;</a></h2>
 <p>La méthode <code>drawPolyLine(int[] x, int[] y, Color color)</code> dessine une ligne brisée en reliant les points spécifiés par
 les tableaux <code>x</code> et <code>y</code> avec la couleur donnée. La boucle <code>for</code> dans cette méthode est au cœur de son fonctionnement :</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">x</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">x</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">drawLine</span><span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Voici une explication détaillée :</p>
 <ol type="1">
 <li>
-<p><strong>Initialisation :</strong> <code>int i = 1;</code>  La boucle commence à l&rsquo;indice 1, et non à 0.</p>
+<p><strong>Initialisation :</strong> <code>int i = 1;</code></p>
+<p>La boucle commence à l&rsquo;indice 1, et non à 0.</p>
 </li>
 <li>
-<p><strong>Condition :</strong> <code>i &lt; x.length;</code> La boucle continue tant que <code>i</code> est strictement inférieur à la longueur du tableau
-   <code>x</code>. Ceci est important, car la boucle accède aux éléments <code>x[i]</code> et <code>x[i-1]</code>.</p>
+<p><strong>Condition :</strong> <code>i &lt; x.length;</code> </p>
+<p>La boucle continue tant que <code>i</code> est strictement inférieur à la longueur du tableau <code>x</code>. Ceci est important, car la 
+   boucle accède aux éléments <code>x[i]</code> et <code>x[i-1]</code>.</p>
 </li>
 <li>
-<p><strong>Incrémentation :</strong> <code>i++;</code>  À chaque itération, <code>i</code> est incrémenté de 1.</p>
+<p><strong>Incrémentation :</strong> <code>i++;</code></p>
+<p>À chaque itération, <code>i</code> est incrémenté de 1.</p>
 </li>
 <li>
-<p><strong>Corps de la boucle :</strong> <code>drawLine(x[i - 1], y[i - 1], x[i], y[i], color);</code>  Le corps de la boucle appelle la méthode
-   <code>drawLine</code> pour tracer un segment entre deux points consécutifs de la ligne brisée. Plus précisément :</p>
+<p><strong>Corps de la boucle :</strong> <code>drawLine(x[i - 1], y[i - 1], x[i], y[i], color);</code>  </p>
+<p>Le corps de la boucle appelle la méthode <code>drawLine</code> pour tracer un segment entre deux points consécutifs de la 
+   ligne brisée. Plus précisément :</p>
 <ul>
 <li><code>x[i-1]</code> et <code>y[i-1]</code> sont les coordonnées du point précédent.</li>
 <li><code>x[i]</code> et <code>y[i]</code> sont les coordonnées du point actuel.</li>
@@ -363,12 +560,14 @@ comment :</p>
 </code></pre></div>
 <ol type="1">
 <li>
-<p><strong>Appel à <code>drawPolyLine</code> :</strong> La méthode appelle d&rsquo;abord <code>drawPolyLine</code> pour dessiner les côtés du polygone, sauf le
+<p><strong>Appel à <code>drawPolyLine</code> :</strong> </p>
+<p>La méthode appelle d&rsquo;abord <code>drawPolyLine</code> pour dessiner les côtés du polygone, sauf le
    dernier côté qui ferme le polygone.</p>
 </li>
 <li>
-<p><strong>Fermeture du polygone :</strong> Ensuite, elle appelle <code>drawLine</code> pour dessiner le dernier segment entre le dernier point
-   (<code>x[x.length - 1]</code>, <code>y[y.length - 1]</code>) et le premier point (<code>x[0]</code>, <code>y[0]</code>), fermant ainsi le polygone.</p>
+<p><strong>Fermeture du polygone :</strong> </p>
+<p>Ensuite, elle appelle <code>drawLine</code> pour dessiner le dernier segment entre le dernier point
+   <code>(x[x.length - 1], y[y.length - 1])</code> et le premier point <code>(x[0], y[0])</code>, fermant ainsi le polygone.</p>
 </li>
 </ol>
 <p>En combinant ces deux appels, <code>drawPolygon</code> dessine efficacement un polygone fermé en utilisant la fonctionnalité de
@@ -400,8 +599,8 @@ points.</p>
    <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">));</span><span class="w"></span>
 </code></pre></div>
    À chaque itération, <code>j</code> est calculé.  <code>j</code> représente la coordonnée y par rapport au centre du cercle. Le calcul est
-   basé sur le théorème de Pythagore (x² + y² = r²), où <code>i</code> est la coordonnée x, <code>j</code> est la coordonnée y et <code>radius</code> est
-   le rayon.</p>
+   basé sur le théorème de Pythagore (<span class="arithmatex">\(x^2 + y^2 = r^2\)</span>), où <code>i</code> est la coordonnée x, <code>j</code> est la coordonnée y et 
+   <code>radius</code> est le rayon.</p>
 </li>
 <li>
 <p><strong>Dessin des points par symétrie :</strong>
@@ -424,8 +623,8 @@ performances.</p>
 <hr />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em> 
-<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em>
+<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
 structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
 </div>
               

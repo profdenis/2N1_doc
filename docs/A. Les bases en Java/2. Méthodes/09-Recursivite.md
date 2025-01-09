@@ -9,9 +9,9 @@ La récursivité est basée sur deux principes fondamentaux :
 
 Prenons l'exemple de la suite de Fibonacci où :
 
-- \( F(0) = 0 \) (cas de base)
-- \( F(1) = 1 \) (cas de base)
-- \( F(n) = F(n-1) + F(n-2) \) pour \( n > 1 \) (cas récursif)
+- $F(0) = 0$ (cas de base)
+- $F(1) = 1$ (cas de base)
+- $F(n) = F(n-1) + F(n-2)$ pour $n > 1$ (cas récursif)
 
 ```java
 public class ExempleFibonacci {

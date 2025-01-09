@@ -158,7 +158,34 @@
     <ul class="current">
     </ul>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../02-main/">La classe Main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Package shapes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../Package%20shapes/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../Package%20shapes/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../Package%20shapes/03-lignes/">Classes VLine, HLine et Line</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../Package%20shapes/04-rectangle/">Classes Rectangle et Square</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../Package%20shapes/05-polygon/">Classes PolyLine et Polygon</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../Package%20shapes/06-cercle/">Classe Circle</a>
+                </li>
     </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">D. Menu</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/01-menu-v1/">La classe Menu, version 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/02-menu-v2/">La classe Menu, version 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/03-menu-v3/">La classe Menu, version 3</a>
                   </li>
               </ul>
       </div>
@@ -188,16 +215,29 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
-<ul>
-<li>Github: <a href="https://github.com/profdenis/Shapes">https://github.com/profdenis/Shapes</a></li>
-<li>HTTPS: <a href="https://github.com/profdenis/Shapes.git">https://github.com/profdenis/Shapes.git</a></li>
-<li>SSH: <code>git@github.com:profdenis/Shapes.git</code></li>
-</ul>
+<p>La version 2 de la classe <code>Main</code> a pour but de dessiner différentes formes sur une image, tout comme la version
+précédente, mais d&rsquo;une façon différente. Elle initialise une image, puis
+dessine des formes variées telles que des points, des lignes, des triangles, des rectangles, des carrés, des cercles et
+des polygones en utilisant leurs classes respectives et en spécifiant leurs propriétés comme la position, la taille et
+la couleur.</p>
+<p>Le processus de dessin est plus orienté objet et organisé par rapport à la version précédente. Dans la version 1, la
+classe <code>Shapes</code> gére toutes les opérations de dessin directement via des méthodes statiques, tandis que dans la version
+2, des classes distinctes pour chaque type de forme sont utilisées. Cela rend cette version plus modulaire et
+extensible. Les deux versions enregistrent ultimement l&rsquo;image résultante dans un fichier, mais la version 2 offre
+une meilleure structure de code et une meilleure maintenabilité.</p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em>
+<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
+structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
+</div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../../Version%201/03-image/" class="btn btn-neutral float-left" title="La classe Image"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../02-main/" class="btn btn-neutral float-right" title="La classe Main">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -226,6 +266,8 @@
     
       <span><a href="../../Version%201/03-image/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../02-main/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

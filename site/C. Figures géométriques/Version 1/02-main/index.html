@@ -148,6 +148,8 @@
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">La classe Main</a>
     <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#resultat-test1png">Résultat : test1.png</a>
+    </li>
     </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../03-image/">La classe Image</a>
@@ -158,7 +160,34 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../../Version%202/01-introduction/">Introduction</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%202/02-main/">La classe Main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Package shapes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/03-lignes/">Classes VLine, HLine et Line</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/04-rectangle/">Classes Rectangle et Square</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/05-polygon/">Classes PolyLine et Polygon</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Version%202/Package%20shapes/06-cercle/">Classe Circle</a>
+                </li>
     </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">D. Menu</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/01-menu-v1/">La classe Menu, version 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/02-menu-v2/">La classe Menu, version 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../D.%20Menu/03-menu-v3/">La classe Menu, version 3</a>
                   </li>
               </ul>
       </div>
@@ -188,6 +217,38 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="la-classe-main">La classe <code>Main</code><a class="headerlink" href="#la-classe-main" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Github: <a href="https://github.com/profdenis/Shapes/tree/master/src/v1/Main.java">Main.java</a></li>
+</ul>
+<details class="note">
+<summary>Code</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">v1</span><span class="p">;</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.Color</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawPoint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawHorizontalLine</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">BLUE</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawLine</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">RED</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawLine</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">GREEN</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawLine</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">YELLOW</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawLine</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">CYAN</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawTriangle</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawRectangle</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">MAGENTA</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawSquare</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">DARK_GRAY</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawCircle</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">ORANGE</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">x_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">y_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">310</span><span class="p">,</span><span class="w"> </span><span class="mi">335</span><span class="p">,</span><span class="w"> </span><span class="mi">370</span><span class="p">,</span><span class="w"> </span><span class="mi">340</span><span class="p">,</span><span class="w"> </span><span class="mi">399</span><span class="p">};</span><span class="w"></span>
+<span class="c1">//        Shapes.drawPolyLine(x_values, y_values, Color.PINK );</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawPolygon</span><span class="p">(</span><span class="n">x_values</span><span class="p">,</span><span class="w"> </span><span class="n">y_values</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">PINK</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">image</span><span class="p">.</span><span class="na">Save</span><span class="p">(</span><span class="s">&quot;test1.png&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</details>
 <p>Le code dans la classe <code>Main</code> utilise la classe <code>Shapes</code> pour dessiner différentes formes géométriques. Toutes les
 méthodes de la classe <code>Shapes</code> sont statiques, ce qui signifie qu&rsquo;elles appartiennent à la classe elle-même et non à une
 instance spécifique de la classe. C&rsquo;est pourquoi on appelle les méthodes directement avec <code>Shapes.nomDeLaMethode()</code> au
@@ -200,6 +261,8 @@ se prive des avantages de l&rsquo;encapsulation et de la possibilité d&rsquo;av
 différents.</p>
 <p>Il est important de noter que cette approche est une simplification pour l&rsquo;exemple et que les versions ultérieures du
 code, présentées plus tard dans le cours, utiliseront les principes de la POO de manière plus appropriée.</p>
+<h2 id="resultat-test1png">Résultat : <code>test1.png</code><a class="headerlink" href="#resultat-test1png" title="Permanent link">&para;</a></h2>
+<p><img alt="Résultat: test1.png" src="../../../images/test1.png" /></p>
 <hr />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
