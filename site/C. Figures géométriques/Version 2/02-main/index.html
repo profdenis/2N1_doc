@@ -188,6 +188,18 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 3</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%203/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%203/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%203/03-cercle/">Classe Circle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%203/04-polymorphisme/">Polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">D. Menu</span></p>
               <ul>
@@ -242,44 +254,46 @@
 <span class="w">        </span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Image</span><span class="p">(</span><span class="n">width</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">Point</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">BLUE</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">HLine</span><span class="w"> </span><span class="n">hline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HLine</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">RED</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">hline</span><span class="p">.</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">hline</span><span class="p">.</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">VLine</span><span class="w"> </span><span class="n">vline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VLine</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">),</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">PINK</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">vline</span><span class="p">.</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">vline</span><span class="p">.</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">Line</span><span class="w"> </span><span class="n">line1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Line</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">),</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">GREEN</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">line1</span><span class="p">.</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">line1</span><span class="p">.</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">Line</span><span class="w"> </span><span class="n">line2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Line</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">130</span><span class="p">),</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">MAGENTA</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">line2</span><span class="p">.</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">line2</span><span class="p">.</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">Triangle</span><span class="w"> </span><span class="n">triangle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Triangle</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">));</span><span class="w"></span>
-<span class="w">        </span><span class="n">triangle</span><span class="p">.</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">triangle</span><span class="p">.</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">Rectangle</span><span class="w"> </span><span class="n">rectangle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">),</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">MAGENTA</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">rectangle</span><span class="p">.</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">rectangle</span><span class="p">.</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">Square</span><span class="w"> </span><span class="n">square</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Square</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">GRAY</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">square</span><span class="p">.</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">square</span><span class="p">.</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">Circle</span><span class="w"> </span><span class="n">circle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Circle</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">),</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">ORANGE</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">circle</span><span class="p">.</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">circle</span><span class="p">.</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">Point</span><span class="o">[]</span><span class="w"> </span><span class="n">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">310</span><span class="p">),</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">335</span><span class="p">),</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">370</span><span class="p">),</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">340</span><span class="p">),</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">399</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">310</span><span class="p">),</span><span class="w"></span>
+<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">335</span><span class="p">),</span><span class="w"></span>
+<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">370</span><span class="p">),</span><span class="w"></span>
+<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">340</span><span class="p">),</span><span class="w"></span>
+<span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">399</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">};</span><span class="w"></span>
+<span class="c1">//        PolyLine polyLine = new PolyLine(points, Color.PINK);</span><span class="w"></span>
+<span class="c1">//        polyLine.Draw(image);</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">Polygon</span><span class="w"> </span><span class="n">polygon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">CYAN</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">polygon</span><span class="p">.</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">polygon</span><span class="p">.</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">image</span><span class="p">.</span><span class="na">Save</span><span class="p">(</span><span class="s">&quot;test2.png&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">image</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="s">&quot;test2.png&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -308,10 +322,10 @@
 </li>
 </ol>
 <p>Pour chaque forme, le code définit ses propriétés (position, taille, couleur) à l&rsquo;aide du constructeur ou des
-   méthodes setter. Ensuite, il appelle la méthode <code>Draw</code> sur chaque objet forme, en passant l&rsquo;objet <code>Image</code> comme
-   argument. Cette méthode <code>Draw</code> est responsable du dessin de la forme spécifique sur l&rsquo;image.</p>
+   méthodes setter. Ensuite, il appelle la méthode <code>draw</code> sur chaque objet forme, en passant l&rsquo;objet <code>Image</code> comme
+   argument. Cette méthode <code>draw</code> est responsable du dessin de la forme spécifique sur l&rsquo;image.</p>
 <ol start="3" type="1">
-<li><strong>Enregistrement de l&rsquo;image :</strong> Enfin, après avoir dessiné toutes les formes, le code appelle la méthode <code>Save</code> sur
+<li><strong>Enregistrement de l&rsquo;image :</strong> Enfin, après avoir dessiné toutes les formes, le code appelle la méthode <code>save</code> sur
    l&rsquo;objet <code>Image</code> pour enregistrer l&rsquo;image résultante dans un fichier nommé « test2.png ».</li>
 </ol>
 <p>L&rsquo;amélioration clé de <code>v2</code> par rapport à une version précédente potentielle (<code>v1</code>) est son approche orientée objet.

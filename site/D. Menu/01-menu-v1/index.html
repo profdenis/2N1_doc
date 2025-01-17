@@ -184,6 +184,18 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 3</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%203/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%203/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%203/03-cercle/">Classe Circle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%203/04-polymorphisme/">Polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">D. Menu</span></p>
               <ul class="current">
@@ -235,12 +247,15 @@
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
+
 <span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="n">showMenu</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
 <span class="w">            </span><span class="n">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">handleOption</span><span class="p">(</span><span class="n">option</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">showMenu</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -287,15 +302,16 @@ afficher le menu de façon répétée jusqu’à ce que l’utilisateur choisiss
 <ul>
 <li>C’est le point d’entrée du programme.</li>
 <li>Elle initialise une variable booléenne <code>done</code> à <code>false</code>.</li>
+<li>Elle crée un <code>Scanner</code> pour lire l’entrée de l’utilisateur.</li>
 <li>Elle entre dans une boucle <code>while</code> qui continue tant que <code>done</code> est <code>false</code>.</li>
 <li>À l’intérieur de la boucle :<ul>
 <li>Elle appelle <code>showMenu()</code> pour afficher les options du menu.</li>
-<li>Elle crée un <code>Scanner</code> pour lire l’entrée de l’utilisateur.</li>
 <li>Elle lit l’entrée de l’utilisateur et la stocke dans la variable <code>option</code>.</li>
 <li>Elle appelle <code>handleOption(option)</code> pour traiter l’option choisie par l’utilisateur. Le résultat (une valeur
   booléenne indiquant si l’utilisateur veut quitter) est stocké dans la variable <code>done</code>.</li>
 </ul>
 </li>
+<li>Elle ferme le <code>scanner</code>.</li>
 </ul>
 </li>
 <li>
@@ -330,7 +346,7 @@ structure. Toutes les informations ont été vérifiées, éditées et complét�
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%202/Package%20shapes/06-cercle/" class="btn btn-neutral float-left" title="Classe Circle"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%203/04-polymorphisme/" class="btn btn-neutral float-left" title="Polymorphisme"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../02-menu-v2/" class="btn btn-neutral float-right" title="La classe Menu, version 2">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -358,7 +374,7 @@ structure. Toutes les informations ont été vérifiées, éditées et complét�
         </span>
     
     
-      <span><a href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%202/Package%20shapes/06-cercle/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%203/04-polymorphisme/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../02-menu-v2/" style="color: #fcfcfc">Next &raquo;</a></span>

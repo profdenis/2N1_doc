@@ -186,6 +186,18 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 3</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/03-cercle/">Classe Circle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/04-polymorphisme/">Polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">D. Menu</span></p>
               <ul>
@@ -274,8 +286,8 @@
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">drawColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">drawColor</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">image</span><span class="p">.</span><span class="na">setPixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -298,7 +310,7 @@ y, ainsi que pour sa couleur de dessin.</p>
 <li><strong><code>setY(int y)</code></strong>: Une méthode setter qui définit la coordonnée y du point.</li>
 <li><strong><code>getDrawColor()</code></strong>: Une méthode getter qui renvoie la couleur de dessin du point.</li>
 <li><strong><code>setDrawColor(Color drawColor)</code></strong>: Une méthode setter qui définit la couleur de dessin du point.</li>
-<li><strong><code>Draw(Image image)</code></strong>: Une méthode qui dessine le point sur une image donnée en utilisant la couleur de dessin
+<li><strong><code>draw(Image image)</code></strong>: Une méthode qui dessine le point sur une image donnée en utilisant la couleur de dessin
   spécifiée.</li>
 </ul>
 <p>En résumé, la classe <code>Point</code> fournit une représentation simple d&rsquo;un point avec des coordonnées et une couleur, ainsi que

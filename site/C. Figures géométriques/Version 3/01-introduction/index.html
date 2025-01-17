@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>La classe Main - Cours de programmation OO 1</title>
+    <title>Introduction - Cours de programmation OO 1</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -15,8 +15,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "La classe Main";
-        var mkdocs_page_input_path = "C. Figures g\u00e9om\u00e9triques/Version 1/02-main.md";
+        var mkdocs_page_name = "Introduction";
+        var mkdocs_page_input_path = "C. Figures g\u00e9om\u00e9triques/Version 3/01-introduction.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -150,17 +150,13 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../../01-introduction/">Introduction</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" >Version 1</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../01-shapes/">La classe Shapes</a>
+                  <li class="toctree-l1"><a class="reference internal" >Version 1</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%201/01-shapes/">La classe Shapes</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">La classe Main</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#resultat-test1png">Résultat : test1.png</a>
-    </li>
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%201/02-main/">La classe Main</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../03-image/">La classe Image</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Version%201/03-image/">La classe Image</a>
                 </li>
     </ul>
                   </li>
@@ -188,15 +184,17 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" >Version 3</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Version%203/01-introduction/">Introduction</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Version 3</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Introduction</a>
+    <ul class="current">
+    </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../Version%203/02-point/">Classe Point</a>
+                <li class="toctree-l2"><a class="reference internal" href="../02-point/">Classe Point</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../Version%203/03-cercle/">Classe Circle</a>
+                <li class="toctree-l2"><a class="reference internal" href="../03-cercle/">Classe Circle</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../Version%203/04-polymorphisme/">Polymorphisme</a>
+                <li class="toctree-l2"><a class="reference internal" href="../04-polymorphisme/">Polymorphisme</a>
                 </li>
     </ul>
                   </li>
@@ -225,10 +223,10 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">C. Figures géométriques</li>
-          <li class="breadcrumb-item">Version 1</li>
-      <li class="breadcrumb-item active">La classe Main</li>
+          <li class="breadcrumb-item">Version 3</li>
+      <li class="breadcrumb-item active">Introduction</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/C. Figures géométriques/Version 1/02-main.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/C. Figures géométriques/Version 3/01-introduction.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -236,66 +234,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="la-classe-main">La classe <code>Main</code><a class="headerlink" href="#la-classe-main" title="Permanent link">&para;</a></h1>
-<ul>
-<li>Github: <a href="https://github.com/profdenis/Shapes/tree/master/src/v1/Main.java">Main.java</a></li>
-</ul>
-<details class="note">
-<summary>Code</summary>
-<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">v1</span><span class="p">;</span><span class="w"></span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.Color</span><span class="p">;</span><span class="w"></span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawPoint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawHorizontalLine</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">BLUE</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawLine</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">RED</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawLine</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">GREEN</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawLine</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">YELLOW</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawLine</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">CYAN</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawTriangle</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawRectangle</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">MAGENTA</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawSquare</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">DARK_GRAY</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawCircle</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">ORANGE</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">x_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span><span class="w"></span>
-<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">y_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">310</span><span class="p">,</span><span class="w"> </span><span class="mi">335</span><span class="p">,</span><span class="w"> </span><span class="mi">370</span><span class="p">,</span><span class="w"> </span><span class="mi">340</span><span class="p">,</span><span class="w"> </span><span class="mi">399</span><span class="p">};</span><span class="w"></span>
-<span class="c1">//        Shapes.drawPolyLine(x_values, y_values, Color.PINK );</span><span class="w"></span>
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">drawPolygon</span><span class="p">(</span><span class="n">x_values</span><span class="p">,</span><span class="w"> </span><span class="n">y_values</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">PINK</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">Shapes</span><span class="p">.</span><span class="na">image</span><span class="p">.</span><span class="na">Save</span><span class="p">(</span><span class="s">&quot;test1.png&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-</details>
-<p>Le code dans la classe <code>Main</code> utilise la classe <code>Shapes</code> pour dessiner différentes formes géométriques. Toutes les
-méthodes de la classe <code>Shapes</code> sont statiques, ce qui signifie qu&rsquo;elles appartiennent à la classe elle-même et non à une
-instance spécifique de la classe. C&rsquo;est pourquoi on appelle les méthodes directement avec <code>Shapes.nomDeLaMethode()</code> au
-lieu de créer un objet <code>Shapes</code> avec <code>Shapes monObjet = new Shapes();</code> puis appeler la méthode avec
-<code>monObjet.nomDeLaMethode()</code>.</p>
-<p>Utiliser uniquement des méthodes statiques dans une classe comme <code>Shapes</code> est contraire aux principes de la
-programmation orientée objet. L&rsquo;un des fondements de la POO est l&rsquo;utilisation d&rsquo;objets, qui combinent données (
-attributs) et comportement (méthodes). En rendant toutes les méthodes statiques, on ne crée pas d&rsquo;objets <code>Shapes</code> et on
-se prive des avantages de l&rsquo;encapsulation et de la possibilité d&rsquo;avoir plusieurs instances de <code>Shapes</code> avec des états
-différents.</p>
-<p>Il est important de noter que cette approche est une simplification pour l&rsquo;exemple et que les versions ultérieures du
-code, présentées plus tard dans le cours, utiliseront les principes de la POO de manière plus appropriée.</p>
-<h2 id="resultat-test1png">Résultat : <code>test1.png</code><a class="headerlink" href="#resultat-test1png" title="Permanent link">&para;</a></h2>
-<p><img alt="Résultat: test1.png" src="../../../images/test1.png" /></p>
+                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>Dans cette version, la classe <code>Shape</code> est une classe de base abstraite pour toutes les formes. Elle centralise les
+propriétés et les comportements communs à toutes les formes. Dans cet exemple, la propriété commune est la couleur de
+dessin (<code>drawColor</code>).</p>
+<p>Elle est déclarée abstraite pour deux raisons principales :</p>
+<ol type="1">
+<li>
+<p><strong>Impossibilité d&rsquo;instancier directement :</strong> Une forme &ldquo;générique&rdquo; n&rsquo;a pas de sens en soi. On ne peut pas dessiner
+   une &ldquo;forme&rdquo; sans plus de précisions. L&rsquo;abstraction empêche la création d&rsquo;objets <code>Shape</code> directement. On doit créer
+   des instances de classes concrètes comme <code>Point</code> ou <code>Circle</code>.</p>
+</li>
+<li>
+<p><strong>Définition d&rsquo;un contrat :</strong> La méthode <code>draw</code> est déclarée abstraite dans <code>Shape</code>. Cela oblige toutes les classes
+   dérivées (comme <code>Point</code> et <code>Circle</code>) à fournir leur propre implémentation de la méthode <code>draw</code>. Chaque forme doit
+   savoir se dessiner elle-même. C&rsquo;est ce qu&rsquo;on appelle un &ldquo;contrat&rdquo; : toute classe qui hérite de <code>Shape</code> s&rsquo;engage à
+   implémenter <code>draw</code>.</p>
+</li>
+</ol>
+<p>En résumé, <code>Shape</code> fournit un modèle commun pour les formes, gère les propriétés partagées, et impose aux formes
+concrètes de définir comment elles se dessinent.</p>
 <hr />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em> 
-<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
-structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em>
+  <strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
+  structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
 </div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../01-shapes/" class="btn btn-neutral float-left" title="La classe Shapes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../03-image/" class="btn btn-neutral float-right" title="La classe Image">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../Version%202/Package%20shapes/06-cercle/" class="btn btn-neutral float-left" title="Classe Circle"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../02-point/" class="btn btn-neutral float-right" title="Classe Point">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -322,10 +293,10 @@ structure. Toutes les informations ont été vérifiées, éditées et complét�
         </span>
     
     
-      <span><a href="../01-shapes/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../Version%202/Package%20shapes/06-cercle/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../03-image/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../02-point/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

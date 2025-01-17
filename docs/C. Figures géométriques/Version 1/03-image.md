@@ -6,7 +6,7 @@
 
     ```java
     package v1;
-    
+
     import javax.imageio.ImageIO;
     import java.awt.*;
     import java.awt.image.BufferedImage;
@@ -43,32 +43,32 @@
             this.height = height;
             this.backgroundColor = backgroundColor;
             bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-            Clear(this.backgroundColor);
+            clear(this.backgroundColor);
         }
     
-        public void Clear(Color clearColor) {
+        public void clear(Color clearColor) {
             for (int i = 0; i < width; i++) {
                 for (int j = 0; j < height; j++) {
-                    SetPixel(i, j, clearColor);
+                    setPixel(i, j, clearColor);
                 }
             }
         }
     
-        public Color GetPixel(int x, int y) {
+        public Color getPixel(int x, int y) {
             if (x >= 0 && x < this.width && y >= 0 && y < this.height) {
-                return GetPixel(x, y);
+                return getPixel(x, y);
             }
             // throw exception?
             return backgroundColor;
         }
     
-        public void SetPixel(int x, int y, Color drawColor) {
+        public void setPixel(int x, int y, Color drawColor) {
             if (x >= 0 && x < this.width && y >= 0 && y < this.height) {
                 bufferedImage.setRGB(x, y, drawColor.getRGB());
             }
         }
     
-        public void Save(String filename) {
+        public void save(String filename) {
             try {
                 File outputFile = new File(filename);
                 ImageIO.write(bufferedImage, "PNG", outputFile);
@@ -95,15 +95,15 @@ Voici les principaux aspects de la classe :
       * L'attribut `bufferedImage` est une instance de `java.awt.image.BufferedImage`, qui est la
         représentation sous-jacente de l'image en mémoire.
 
-* `Clear()`
+* `clear()`
       * Cette méthode remplit l'image avec la couleur spécifiée, permettant d'effacer le contenu précédent.
 
-* `GetPixel()` et `SetPixel()` 
+* `getPixel()` et `setPixel()` 
       * Ces méthodes permettent respectivement de lire et de modifier la couleur d'un pixel
         spécifique de l'image. La méthode `GetPixel()` retourne la couleur de fond par défaut si les coordonnées sont hors
         limites, au lieu de générer une erreur.
 
-* `Save()`
+* `save()`
       * Cette méthode enregistre l'image dans un fichier au format PNG. Elle gère les exceptions `IOException`
         qui pourraient survenir lors de l'écriture du fichier.
 

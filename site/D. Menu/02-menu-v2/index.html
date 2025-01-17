@@ -184,6 +184,18 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 3</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%203/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%203/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%203/03-cercle/">Classe Circle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../C.%20Figures%20g%C3%A9om%C3%A9triques/Version%203/04-polymorphisme/">Polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">D. Menu</span></p>
               <ul class="current">
@@ -235,12 +247,15 @@
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
+
 <span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="n">showMainMenu</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
 <span class="w">            </span><span class="n">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">handleMainMenuOption</span><span class="p">(</span><span class="n">option</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">showMainMenu</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -287,10 +302,15 @@
 <span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
 <span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;4&quot;</span><span class="p">:</span><span class="w"></span>
 <span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Vous voulez quitter !&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
 <span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
 <span class="w">            </span><span class="k">default</span><span class="p">:</span><span class="w"></span>
 <span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Option invalide. SVP choisir une option valide.&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// on doit fermer le scanner à 2 endroits parce qu&#39;on retourne à 2 endroits</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// exercice : modifier le code pour éviter de devoir fermer le scanner à 2 endroits</span><span class="w"></span>
+<span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 

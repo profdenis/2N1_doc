@@ -190,6 +190,18 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 3</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/03-cercle/">Classe Circle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/04-polymorphisme/">Polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">D. Menu</span></p>
               <ul>
@@ -267,9 +279,9 @@
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">points</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">points</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Line</span><span class="p">(</span><span class="n">points</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">points</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Line</span><span class="p">(</span><span class="n">points</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">points</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -278,7 +290,7 @@
 <p>La classe <code>PolyLine</code> représente une série de segments de ligne connectés. Elle prend en entrée un tableau d&rsquo;objets
 <code>Point</code>, qui définissent les sommets de la <em>&ldquo;polyligne&rdquo;</em> (ligne brisée, ou segmentée). Elle possède également une
 propriété <code>drawColor</code> pour spécifier la couleur des segments de ligne.</p>
-<p>La méthode <code>Draw</code> itère à travers le tableau <code>points</code>, dessinant un segment de <code>Line</code> entre chaque paire de points
+<p>La méthode <code>draw</code> itère à travers le tableau <code>points</code>, dessinant un segment de <code>Line</code> entre chaque paire de points
 consécutifs en utilisant la <code>drawColor</code> spécifiée. En effet, elle dessine une ligne de <code>points[0]</code> à <code>points[1]</code>, puis
 de <code>points[1]</code> à <code>points[2]</code>, et ainsi de suite, jusqu&rsquo;à ce que le dernier point soit atteint.</p>
 <h2 id="classe-polygon">Classe <code>Polygon</code><a class="headerlink" href="#classe-polygon" title="Permanent link">&para;</a></h2>
@@ -320,20 +332,20 @@ de <code>points[1]</code> à <code>points[2]</code>, et ainsi de suite, jusqu&rs
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">points</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">PolyLine</span><span class="p">(</span><span class="n">points</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">Line</span><span class="p">(</span><span class="n">points</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">points</span><span class="o">[</span><span class="n">points</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">PolyLine</span><span class="p">(</span><span class="n">points</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">Line</span><span class="p">(</span><span class="n">points</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">points</span><span class="o">[</span><span class="n">points</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </details>
 <p>La classe <code>Polygon</code> représente un polygone fermé. Comme <code>PolyLine</code>, elle utilise un tableau de <code>Point</code> pour ses sommets
 et une <code>drawColor</code> pour la couleur.</p>
-<p>La principale différence réside dans la méthode <code>Draw</code>.  <code>Polygon</code> dessine non seulement une ligne entre chaque paire de
+<p>La principale différence réside dans la méthode <code>draw</code>.  <code>Polygon</code> dessine non seulement une ligne entre chaque paire de
 points consécutifs (comme le fait <code>PolyLine</code>), mais elle dessine également une ligne fermant le polygone, entre le
 dernier point (<code>points[points.length - 1]</code>) et le premier point (<code>points[0]</code>). Elle utilise <code>PolyLine</code> pour dessiner les
 segments connectés et ensuite dessine explicitement la ligne fermante avec
-<code>new Line(points[0], points[points.length - 1], drawColor).Draw(image);</code>. Cela crée un polygone complet plutôt qu&rsquo;une
+<code>new Line(points[0], points[points.length - 1], drawColor).draw(image);</code>. Cela crée un polygone complet plutôt qu&rsquo;une
 simple ligne brisée.</p>
 <hr />
 <div class="admonition note">

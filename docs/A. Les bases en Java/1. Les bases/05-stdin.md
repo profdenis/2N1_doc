@@ -145,13 +145,13 @@ public class CalculatriceInteractive {
 
 ```java
 try{
-// Code pouvant générer une exception
+    // Code pouvant générer une exception
 } catch(Exception1 e) {
-// Gestion de l'exception 1
+    // Gestion de l'exception 1
 } catch(Exception2 e) {
-// Gestion de l'exception 2
+    // Gestion de l'exception 2
 } finally {
-// Code exécuté dans tous les cas
+    // Code exécuté dans tous les cas
 }
 ```
 

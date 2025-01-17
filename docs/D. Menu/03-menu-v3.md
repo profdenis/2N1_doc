@@ -16,6 +16,7 @@
     
     public class Menu {
     
+        // utilise un scanner static pour éviter de créer et de fermer un scanner à plusieurs reprises
         private static final Scanner scanner = new Scanner(System.in);
     
         public static void main(String[] args) {

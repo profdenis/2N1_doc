@@ -13,12 +13,15 @@
     
         public static void main(String[] args) {
             boolean done = false;
+            Scanner scanner = new Scanner(System.in);
+    
             while (!done) {
                 showMenu();
-                Scanner scanner = new Scanner(System.in);
                 String option = scanner.nextLine();
                 done = handleOption(option);
             }
+    
+            scanner.close();
         }
     
         public static void showMenu() {
@@ -50,6 +53,7 @@
         }
     }
     ```
+
 !!! warning "Avertissement"
 
     Cet exemple n'est pas un programme complet, mais une première version d'un exemple de structure de menu pouvant 
@@ -63,13 +67,14 @@ afficher le menu de façon répétée jusqu’à ce que l’utilisateur choisiss
 * **`main(String[] args)` :**
     * C’est le point d’entrée du programme.
     * Elle initialise une variable booléenne `done` à `false`.
+    * Elle crée un `Scanner` pour lire l’entrée de l’utilisateur.
     * Elle entre dans une boucle `while` qui continue tant que `done` est `false`.
     * À l’intérieur de la boucle :
         * Elle appelle `showMenu()` pour afficher les options du menu.
-        * Elle crée un `Scanner` pour lire l’entrée de l’utilisateur.
         * Elle lit l’entrée de l’utilisateur et la stocke dans la variable `option`.
         * Elle appelle `handleOption(option)` pour traiter l’option choisie par l’utilisateur. Le résultat (une valeur
           booléenne indiquant si l’utilisateur veut quitter) est stocké dans la variable `done`.
+    * Elle ferme le `scanner`.
 
 * **`showMenu()` :**
     * Cette méthode affiche simplement les options du menu à la console en utilisant `System.out.println()`.

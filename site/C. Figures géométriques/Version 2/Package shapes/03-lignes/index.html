@@ -192,6 +192,18 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 3</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/03-cercle/">Classe Circle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/04-polymorphisme/">Polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">D. Menu</span></p>
               <ul>
@@ -279,9 +291,9 @@
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="na">getX</span><span class="p">(),</span><span class="w"> </span><span class="n">start</span><span class="p">.</span><span class="na">getY</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="na">getX</span><span class="p">(),</span><span class="w"> </span><span class="n">start</span><span class="p">.</span><span class="na">getY</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -318,7 +330,7 @@ spécifiée à partir d&rsquo;un point donné. Voici une explication :</p>
 <li><code>setHeight(int height)</code>: Définit la hauteur de la ligne.</li>
 <li><code>getDrawColor()</code>: Renvoie la couleur de dessin de la ligne.</li>
 <li><code>setDrawColor(Color drawColor)</code>: Définit la couleur de dessin de la ligne.</li>
-<li><code>Draw(Image image)</code>: Il s&rsquo;agit de la méthode principale. Elle itère <code>height</code> fois, dessinant un seul <code>Point</code> à
+<li><code>draw(Image image)</code>: Il s&rsquo;agit de la méthode principale. Elle itère <code>height</code> fois, dessinant un seul <code>Point</code> à
   chaque position le long de la ligne verticale. La coordonnée x reste constante (à partir du point <code>start</code>), tandis
   que la coordonnée y est incrémentée à chaque itération. Chaque point est dessiné en utilisant la <code>drawColor</code>
   spécifiée sur l&rsquo;<code>Image</code> fournie.</li>
@@ -376,9 +388,9 @@ dans sa méthode <code>Draw</code>. Elle évite les calculs redondants en dessin
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">.</span><span class="na">getY</span><span class="p">(),</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">.</span><span class="na">getY</span><span class="p">(),</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -387,11 +399,11 @@ dans sa méthode <code>Draw</code>. Elle évite les calculs redondants en dessin
 <p>La classe <code>HLine</code> est très similaire à <code>VLine</code>, mais elle dessine une ligne horizontale. La principale différence réside
 dans la façon dont la méthode <code>Draw</code> fonctionne :</p>
 <ul>
-<li><strong><code>HLine.Draw(Image image)</code>:</strong> Au lieu d&rsquo;incrémenter la coordonnée y comme dans <code>VLine</code>, <code>HLine</code> incrémente la
+<li><strong><code>HLine.draw(Image image)</code>:</strong> Au lieu d&rsquo;incrémenter la coordonnée y comme dans <code>VLine</code>, <code>HLine</code> incrémente la
   coordonnée x. La boucle <code>for</code> parcourt la <code>largeur</code> de la ligne :</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">width</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">.</span><span class="na">getY</span><span class="p">(),</span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">.</span><span class="na">getY</span><span class="p">(),</span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>À chaque itération, un nouveau <code>Point</code> est créé avec :</p>
@@ -453,7 +465,7 @@ de la structure de la classe (champs, constructeurs, getters/setters) est quasim
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">drawColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">drawColor</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="c1">// ligne verticale, il faut éviter une division par 0</span><span class="w"></span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">end</span><span class="p">.</span><span class="na">getX</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="n">VLine</span><span class="w"> </span><span class="n">vline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VLine</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">end</span><span class="p">.</span><span class="na">getY</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start</span><span class="p">.</span><span class="na">getY</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">);</span><span class="w"></span>
@@ -478,7 +490,7 @@ de la structure de la classe (champs, constructeurs, getters/setters) est quasim
 
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minY</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">maxY</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">((</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">intercept</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">slope</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">setPixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
@@ -488,7 +500,7 @@ de la structure de la classe (champs, constructeurs, getters/setters) est quasim
 
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minX</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">maxX</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">intercept</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">SetPixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">image</span><span class="p">.</span><span class="na">setPixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
@@ -503,12 +515,12 @@ direction, pas seulement horizontales ou verticales. Voici les principales diff�
    les extrémités de la ligne.</p>
 </li>
 <li>
-<p><strong>Méthode <code>Draw</code> plus complexe :</strong> La méthode <code>Draw</code> de <code>Line</code> est nettement plus sophistiquée. Elle gère plusieurs
+<p><strong>Méthode <code>draw</code> plus complexe :</strong> La méthode <code>Draw</code> de <code>Line</code> est nettement plus sophistiquée. Elle gère plusieurs
    cas :</p>
 <ul>
 <li>
 <p><strong>Lignes verticales :</strong> Si <code>start.getX()</code> est égal à <code>end.getX()</code>, la ligne est verticale. Dans ce cas, la méthode
-  crée une instance de <code>VLine</code> et utilise sa méthode <code>Draw</code> pour dessiner la ligne. Ceci est une optimisation pour
+  crée une instance de <code>VLine</code> et utilise sa méthode <code>draw</code> pour dessiner la ligne. Ceci est une optimisation pour
   éviter une division par zéro dans le calcul de la pente.</p>
 </li>
 <li>
@@ -538,7 +550,7 @@ direction, pas seulement horizontales ou verticales. Voici les principales diff�
 </li>
 </ol>
 <p>En résumé, <code>Line</code> est une classe plus générale et flexible pour dessiner des lignes de toutes orientations. Sa méthode
-<code>Draw</code> utilise des optimisations et gère les cas particuliers pour garantir un dessin précis et efficace. L&rsquo;utilisation
+<code>draw</code> utilise des optimisations et gère les cas particuliers pour garantir un dessin précis et efficace. L&rsquo;utilisation
 de <code>VLine</code> pour les lignes verticales est un bon exemple de réutilisation de code et de gestion des cas limites.</p>
 <hr />
 <div class="admonition note">

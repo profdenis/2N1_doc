@@ -51,9 +51,9 @@
         }
     
     
-        public void Draw(Image image) {
+        public void draw(Image image) {
             for (int j = 0; j < height; j++) {
-                new Point(start.getX(), start.getY() + j, drawColor).Draw(image);
+                new Point(start.getX(), start.getY() + j, drawColor).draw(image);
             }
         }
     }
@@ -82,7 +82,7 @@ spécifiée à partir d'un point donné. Voici une explication :
     - `setHeight(int height)`: Définit la hauteur de la ligne.
     - `getDrawColor()`: Renvoie la couleur de dessin de la ligne.
     - `setDrawColor(Color drawColor)`: Définit la couleur de dessin de la ligne.
-    - `Draw(Image image)`: Il s'agit de la méthode principale. Elle itère `height` fois, dessinant un seul `Point` à
+    - `draw(Image image)`: Il s'agit de la méthode principale. Elle itère `height` fois, dessinant un seul `Point` à
       chaque position le long de la ligne verticale. La coordonnée x reste constante (à partir du point `start`), tandis
       que la coordonnée y est incrémentée à chaque itération. Chaque point est dessiné en utilisant la `drawColor`
       spécifiée sur l'`Image` fournie.
@@ -141,9 +141,9 @@ dans sa méthode `Draw`. Elle évite les calculs redondants en dessinant point p
         }
     
     
-        public void Draw(Image image) {
+        public void draw(Image image) {
             for (int i = 0; i < width; i++) {
-                new Point(start.getX() + i, start.getY(), drawColor).Draw(image);
+                new Point(start.getX() + i, start.getY(), drawColor).draw(image);
             }
         }
     }
@@ -152,12 +152,12 @@ dans sa méthode `Draw`. Elle évite les calculs redondants en dessinant point p
 La classe `HLine` est très similaire à `VLine`, mais elle dessine une ligne horizontale. La principale différence réside
 dans la façon dont la méthode `Draw` fonctionne :
 
-* **`HLine.Draw(Image image)`:** Au lieu d'incrémenter la coordonnée y comme dans `VLine`, `HLine` incrémente la
+* **`HLine.draw(Image image)`:** Au lieu d'incrémenter la coordonnée y comme dans `VLine`, `HLine` incrémente la
   coordonnée x. La boucle `for` parcourt la `largeur` de la ligne :
 
 ```java
 for(int i = 0; i<width; i++) {
-        new Point(start.getX() + i, start.getY(),drawColor).Draw(image);
+        new Point(start.getX() + i, start.getY(),drawColor).draw(image);
 }
 ```
 
@@ -224,7 +224,7 @@ de la structure de la classe (champs, constructeurs, getters/setters) est quasim
             this.drawColor = drawColor;
         }
     
-        public void Draw(Image image) {
+        public void draw(Image image) {
             // ligne verticale, il faut éviter une division par 0
             if (start.getX() == end.getX()) {
                 VLine vline = new VLine(start, Math.abs(end.getY() - start.getY()) + 1, drawColor);
@@ -249,7 +249,7 @@ de la structure de la classe (champs, constructeurs, getters/setters) est quasim
     
             for (int y = minY; y <= maxY; y++) {
                 int x = (int) Math.round((y - intercept) / slope);
-                image.SetPixel(x, y, color);
+                image.setPixel(x, y, color);
             }
         }
     
@@ -259,7 +259,7 @@ de la structure de la classe (champs, constructeurs, getters/setters) est quasim
     
             for (int x = minX; x <= maxX; x++) {
                 int y = (int) Math.round(slope * x + intercept);
-                image.SetPixel(x, y, color);
+                image.setPixel(x, y, color);
             }
         }
     
@@ -272,11 +272,11 @@ direction, pas seulement horizontales ou verticales. Voici les principales diff�
 1. **Champs :** Au lieu d'une `hauteur` ou d'une `largeur`, `Line` possède deux points : `start` et `end`, qui définissent
    les extrémités de la ligne.
 
-2. **Méthode `Draw` plus complexe :** La méthode `Draw` de `Line` est nettement plus sophistiquée. Elle gère plusieurs
+2. **Méthode `draw` plus complexe :** La méthode `Draw` de `Line` est nettement plus sophistiquée. Elle gère plusieurs
    cas :
 
     * **Lignes verticales :** Si `start.getX()` est égal à `end.getX()`, la ligne est verticale. Dans ce cas, la méthode
-      crée une instance de `VLine` et utilise sa méthode `Draw` pour dessiner la ligne. Ceci est une optimisation pour
+      crée une instance de `VLine` et utilise sa méthode `draw` pour dessiner la ligne. Ceci est une optimisation pour
       éviter une division par zéro dans le calcul de la pente.
 
     * **Calcul de la pente et de l'ordonnée à l'origine :** Si la ligne n'est pas verticale, la méthode calcule la
@@ -298,7 +298,7 @@ direction, pas seulement horizontales ou verticales. Voici les principales diff�
       proche. Enfin, la méthode `SetPixel` de l'objet `Image` est appelée pour dessiner chaque point de la ligne.
 
 En résumé, `Line` est une classe plus générale et flexible pour dessiner des lignes de toutes orientations. Sa méthode
-`Draw` utilise des optimisations et gère les cas particuliers pour garantir un dessin précis et efficace. L'utilisation
+`draw` utilise des optimisations et gère les cas particuliers pour garantir un dessin précis et efficace. L'utilisation
 de `VLine` pour les lignes verticales est un bon exemple de réutilisation de code et de gestion des cas limites.
 
 

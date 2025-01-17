@@ -50,22 +50,22 @@
             this.drawColor = drawColor;
         }
     
-        public void Draw(Image image) {
+        public void draw(Image image) {
             int cos45 = (int) Math.round(radius * Math.cos(Math.PI / 4));
     
             for (int i = 0; i <= cos45; i++) {
                 int j = (int) Math.round(Math.sqrt(radius * radius - i * i));
-                image.SetPixel(center.getX() + i, center.getY() + j, drawColor); // point 1
-                image.SetPixel(center.getX() - i, center.getY() + j, drawColor); // point 2: symétrie du point 1 par rapport à l'axe Y
+                image.setPixel(center.getX() + i, center.getY() + j, drawColor); // point 1
+                image.setPixel(center.getX() - i, center.getY() + j, drawColor); // point 2: symétrie du point 1 par rapport à l'axe Y
     
-                image.SetPixel(center.getX() + i, center.getY() - j, drawColor); // point 3: symétrie du point 1 par rapport à l'axe X
-                image.SetPixel(center.getX() - i, center.getY() - j, drawColor); // point 4: symétrie du point 3 par rapport à l'axe Y
+                image.setPixel(center.getX() + i, center.getY() - j, drawColor); // point 3: symétrie du point 1 par rapport à l'axe X
+                image.setPixel(center.getX() - i, center.getY() - j, drawColor); // point 4: symétrie du point 3 par rapport à l'axe Y
     
-                image.SetPixel(center.getX() + j, center.getY() + i, drawColor); // point 5: symétrie du point 1 par rapport à la diagonale 45°
-                image.SetPixel(center.getX() + j, center.getY() - i, drawColor); // point 6: symétrie du point 5 par rapport à l'acenter.getX()e X
+                image.setPixel(center.getX() + j, center.getY() + i, drawColor); // point 5: symétrie du point 1 par rapport à la diagonale 45°
+                image.setPixel(center.getX() + j, center.getY() - i, drawColor); // point 6: symétrie du point 5 par rapport à l'acenter.getX()e X
     
-                image.SetPixel(center.getX() - j, center.getY() + i, drawColor); // point 7: symétrie du point 5 par rapport à l'axe Y
-                image.SetPixel(center.getX() - j, center.getY() - i, drawColor); // point 8: symétrie du point 7 par rapport à l'axe X
+                image.setPixel(center.getX() - j, center.getY() + i, drawColor); // point 7: symétrie du point 5 par rapport à l'axe Y
+                image.setPixel(center.getX() - j, center.getY() - i, drawColor); // point 8: symétrie du point 7 par rapport à l'axe X
             }
         }
     }
@@ -75,18 +75,18 @@ La classe `Circle` représente un cercle et fournit des méthodes pour le dessin
 `Draw` :
 
 ```java
-public void Draw(Image image) {
+public void draw(Image image) {
     int cos45 = (int) Math.round(radius * Math.cos(Math.PI / 4));
 
     for (int i = 0; i <= cos45; i++) {
         int j = (int) Math.round(Math.sqrt(radius * radius - i * i));
-        image.SetPixel(center.getX() + i, center.getY() + j, drawColor); // point 1
+        image.setPixel(center.getX() + i, center.getY() + j, drawColor); // point 1
         // ... autres points
     }
 }
 ```
 
-La méthode `Draw` prend un objet `Image` en paramètre, sur lequel le cercle sera dessiné. Elle utilise un algorithme
+La méthode `draw` prend un objet `Image` en paramètre, sur lequel le cercle sera dessiné. Elle utilise un algorithme
 simple pour dessiner le cercle point par point en exploitant les symétries du cercle :
 
 1. **Calcul de `cos45`:**  `cos45` est utilisé pour optimiser la boucle. Il représente la distance horizontale ou
@@ -101,7 +101,7 @@ simple pour dessiner le cercle point par point en exploitant les symétries du c
    rôle de x et `j` celui de y.
 
 4. **Dessin des points :** Les lignes suivantes dessinent 8 points symétriques sur l'image en utilisant
-   `image.SetPixel()`. Chaque appel à `SetPixel()` prend les coordonnées x et y du point et la couleur `drawColor` du
+   `image.setPixel()`. Chaque appel à `setPixel()` prend les coordonnées x et y du point et la couleur `drawColor` du
    cercle. Les 8 points sont calculés comme suit :
     * **Point 1:** `(x + i, y + j)` - Point initial dans le premier octant
     * **Point 2:** `(x - i, y + j)` - Symétrique du point 1 par rapport à l'axe Y
@@ -112,7 +112,7 @@ simple pour dessiner le cercle point par point en exploitant les symétries du c
     * **Point 7:** `(x - j, y + i)` - Symétrique du point 5 par rapport à l'axe Y
     * **Point 8:** `(x - j, y - i)` - Symétrique du point 7 par rapport à l'axe X
 
-En dessinant ces 8 points à chaque itération, la méthode `Draw` dessine efficacement un cercle complet.
+En dessinant ces 8 points à chaque itération, la méthode `draw` dessine efficacement un cercle complet.
 
 
 

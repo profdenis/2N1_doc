@@ -190,6 +190,18 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" >Version 3</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/01-introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/02-point/">Classe Point</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/03-cercle/">Classe Circle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Version%203/04-polymorphisme/">Polymorphisme</a>
+                </li>
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">D. Menu</span></p>
               <ul>
@@ -287,11 +299,11 @@
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">drawColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">drawColor</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">VLine</span><span class="p">(</span><span class="n">topLeft</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">HLine</span><span class="p">(</span><span class="n">topLeft</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">VLine</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">topLeft</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">topLeft</span><span class="p">.</span><span class="na">getY</span><span class="p">()),</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">HLine</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">topLeft</span><span class="p">.</span><span class="na">getX</span><span class="p">(),</span><span class="w"> </span><span class="n">topLeft</span><span class="p">.</span><span class="na">getY</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">height</span><span class="p">),</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">VLine</span><span class="p">(</span><span class="n">topLeft</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">HLine</span><span class="p">(</span><span class="n">topLeft</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">VLine</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">topLeft</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">topLeft</span><span class="p">.</span><span class="na">getY</span><span class="p">()),</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">HLine</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">topLeft</span><span class="p">.</span><span class="na">getX</span><span class="p">(),</span><span class="w"> </span><span class="n">topLeft</span><span class="p">.</span><span class="na">getY</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">height</span><span class="p">),</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -323,7 +335,7 @@ code :</p>
 <li><code>setHeight(int height)</code>: Définit la hauteur du rectangle.</li>
 <li><code>getDrawColor()</code>: Renvoie la couleur de dessin du rectangle.</li>
 <li><code>setDrawColor(Color drawColor)</code>: Définit la couleur de dessin du rectangle.</li>
-<li><code>Draw(Image image)</code>: Cette méthode dessine le rectangle sur l&rsquo;image donnée. Pour ce faire, elle dessine quatre
+<li><code>draw(Image image)</code>: Cette méthode dessine le rectangle sur l&rsquo;image donnée. Pour ce faire, elle dessine quatre
   lignes :
   deux verticales et deux horizontales, à l&rsquo;aide des classes <code>VLine</code> et <code>HLine</code> (probablement définies ailleurs dans le
   code). Elle utilise la <code>drawColor</code> du rectangle pour les lignes.</li>
@@ -379,9 +391,9 @@ image en utilisant ses dimensions et sa couleur définies.</p>
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">drawColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">drawColor</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="c1">//noinspection SuspiciousNameCombination</span><span class="w"></span>
-<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">(</span><span class="n">topLeft</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">(</span><span class="n">topLeft</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">drawColor</span><span class="p">).</span><span class="na">draw</span><span class="p">(</span><span class="n">image</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -408,8 +420,8 @@ clés :</p>
 <ul>
 <li><code>getTopLeft()</code>, <code>setTopLeft(Point topLeft)</code>, <code>getWidth()</code>, <code>setWidth(int width)</code>, <code>getDrawColor()</code>, et
   <code>setDrawColor(Color drawColor)</code>: Fonctionnent de la même manière que dans <code>Rectangle</code>.</li>
-<li><code>Draw(Image image)</code>: Cette méthode dessine le carré sur l&rsquo;image donnée. <strong>Au lieu de dessiner quatre lignes
-  individuelles, elle utilise la méthode <code>Draw()</code> de la classe <code>Rectangle</code> en lui passant la largeur pour à la fois la
+<li><code>draw(Image image)</code>: Cette méthode dessine le carré sur l&rsquo;image donnée. <strong>Au lieu de dessiner quatre lignes
+  individuelles, elle utilise la méthode <code>draw()</code> de la classe <code>Rectangle</code> en lui passant la largeur pour à la fois la
   largeur et la hauteur, dessinant ainsi un carré.</strong> C&rsquo;est une différence importante dans l&rsquo;implémentation.</li>
 </ul>
 <p>En résumé, puisqu&rsquo;un carré est un rectangle avec la contrainte supplémentaire que la hauteur et la largeur sont égales,

@@ -1,6 +1,6 @@
 # 🔸7🔸Peut-on modifier la valeur à l'intérieur d'un Integer ?
 
-Non, il est impossible de modifier la valeur à l'intérieur d'un `Integer` car la classe Integer est immuable 
+Non, il est impossible de modifier la valeur à l'intérieur d'un `Integer` car la classe `Integer` est immuable 
 (*immutable*) en Java[1][5]. Cela signifie que lorsqu'un objet de type `Integer` est créé, sa valeur ne peut plus être 
 modifiée.
 

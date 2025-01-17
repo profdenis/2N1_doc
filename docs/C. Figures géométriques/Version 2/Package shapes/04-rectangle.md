@@ -61,11 +61,11 @@
             this.drawColor = drawColor;
         }
     
-        public void Draw(Image image) {
-            new VLine(topLeft, height, drawColor).Draw(image);
-            new HLine(topLeft, width, drawColor).Draw(image);
-            new VLine(new Point(topLeft.getX() + width, topLeft.getY()), height, drawColor).Draw(image);
-            new HLine(new Point(topLeft.getX(), topLeft.getY() + height), width, drawColor).Draw(image);
+        public void draw(Image image) {
+            new VLine(topLeft, height, drawColor).draw(image);
+            new HLine(topLeft, width, drawColor).draw(image);
+            new VLine(new Point(topLeft.getX() + width, topLeft.getY()), height, drawColor).draw(image);
+            new HLine(new Point(topLeft.getX(), topLeft.getY() + height), width, drawColor).draw(image);
         }
     }
     ```
@@ -98,7 +98,7 @@ code :
 * `setHeight(int height)`: Définit la hauteur du rectangle.
 * `getDrawColor()`: Renvoie la couleur de dessin du rectangle.
 * `setDrawColor(Color drawColor)`: Définit la couleur de dessin du rectangle.
-* `Draw(Image image)`: Cette méthode dessine le rectangle sur l'image donnée. Pour ce faire, elle dessine quatre
+* `draw(Image image)`: Cette méthode dessine le rectangle sur l'image donnée. Pour ce faire, elle dessine quatre
   lignes :
   deux verticales et deux horizontales, à l'aide des classes `VLine` et `HLine` (probablement définies ailleurs dans le
   code). Elle utilise la `drawColor` du rectangle pour les lignes.
@@ -157,9 +157,9 @@ image en utilisant ses dimensions et sa couleur définies.
             this.drawColor = drawColor;
         }
     
-        public void Draw(Image image) {
+        public void draw(Image image) {
             //noinspection SuspiciousNameCombination
-            new Rectangle(topLeft, width, width, drawColor).Draw(image);
+            new Rectangle(topLeft, width, width, drawColor).draw(image);
         }
     }
     ```
@@ -189,8 +189,8 @@ clés :
 
 * `getTopLeft()`, `setTopLeft(Point topLeft)`, `getWidth()`, `setWidth(int width)`, `getDrawColor()`, et
   `setDrawColor(Color drawColor)`: Fonctionnent de la même manière que dans `Rectangle`.
-* `Draw(Image image)`: Cette méthode dessine le carré sur l'image donnée. **Au lieu de dessiner quatre lignes
-  individuelles, elle utilise la méthode `Draw()` de la classe `Rectangle` en lui passant la largeur pour à la fois la
+* `draw(Image image)`: Cette méthode dessine le carré sur l'image donnée. **Au lieu de dessiner quatre lignes
+  individuelles, elle utilise la méthode `draw()` de la classe `Rectangle` en lui passant la largeur pour à la fois la
   largeur et la hauteur, dessinant ainsi un carré.** C'est une différence importante dans l'implémentation.
 
 En résumé, puisqu'un carré est un rectangle avec la contrainte supplémentaire que la hauteur et la largeur sont égales,

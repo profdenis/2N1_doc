@@ -13,12 +13,15 @@
     
         public static void main(String[] args) {
             boolean done = false;
+            Scanner scanner = new Scanner(System.in);
+    
             while (!done) {
                 showMainMenu();
-                Scanner scanner = new Scanner(System.in);
                 String option = scanner.nextLine();
                 done = handleMainMenuOption(option);
             }
+    
+            scanner.close();
         }
     
         public static void showMainMenu() {
@@ -65,10 +68,15 @@
                     break;
                 case "4":
                     System.out.println("Vous voulez quitter !");
+                    scanner.close();
                     return true;
                 default:
                     System.out.println("Option invalide. SVP choisir une option valide.");
             }
+
+            // on doit fermer le scanner à 2 endroits parce qu'on retourne à 2 endroits
+            // exercice : modifier le code pour éviter de devoir fermer le scanner à 2 endroits
+            scanner.close();
             return false;
         }
     

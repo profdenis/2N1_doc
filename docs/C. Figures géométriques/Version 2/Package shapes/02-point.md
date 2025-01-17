@@ -51,8 +51,8 @@
             this.drawColor = drawColor;
         }
     
-        public void Draw(Image image) {
-            image.SetPixel(x, y, drawColor);
+        public void draw(Image image) {
+            image.setPixel(x, y, drawColor);
         }
     }
     ```
@@ -76,7 +76,7 @@ Voici une explication des différents éléments de la classe :
 * **`setY(int y)`**: Une méthode setter qui définit la coordonnée y du point.
 * **`getDrawColor()`**: Une méthode getter qui renvoie la couleur de dessin du point.
 * **`setDrawColor(Color drawColor)`**: Une méthode setter qui définit la couleur de dessin du point.
-* **`Draw(Image image)`**: Une méthode qui dessine le point sur une image donnée en utilisant la couleur de dessin
+* **`draw(Image image)`**: Une méthode qui dessine le point sur une image donnée en utilisant la couleur de dessin
   spécifiée.
 
 En résumé, la classe `Point` fournit une représentation simple d'un point avec des coordonnées et une couleur, ainsi que
