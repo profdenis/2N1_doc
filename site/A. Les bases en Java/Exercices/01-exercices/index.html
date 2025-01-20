@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>🔸7🔸Peut-on modifier la valeur à l&rsquo;intérieur d&rsquo;un Integer ? - Cours de programmation OO 1</title>
+    <title>Exercices, partie 1 - Cours de programmation OO 1</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -15,8 +15,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "\ud83d\udd387\ud83d\udd38Peut-on modifier la valeur \u00e0 l\u0026rsquo;int\u00e9rieur d\u0026rsquo;un Integer ?";
-        var mkdocs_page_input_path = "A. Les bases en Java/2. M\u00e9thodes/07-Integer.md";
+        var mkdocs_page_name = "Exercices, partie 1";
+        var mkdocs_page_input_path = "A. Les bases en Java/Exercices/01-exercices.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -58,21 +58,15 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" >2. Méthodes</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../06-Methodes/">🔸6🔸Méthodes</a>
+                  <li class="toctree-l1"><a class="reference internal" >2. Méthodes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20M%C3%A9thodes/06-Methodes/">🔸6🔸Méthodes</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">🔸7🔸Peut-on modifier la valeur à l&rsquo;intérieur d&rsquo;un Integer ?</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#alternatives">Alternatives</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#citations">Citations</a>
-    </li>
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20M%C3%A9thodes/07-Integer/">🔸7🔸Peut-on modifier la valeur à l&rsquo;intérieur d&rsquo;un Integer ?</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../08-Purete_d_une_methode/">🔸8🔸Pureté d&rsquo;une méthode</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20M%C3%A9thodes/08-Purete_d_une_methode/">🔸8🔸Pureté d&rsquo;une méthode</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../09-Recursivite/">🔸9🔸Récursivité</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../2.%20M%C3%A9thodes/09-Recursivite/">🔸9🔸Récursivité</a>
                 </li>
     </ul>
                   </li>
@@ -92,9 +86,13 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" >Exercices</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Exercices/01-exercices/">Exercices, partie 1</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Exercices</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Exercices, partie 1</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#questions">Questions</a>
+    </li>
+    </ul>
                 </li>
     </ul>
                   </li>
@@ -233,10 +231,10 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">A. Les bases en Java</li>
-          <li class="breadcrumb-item">2. Méthodes</li>
-      <li class="breadcrumb-item active">🔸7🔸Peut-on modifier la valeur à l&rsquo;intérieur d&rsquo;un Integer ?</li>
+          <li class="breadcrumb-item">Exercices</li>
+      <li class="breadcrumb-item active">Exercices, partie 1</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/A. Les bases en Java/2. Méthodes/07-Integer.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/profdenis/2N1_doc/edit/master/docs/A. Les bases en Java/Exercices/01-exercices.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -244,67 +242,87 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="7peut-on-modifier-la-valeur-a-linterieur-dun-integer">🔸7🔸Peut-on modifier la valeur à l&rsquo;intérieur d&rsquo;un Integer ?<a class="headerlink" href="#7peut-on-modifier-la-valeur-a-linterieur-dun-integer" title="Permanent link">&para;</a></h1>
-<p>Non, il est impossible de modifier la valeur à l&rsquo;intérieur d&rsquo;un <code>Integer</code> car la classe <code>Integer</code> est immuable 
-(<em>immutable</em>) en Java[1][5]. Cela signifie que lorsqu&rsquo;un objet de type <code>Integer</code> est créé, sa valeur ne peut plus être 
-modifiée.</p>
-<h2 id="alternatives">Alternatives<a class="headerlink" href="#alternatives" title="Permanent link">&para;</a></h2>
-<p>Pour gérer des entiers modifiables, il existe deux solutions principales :</p>
-<p><strong>Utiliser AtomicInteger</strong> :</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.concurrent.atomic.AtomicInteger</span><span class="p">;</span><span class="w"></span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExempleAtomicInteger</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">incrementer</span><span class="p">(</span><span class="n">AtomicInteger</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">nombre</span><span class="p">.</span><span class="na">incrementAndGet</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">AtomicInteger</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AtomicInteger</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">incrementer</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">.</span><span class="na">get</span><span class="p">());</span><span class="w"> </span><span class="c1">// Affiche 6</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p><strong>Créer une classe wrapper personnalisée</strong> :</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NombreModifiable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">NombreModifiable</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setValeur</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nouvelleValeur</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nouvelleValeur</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getValeur</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">valeur</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>Cette limitation des Integer est intentionnelle et fait partie de la conception de Java[2]. Quand on tente de modifier
-un Integer, Java crée en fait un nouvel objet plutôt que de modifier l&rsquo;existant[4].</p>
-<h2 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>[1] https://www.geeksforgeeks.org/how-to-pass-integer-by-reference-in-java/</li>
-<li>[2] https://namekdev.net/2012/07/immutability-of-java-integer/</li>
-<li>[3] https://www.scaler.com/topics/integer-class-in-java/</li>
-<li>[4] https://stackoverflow.com/questions/26185527/how-can-i-change-integer-value-when-it-is-an-argument-like-change-arrays-value/26185597</li>
-<li>[5] https://www.geeksforgeeks.org/primitive-wrapper-classes-are-immutable-in-java/</li>
+                <h1 id="exercices-partie-1">Exercices, partie 1<a class="headerlink" href="#exercices-partie-1" title="Permanent link">&para;</a></h1>
+<p>Pour chacune des questions suivantes, créez une méthode statique qui fait ce qui est décrit, et testez votre méthode
+dans un <code>main</code> . Vous pouvez mettre toutes les méthodes dans la même classe. Vous pouvez tester une méthode à la fois
+dans le <code>main</code>.</p>
+<h2 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h2>
+<ol type="1">
+<li>Calculer et afficher la valeur absolue d&rsquo;un nombre entré par l&rsquo;utilisateur.</li>
+<li>Déterminer si le nombre <em>entier</em> entré par l&rsquo;utilisateur est pair ou impair.</li>
+<li>Lire trois nombres et imprimer le plus petit de ces trois nombres.</li>
+<li>Calculer le salaire total d&rsquo;un employé. On lit en entrée les données concernant son salaire horaire et le nombre
+   d&rsquo;heures travaillées. Si l&rsquo;employé a travaillé plus de 40 heures, les heures supplémentaires sont
+   payées à 1.5 fois le salaire horaire.</li>
+<li>Lire trois nombres positifs représentant la longueur des côtés d&rsquo;un triangle. Imprimer :<ul>
+<li>&ldquo;Scalène&rdquo; si les trois côtés sont inégaux</li>
+<li>&ldquo;Isocèle&rdquo; si deux des côtés sont égaux</li>
+<li>&ldquo;Équilatéral&rdquo; si les trois côtés sont égaux</li>
 </ul>
-<hr />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em> 
-<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
-structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
-</div>
+</li>
+<li>Un professeur vous fournit trois notes calculées sur 100. Calculer la moyenne et imprimer échec si la note finale est
+   inférieure à 60/100. Dans le cas contraire, imprimer la note obtenue par l&rsquo;étudiant.</li>
+<li>Lire en entrée une note finale d&rsquo;un cours. Si la note est plus petite que 0, ou si la note est plus grande que 100,
+   alors afficher &ldquo;Cette note est invalide&rdquo; et terminer la fonction. Si la note est valide, alors vous devez afficher
+   une lettre correspondant à la note selon les conditions suivantes :<ul>
+<li><strong>E</strong> : plus petite que 60</li>
+<li><strong>D</strong> : de 60 à moins que 70</li>
+<li><strong>C</strong> : de 70 à moins que 80</li>
+<li><strong>B</strong> : de 80 à moins que 90</li>
+<li><strong>A</strong> : 90 ou plus</li>
+</ul>
+</li>
+<li>Vous devez lire un nombre entre 1 et 10 inclusivement.<ul>
+<li>Si le nombre n&rsquo;est pas dans cet intervalle, alors afficher <em>&ldquo;invalide&rdquo;</em>.</li>
+<li>Si le nombre est valide, alors afficher <em>&ldquo;valide&rdquo;</em>.</li>
+</ul>
+</li>
+<li>Vous devez lire un nombre entre 1 et 10 inclusivement.<ul>
+<li>Si le nombre n&rsquo;est pas dans cet intervalle, alors afficher <em>&ldquo;invalide&rdquo;</em> et demander le nombre à nouveau. Vous
+  devez vous assurer que le nombre est valide avant de continuer à la prochaine étape. Il n&rsquo;y aucune limite sur
+  le nombre d&rsquo;essais incorrects.</li>
+<li>Si le nombre est valide, alors afficher <em>&ldquo;valide&rdquo;</em>.</li>
+</ul>
+</li>
+<li>Vous devez lire un nombre entre 1 et 10 inclusivement.<ul>
+<li>Si le nombre n&rsquo;est pas dans cet intervalle, alors afficher <em>&ldquo;invalide&rdquo;</em> et demander le nombre à nouveau. Vous
+  devez vous assurer que le nombre est valide avant de continuer à la prochaine étape. Il y a une limite de 3 essais
+  incorrects.</li>
+<li>Si le nombre maximal d&rsquo;essais incorrects a été atteint, alors afficher <em>&ldquo;Nombre maximal d&rsquo;essais atteint.&rdquo;</em> et la
+  méthode doit se terminer.</li>
+<li>Si le nombre est valide, alors afficher <em>&ldquo;valide&rdquo;</em>.</li>
+</ul>
+</li>
+<li>Vous devez lire un nombre <em>entier</em> et l&rsquo;afficher à l&rsquo;envers. Par exemple, l&rsquo;utilisateur saisit <code>123456</code> et le
+    programme affiche <code>654321</code>. Pour cet exercice, vous ne pouvez pas inverser une chaîne de caractères qui représente
+    le nombre, vous devez utiliser un <code>int</code> et utiliser la division et le modulo sur ce <code>int</code>.</li>
+<li>Vous devez lire un nombre <em>entier</em> et afficher un décompte à partir de ce nombre jusqu&rsquo;à 0. Lorsque le décompte est
+    terminé, afficher &ldquo;Terminé !&rdquo; à la place du nombre 0. Par exemple, si le nombre entré est 5, vous devez afficher
+    <div class="highlight"><pre><span></span><code>5
+4
+3
+2
+1
+Terminé !
+</code></pre></div></li>
+<li>Pour chacune des questions suivantes, définissez un tableau de nombres entiers contenant environ 10 valeurs de votre
+    choix. La longueur exacte du tableau et les nombres qu&rsquo;il contient sont à
+    votre choix, mais ils devraient permettre de bien tester les questions. Répondez aux questions dans des fonctions
+    différentes. En utilisant une boucle <code>for</code> sur les index du tableau,<ol type="1">
+<li>trouvez la somme et la moyenne de tous les nombres dans le tableau.</li>
+<li>affichez tous les nombres pairs contenus dans le tableau.</li>
+<li>déterminez si tous les nombres dans le tableau sont positifs ou non. Si tous les nombres sont positifs, alors
+   affichez <em>vrai</em>, sinon affichez <em>faux</em>.</li>
+</ol>
+</li>
+<li>Répétez la question précédente, mais en utilisant une boucle <code>while</code> ou <code>do while</code> sur le tableau.</li>
+</ol>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../06-Methodes/" class="btn btn-neutral float-left" title="🔸6🔸Méthodes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../08-Purete_d_une_methode/" class="btn btn-neutral float-right" title="🔸8🔸Pureté d&rsquo;une méthode">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../4.%20Fichiers/13-fichiers-json/" class="btn btn-neutral float-left" title="🔸13🔸Gestion des fichiers JSON"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/01-bases/" class="btn btn-neutral float-right" title="🔸1🔸Programmation OO">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -331,10 +349,10 @@ structure. Toutes les informations ont été vérifiées, éditées et complét�
         </span>
     
     
-      <span><a href="../06-Methodes/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../4.%20Fichiers/13-fichiers-json/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../08-Purete_d_une_methode/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../../B.%20Programmation%20OO/1.%20Les%20bases%20en%20OO/01-bases/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
