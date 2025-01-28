@@ -2,57 +2,55 @@
 
 - Github: [v1/Menu.java](https://github.com/profdenis/menu/tree/master/src/v1/Menu.java)
 
-??? note "Code"
+```java
+package v1;
 
-    ```java
-    package v1;
-    
-    import java.util.Scanner;
-    
-    public class Menu {
-    
-        public static void main(String[] args) {
-            boolean done = false;
-            Scanner scanner = new Scanner(System.in);
-    
-            while (!done) {
-                showMenu();
-                String option = scanner.nextLine();
-                done = handleOption(option);
-            }
-    
-            scanner.close();
+import java.util.Scanner;
+
+public class Menu {
+
+    public static void main(String[] args) {
+        boolean done = false;
+        Scanner scanner = new Scanner(System.in);
+
+        while (!done) {
+            showMenu();
+            String option = scanner.nextLine();
+            done = handleOption(option);
         }
-    
-        public static void showMenu() {
-            System.out.println("Choisissez une option :");
-            System.out.println("1. Option 1");
-            System.out.println("2. Option 2");
-            System.out.println("3. Option 3");
-            System.out.println("4. Quitter");
-        }
-    
-        public static boolean handleOption(String option) {
-            switch (option) {
-                case "1":
-                    System.out.println("Vous avez choisi l'option 1 !");
-                    break;
-                case "2":
-                    System.out.println("Vous avez choisi l'option 2 !");
-                    break;
-                case "3":
-                    System.out.println("Vous avez choisi l'option 3 !");
-                    break;
-                case "4":
-                    System.out.println("Vous voulez quitter !");
-                    return true;
-                default:
-                    System.out.println("Option invalide. SVP choisir une option valide.");
-            }
-            return false;
-        }
+
+        scanner.close();
     }
-    ```
+
+    public static void showMenu() {
+        System.out.println("Choisissez une option :");
+        System.out.println("1. Option 1");
+        System.out.println("2. Option 2");
+        System.out.println("3. Option 3");
+        System.out.println("4. Quitter");
+    }
+
+    public static boolean handleOption(String option) {
+        switch (option) {
+            case "1":
+                System.out.println("Vous avez choisi l'option 1 !");
+                break;
+            case "2":
+                System.out.println("Vous avez choisi l'option 2 !");
+                break;
+            case "3":
+                System.out.println("Vous avez choisi l'option 3 !");
+                break;
+            case "4":
+                System.out.println("Vous voulez quitter !");
+                return true;
+            default:
+                System.out.println("Option invalide. SVP choisir une option valide.");
+        }
+        return false;
+    }
+}
+```
 
 !!! warning "Avertissement"
 
@@ -93,10 +91,10 @@ ce que l’utilisateur choisisse l’option « 4 » (Quitter).
 
 
 
-
 -------
 
-!!! note "Note"
-    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
-    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
-    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+      Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
+      **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
+      structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+     

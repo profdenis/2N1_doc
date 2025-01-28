@@ -1,119 +1,137 @@
 # La classe `Menu`, version 3
 
-- Github: [v3/Menu.java](https://github.com/profdenis/menu/tree/master/src/v3/Menu.java)
+Github: 
+   
+   - [v3/Menu.java](https://github.com/profdenis/menu/tree/master/src/v3/Menu.java)
+   - [main.txt](https://github.com/profdenis/menu/blob/master/menu/main.txt)
+   - [sub.txt](https://github.com/profdenis/menu/blob/master/menu/sub.txt)
+  
+```java title="v3/Menu.java"
+package v3;
 
-??? note "Code"
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
-    ```java
-    package v3;
-    
-    import java.io.IOException;
-    import java.nio.file.Files;
-    import java.nio.file.Paths;
-    import java.util.HashMap;
-    import java.util.Map;
-    import java.util.Scanner;
-    
-    public class Menu {
-    
-        // utilise un scanner static pour éviter de créer et de fermer un scanner à plusieurs reprises
-        private static final Scanner scanner = new Scanner(System.in);
-    
-        public static void main(String[] args) {
-            boolean done = false;
-    
-            while (!done) {
-                if (showMenu("main")) {
-                    String option = scanner.nextLine();
-                    done = handleMainMenuOption(option);
-                } else {
-                    done = true;
-                }
-            }
-        }
-    
-        private static Map<String, String> menuStrings = new HashMap<>();
-    
-        public static boolean showMenu(String name) {
-            if (!menuStrings.containsKey(name)) {
-                try {
-                    String menuPath = "menu/" + name + ".txt";
-                    byte[] menuBytes = Files.readAllBytes(Paths.get(menuPath));
-                    menuStrings.put(name, new String(menuBytes));
-                } catch (IOException e) {
-                    System.err.println("Error reading menu content: " + e.getMessage());
-                    return false;
-                }
-            }
-            System.out.println(menuStrings.get(name));
-            return true;
-        }
-    
-        public static boolean handleMainMenuOption(String option) {
-            switch (option) {
-                case "1":
-                    handleMainMenuCase1();
-                    break;
-                case "2":
-                    handleMainMenuCase2();
-                    break;
-                case "3":
-                    System.out.println("Vous avez choisi l'option 3 !");
-                    break;
-                case "4":
-                    System.out.println("Vous voulez quitter !");
-                    return true;
-                default:
-                    System.out.println("Option invalide. SVP choisir une option valide.");
-            }
-            return false;
-        }
-    
-        private static void handleMainMenuCase1() {
-            System.out.println("Vous avez choisi l'option 1 !");
-            if (showMenu("sub")) {
+public class Menu {
+
+    // utilise un scanner static pour éviter de créer et de fermer un scanner à plusieurs reprises
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        boolean done = false;
+
+        while (!done) {
+            if (showMenu("main")) {
                 String option = scanner.nextLine();
-                // ignore la valeur de retour parce que le sous-menu est exécuté une seule fois, pas de boucle ici ;
-                // on pourrait utiliser la valeur de retour pour déterminer si une option valide a été sélectionnée
-                // ou non
-                handleSubMenuOption(option);
+                done = handleMainMenuOption(option);
+            } else {
+                done = true;
             }
-        }
-    
-        private static void handleMainMenuCase2() {
-            System.out.println("Vous avez choisi l'option 2 !");
-            boolean done = false;
-            while (!done) {
-                if (showMenu("sub")) {
-                    String option = scanner.nextLine();
-                    done = handleSubMenuOption(option);
-                } else {
-                    done = true;
-                }
-            }
-        }
-    
-        public static boolean handleSubMenuOption(String option) {
-            switch (option) {
-                case "a":
-                    System.out.println("Vous avez choisi l'option a !");
-                    break;
-                case "b":
-                    System.out.println("Vous avez choisi l'option b !");
-                    break;
-                case "c":
-                    System.out.println("Vous avez choisi l'option c !");
-                    break;
-                case "d":
-                    System.out.println("Vous voulez quitter le sous-menu!");
-                    return true;
-                default:
-                    System.out.println("Option invalide. SVP choisir une option valide.");
-            }
-            return false;
         }
     }
-    ```
+
+    private static Map<String, String> menuStrings = new HashMap<>();
+
+    public static boolean showMenu(String name) {
+        if (!menuStrings.containsKey(name)) {
+            try {
+                String menuPath = "menu/" + name + ".txt";
+                byte[] menuBytes = Files.readAllBytes(Paths.get(menuPath));
+                menuStrings.put(name, new String(menuBytes));
+            } catch (IOException e) {
+                System.err.println("Error reading menu content: " + e.getMessage());
+                return false;
+            }
+        }
+        System.out.println(menuStrings.get(name));
+        return true;
+    }
+
+    public static boolean handleMainMenuOption(String option) {
+        switch (option) {
+            case "1":
+                handleMainMenuCase1();
+                break;
+            case "2":
+                handleMainMenuCase2();
+                break;
+            case "3":
+                System.out.println("Vous avez choisi l'option 3 !");
+                break;
+            case "4":
+                System.out.println("Vous voulez quitter !");
+                return true;
+            default:
+                System.out.println("Option invalide. SVP choisir une option valide.");
+        }
+        return false;
+    }
+
+    private static void handleMainMenuCase1() {
+        System.out.println("Vous avez choisi l'option 1 !");
+        if (showMenu("sub")) {
+            String option = scanner.nextLine();
+            // ignore la valeur de retour parce que le sous-menu est exécuté une seule fois, pas de boucle ici ;
+            // on pourrait utiliser la valeur de retour pour déterminer si une option valide a été sélectionnée
+            // ou non
+            handleSubMenuOption(option);
+        }
+    }
+
+    private static void handleMainMenuCase2() {
+        System.out.println("Vous avez choisi l'option 2 !");
+        boolean done = false;
+        while (!done) {
+            if (showMenu("sub")) {
+                String option = scanner.nextLine();
+                done = handleSubMenuOption(option);
+            } else {
+                done = true;
+            }
+        }
+    }
+
+    public static boolean handleSubMenuOption(String option) {
+        switch (option) {
+            case "a":
+                System.out.println("Vous avez choisi l'option a !");
+                break;
+            case "b":
+                System.out.println("Vous avez choisi l'option b !");
+                break;
+            case "c":
+                System.out.println("Vous avez choisi l'option c !");
+                break;
+            case "d":
+                System.out.println("Vous voulez quitter le sous-menu!");
+                return true;
+            default:
+                System.out.println("Option invalide. SVP choisir une option valide.");
+        }
+        return false;
+    }
+}
+```
+
+```txt title="main.txt"
+Choisissez une option :
+1. Sous-menu (1 fois)
+2. Sous-menu (boucle)
+3. Option 3
+4. Quitter
+```
+
+```txt title="sub.txt"
+Choisissez une option :
+a. Option a
+b. Option b
+c. Option c
+d. Quitter
+```
 
 !!! warning "Avertissement"
 
@@ -147,9 +165,11 @@ dédiées améliore la qualité et la lisibilité du code.
 
 
 
+
 -------
 
-!!! note "Note"
-    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
-    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
-    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+      Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
+      **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
+      structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+     
