@@ -919,9 +919,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#citations" class="md-nav__link">
+  <a href="#convertir-un-arraylist-en-tableau" class="md-nav__link">
     <span class="md-ellipsis">
-      Citations
+      Convertir un ArrayList en tableau
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possibilite-de-creer-un-arraylist-a-partir-dun-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Possibilité de créer un ArrayList à partir d&rsquo;un tableau
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points-cles-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points clés à retenir
     </span>
   </a>
   
@@ -2688,9 +2706,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#citations" class="md-nav__link">
+  <a href="#convertir-un-arraylist-en-tableau" class="md-nav__link">
     <span class="md-ellipsis">
-      Citations
+      Convertir un ArrayList en tableau
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possibilite-de-creer-un-arraylist-a-partir-dun-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Possibilité de créer un ArrayList à partir d&rsquo;un tableau
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points-cles-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points clés à retenir
     </span>
   </a>
   
@@ -2840,20 +2876,102 @@
 <li>On veut des méthodes utilitaires intégrées</li>
 <li>La flexibilité est plus importante que la performance</li>
 </ul>
-<h2 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary>Citations</summary>
 <ul>
 <li>[1] https://beginnersbook.com/2013/12/java-arraylist/</li>
 <li>[2] https://www.programiz.com/java-programming/arraylist</li>
 <li>[3] https://www.geeksforgeeks.org/arraylist-in-java/</li>
 <li>[4] https://www.w3schools.com/java/java_arraylist.asp</li>
 </ul>
+</details>
+<h2 id="convertir-un-arraylist-en-tableau">Convertir un <code>ArrayList</code> en tableau<a class="headerlink" href="#convertir-un-arraylist-en-tableau" title="Permanent link">&para;</a></h2>
+<p>Voici un exemple simple de programme Java qui utilise la méthode <code>toArray()</code> sur un <code>ArrayList</code> pour convertir vers un
+tableau :</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExempleToArray</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="c1">// Création d&#39;un ArrayList</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listeNoms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="c1">// Ajout d&#39;éléments</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="n">listeNoms</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Jean&quot;</span><span class="p">);</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="n">listeNoms</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Marie&quot;</span><span class="p">);</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="n">listeNoms</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pierre&quot;</span><span class="p">);</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="n">listeNoms</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Colette&quot;</span><span class="p">);</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="c1">// Utilisation de toArray() pour obtenir un tableau</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="n">Object</span><span class="o">[]</span><span class="w"> </span><span class="n">tableauObjets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listeNoms</span><span class="p">.</span><span class="na">toArray</span><span class="p">();</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="c1">// Affichage du tableau</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tableau obtenu via toArray():&quot;</span><span class="p">);</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">tableauObjets</span><span class="p">));</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="c1">// Type casting pour obtenir un tableau de String</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">tableauStrings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listeNoms</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="n">listeNoms</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nTableau de String après type casting:&quot;</span><span class="p">);</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">tableauStrings</span><span class="p">));</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Ce programme crée un <code>ArrayList</code> de noms, ajoute quelques éléments, puis utilise <code>toArray()</code> pour obtenir un tableau
+d&rsquo;objets. Il montre ensuite comment effectuer un type casting pour obtenir un tableau de <code>String</code>.</p>
+<h2 id="possibilite-de-creer-un-arraylist-a-partir-dun-tableau">Possibilité de créer un ArrayList à partir d&rsquo;un tableau<a class="headerlink" href="#possibilite-de-creer-un-arraylist-a-partir-dun-tableau" title="Permanent link">&para;</a></h2>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CreationArrayListFromArray</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="c1">// Tableau initial</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">tabInitial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">};</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="c1">// Création d&#39;un ArrayList à partir du tableau</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">liste</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">tabInitial</span><span class="p">));</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="c1">// Affichage</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ArrayList créée à partir du tableau :&quot;</span><span class="p">);</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">liste</span><span class="p">);</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Dans cet exemple, nous utilisons <code>Arrays.asList()</code> pour créer une liste à partir du tableau, puis passons cette liste au
+constructeur d&rsquo;<code>ArrayList</code>. Cela crée un nouveau <code>ArrayList</code> contenant tous les éléments du tableau original.</p>
+<h2 id="points-cles-a-retenir">Points clés à retenir<a class="headerlink" href="#points-cles-a-retenir" title="Permanent link">&para;</a></h2>
+<ol type="1">
+<li>La méthode <code>toArray()</code> retourne un tableau d&rsquo;objets (<code>Object[]</code>) par défaut.</li>
+<li>Pour obtenir un tableau de type spécifique, il faut utiliser la signature <code>toArray(T[] a)</code> et passer un tableau vide
+   du bon type.</li>
+<li>On peut créer un <code>ArrayList</code> à partir d&rsquo;un tableau en utilisant <code>Arrays.asList()</code> et en passant le résultat au
+   constructeur d&rsquo;<code>ArrayList</code>.</li>
+<li>Cette approche permet de convertir facilement entre <code>ArrayList</code> et tableau standard.</li>
+</ol>
+<p>En suivant ces méthodes, vous pouvez facilement convertir entre <code>ArrayList</code> et tableau dans Java, ce qui offre une
+grande flexibilité dans vos programmes.</p>
+<details class="note">
+<summary>Citations</summary>
+<ul>
+<li>[1] https://www.geeksforgeeks.org/arraylist-array-conversion-java-toarray-methods/</li>
+<li>[2] https://stackoverflow.com/questions/32677003/how-to-convert-arraylist-to-array</li>
+<li>[3] https://www.geeksforgeeks.org/arraylist-toarray-method-in-java-with-examples/</li>
+<li>[4] https://www.codecademy.com/resources/docs/java/array-list/toArray    </li>
+<li>[5] https://www.w3schools.com/java/ref_arraylist_toarray.asp</li>
+<li>[6] https://docs.vultr.com/java/standard-library/java/util/ArrayList/toArray</li>
+<li>[7] https://www.javatpoint.com/how-to-convert-arraylist-to-array-and-array-to-arraylist-in-java</li>
+<li>[8] https://stackoverflow.com/questions/5061640/make-arraylist-toarray-return-more-specific-types/64137104</li>
+<li>[9] https://howtodoinjava.com/java/collections/arraylist/convert-arraylist-to-array/</li>
+<li>[10] https://forums.oracle.com/ords/apexds/post/convert-arraylist-into-array-7537</li>
+</ul>
+</details>
 <hr />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em> 
-<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
-structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
-</div>
+<details class="info">
+<summary>Utilisation de l&rsquo;IA</summary>
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em>
+  <strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
+  structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
+</details>
 
 
 
