@@ -46,7 +46,7 @@ class Professeur {
   +toString(): String
 }
 
-Personne <|-- Etudiant
+Etudiant --|> Personne
 Personne <|-- Professeur
 
 @enduml
@@ -94,7 +94,7 @@ Personne <|-- Professeur
       +toString(): String
     }
     
-    Personne <|-- Etudiant
+    Etudiant --|> Personne
     Personne <|-- Professeur
     
     @enduml
@@ -167,10 +167,10 @@ class GestionnaireTransactions {
     + {static} void main(String[] args)
 }
 
-Transaction <|-- Retrait
+Transaction <|-l- Retrait
 Transaction <|-- Depot
 Transaction <|-- Virement
-Transaction <|-- Paiement
+Transaction <|-r- Paiement
 GestionnaireTransactions ..> Transaction : utilise
 
 @enduml
@@ -230,10 +230,10 @@ GestionnaireTransactions ..> Transaction : utilise
         + {static} void main(String[] args)
     }
     
-    Transaction <|-- Retrait
+    Transaction <|-l- Retrait
     Transaction <|-- Depot
     Transaction <|-- Virement
-    Transaction <|-- Paiement
+    Transaction <|-r- Paiement
     GestionnaireTransactions ..> Transaction : utilise
     
     @enduml

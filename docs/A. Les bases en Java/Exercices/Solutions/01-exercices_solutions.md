@@ -412,6 +412,50 @@ public class ExercicesPartie1 {
 - Entrée : -5 → Sortie : "Cette note est invalide"
 - Entrée : 101 → Sortie : "Cette note est invalide"
 
+### Avec une expression `switch` moderne
+
+Voici la même conversion de notes en utilisant le switch moderne (*switch expressions*) disponible depuis Java 14 :
+
+```java
+import java.util.Scanner;
+
+public class ExercicesPartie1 {
+    public static void convertirNoteEnLettre() {
+        Scanner clavier = new Scanner(System.in);
+
+        System.out.print("Entrez la note finale (0-100): ");
+        double note = clavier.nextDouble();
+
+        // Validation de la note
+        if (note < 0 || note > 100) {
+            System.out.println("Cette note est invalide");
+            return;
+        }
+
+        // Conversion en lettre avec switch moderne
+        char lettre = switch ((int) (note / 10)) {
+            case 9, 10 -> 'A';
+            case 8 -> 'B';
+            case 7 -> 'C';
+            case 6 -> 'D';
+            default -> 'E';
+        };
+
+        System.out.println("Note: " + lettre);
+    }
+
+    public static void main(String[] args) {
+        convertirNoteEnLettre();
+    }
+}
+```
+
+Les avantages de cette version moderne sont :
+- La syntaxe est plus concise avec l'opérateur fléché (`->`)
+- Pas besoin d'utiliser `break`
+- L'assignation peut se faire directement dans une expression
+- Les cas multiples peuvent être listés avec des virgules (`case 9, 10`)
+
 ## Question 8 : Validation simple d'un intervalle
 
 Pour valider qu'un nombre est entre 1 et 10 inclusivement, nous devons :

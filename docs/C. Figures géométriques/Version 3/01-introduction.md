@@ -1,5 +1,40 @@
 # Introduction
 
+??? note "Code"
+
+    ```java
+    package v3.shapes;
+    
+    import java.awt.Color;
+    
+    public abstract class Shape
+    {
+        public static Color defaultDrawColor = Color.BLACK;
+        public Color drawColor;
+    
+        protected Shape(Color drawColor)
+        {
+            this.drawColor = drawColor;
+        }
+        
+        protected Shape()
+        {
+            this(defaultDrawColor);
+        }
+    
+        public Color getDrawColor() {
+            return drawColor;
+        }
+    
+        public void setDrawColor(Color drawColor) {
+            this.drawColor = drawColor;
+        }
+    
+        public abstract void draw(Image image);
+    }
+    ```
+
+
 Dans cette version, la classe `Shape` est une classe de base abstraite pour toutes les formes. Elle centralise les
 propriétés et les comportements communs à toutes les formes. Dans cet exemple, la propriété commune est la couleur de
 dessin (`drawColor`).
