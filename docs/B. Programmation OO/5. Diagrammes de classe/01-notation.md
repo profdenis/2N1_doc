@@ -63,6 +63,7 @@ Client "1" -- "*" Compte : possède
 ```
 
 ??? important "Source PlantUML"
+
     ```plantuml
     @startuml
     skinparam classAttributeIconSize 0
@@ -88,7 +89,7 @@ Dans cet exemple :
 
 - La classe `Compte` a deux attributs privés (`numero` et `solde`) et deux méthodes publiques (`deposer` et `retirer`)
 - La classe `Client` a deux attributs privés (`nom` et `prenom`) et une méthode publique (`getNomComplet`)
-- La relation entre les classes indique qu'un client peut posséder plusieurs comptes (relation "1 à plusieurs")[9]
+- L'association entre les classes indique qu'un client peut posséder plusieurs comptes (association "1 à plusieurs")[9]
 
 ## Citations
 

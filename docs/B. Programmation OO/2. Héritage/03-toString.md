@@ -72,7 +72,7 @@ public class ExemplePolymorphisme {
         for (Personne p : personnes) {
             System.out.println(p.toString());
             // ou simplement
-            System.out.println(p);
+            //System.out.println(p);
         }
     }
 }

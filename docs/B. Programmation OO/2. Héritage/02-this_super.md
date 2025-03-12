@@ -27,10 +27,16 @@ public class Etudiant extends Personne {
 
     public void setNom(String nom) {
         this.nom = nom;        // Attribut local
-        super.nom = nom;       // Attribut de la classe parente
+        super.nom = nom;       // Attribut de la classe parente; ne doit pas être privé pour avoir accès
     }
 }
 ```
+
+!!! warning "Attention"
+
+    Bien que l'exemple précédent soit valide (il compile si `nom` dans parent n'est pas privé), il n'est pas recommandé
+    d'utiliser des attributs différents avec le même nom dans une sous-classe, pour éviter des problèmes de références 
+    à ces attributs dûs à la confusion possible entre les attributs. 
 
 ## Règles importantes
 
