@@ -13,7 +13,7 @@ Voici un exercice sur un système de gestion de véhicules, basé en partie sur 
 
 ### Diagramme de classes
 
-```plantuml
+```puml
 @startuml
 skinparam classAttributeIconSize 0
 
@@ -76,6 +76,71 @@ VehiculeMotorise <|-- Camion
 @enduml
 ```
 
+
+??? important "Source PlantUML"
+    ```plantuml
+    @startuml
+    skinparam classAttributeIconSize 0
+    
+    class Vehicule {
+        - nom: String
+        - vitesseMax: int
+        + toString(): String
+    }
+    
+    class VehiculeNonMotorise {
+        - typePropulsion: String
+        + toString(): String
+    }
+    
+    class VehiculeMotorise {
+        - puissance: int
+        + toString(): String
+    }
+    
+    class Velo {
+        - nombreDeVitesses: int
+        + toString(): String
+    }
+    
+    class Caleche {
+        - typeAnimal: String
+        - nombreDeChevaux: int
+        + toString(): String
+    }
+    
+    class PatinsARoulettes {
+        - nombreDeRoues: int
+        + toString(): String
+    }
+    
+    class Moto {
+        - cylindree: int
+        + toString(): String
+    }
+    
+    class Voiture {
+        - nombreDePortes: int
+        + toString(): String
+    }
+    
+    class Camion {
+        - capaciteDeCharge: int
+        + toString(): String
+    }
+    
+    Vehicule <|-- VehiculeNonMotorise
+    Vehicule <|-- VehiculeMotorise
+    VehiculeNonMotorise <|-- Velo
+    VehiculeNonMotorise <|-- Caleche
+    VehiculeNonMotorise <|-- PatinsARoulettes
+    VehiculeMotorise <|-- Moto
+    VehiculeMotorise <|-- Voiture
+    VehiculeMotorise <|-- Camion
+    
+    @enduml
+    ```
+
 ### `Main.java`
 
 ```java
@@ -136,7 +201,7 @@ physiques correctes.
 
 ### Diagramme de classes
 
-```plantuml
+```puml
 @startuml
 skinparam classAttributeIconSize 0
 
@@ -209,3 +274,78 @@ VehiculeMotorise <|-- Camion
 
 @enduml
 ```
+
+??? important "Source PlantUML"
+    ```plantuml
+    @startuml
+    skinparam classAttributeIconSize 0
+    
+    class Vehicule {
+        - nom: String
+        - vitesseMax: int
+        - vitesseCourante: int
+        - couleur: String
+        - poids: int
+        + toString(): String
+        + accelerer(double delta): void
+        + freiner(double delta): void
+    }
+    
+    class VehiculeNonMotorise {
+        - typePropulsion: String
+        + toString(): String
+    }
+    
+    class VehiculeMotorise {
+        - puissance: int
+        - typeCarburant: String
+        - nombreDePassagers: int
+        + toString(): String
+        + demarrer(): void
+    }
+    
+    class Velo {
+        - nombreDeVitesses: int
+        + toString(): String
+    }
+    
+    class Caleche {
+        - typeAnimal: String
+        - nombreDeChevaux: int
+        + toString(): String
+    }
+    
+    class PatinsARoulettes {
+        - nombreDeRoues: int
+        + toString(): String
+    }
+    
+    class Moto {
+        - cylindree: int
+        + toString(): String
+        + demarrer(): void
+    }
+    
+    class Voiture {
+        - nombreDePortes: int
+        + toString(): String
+        + demarrer(): void
+    }
+    
+    class Camion {
+        - capaciteDeCharge: int
+        + toString(): String
+        + demarrer(): void
+    }
+    
+    Vehicule <|-- VehiculeNonMotorise
+    Vehicule <|-- VehiculeMotorise
+    VehiculeNonMotorise <|-- Velo
+    VehiculeNonMotorise <|-- Caleche
+    VehiculeNonMotorise <|-- PatinsARoulettes
+    VehiculeMotorise <|-- Moto
+    VehiculeMotorise <|-- Voiture
+    VehiculeMotorise <|-- Camion
+    
+    @enduml
+    ```
