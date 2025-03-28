@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://profdenis.github.io/2N1_doc/B.%20Programmation%20OO/5.%20Diagrammes%20de%20classe/01-notation/">
+        <link rel="canonical" href="https://profdenis.github.io/2N1_doc/B.%20Programmation%20OO/2.%20H%C3%A9ritage/08-hachage/">
       
       
-        <link rel="prev" href="../../4.%20Interfaces/03-exemples/">
+        <link rel="prev" href="../07-equals/">
       
       
-        <link rel="next" href="../02-exemples/">
+        <link rel="next" href="../09-class/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>🔸1🔸Notation UML - Cours de programmation OO 1</title>
+        <title>8. Fonctions et code de hachage - Cours de programmation OO 1</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1notation-uml" class="md-skip">
+        <a href="#8-fonctions-et-code-de-hachage" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🔸1🔸Notation UML
+              8. Fonctions et code de hachage
             
           </span>
         </div>
@@ -1361,8 +1361,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1375,13 +1377,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
@@ -1395,7 +1395,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             2. Héritage
@@ -1409,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/01-heritage/" class="md-nav__link">
+      <a href="../01-heritage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1430,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/02-this_super/" class="md-nav__link">
+      <a href="../02-this_super/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1451,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/03-toString/" class="md-nav__link">
+      <a href="../03-toString/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1472,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/04-polymorphisme/" class="md-nav__link">
+      <a href="../04-polymorphisme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1493,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/05-vehicules/" class="md-nav__link">
+      <a href="../05-vehicules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1514,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/06-object/" class="md-nav__link">
+      <a href="../06-object/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1535,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/07-equals/" class="md-nav__link">
+      <a href="../07-equals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,10 +1553,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/08-hachage/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    8. Fonctions et code de hachage
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1565,6 +1585,266 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition-et-proprietes-cles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Définition et propriétés clés
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-de-fonctions-de-hachage-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples de fonctions de hachage simples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples de fonctions de hachage simples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-somme-ascii-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Somme ASCII modulo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-methode-par-division-pour-entiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Méthode par division (pour entiers)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-methode-de-pliage-pour-chaines" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Méthode de pliage pour chaînes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Méthode de pliage pour chaînes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methode-de-pliage-principe-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Méthode de pliage : principe général
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-java-avec-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Java avec addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristiques-cles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caractéristiques clés
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantagesinconvenients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avantages/inconvénients
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-dutilisation-typiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cas d&rsquo;utilisation typiques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variante-avec-xor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variante avec XOR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse-de-collision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyse de collision
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimisations-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimisations possibles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hash-polynomial-utilise-en-java-pour-les-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Hash polynomial (utilisé en Java pour les strings)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications-au-dela-de-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications au-delà de Java
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applications au-delà de Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structures-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures de données
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securite-informatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sécurité informatique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reseau-et-systemes-distribues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Réseau et systèmes distribués
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparaison-fonctions-simples-vs-cryptographiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparaison fonctions simples vs cryptographiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-de-hachage-concept-cle-pour-hashcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction de hachage : concept clé pour hashCode()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonction de hachage : concept clé pour hashCode()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristiques-essentielles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caractéristiques essentielles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-a-hashcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application à hashCode()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proprietes-cles-contrat-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propriétés clés (contrat Java)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-concret" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple concret
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1577,7 +1857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/09-class/" class="md-nav__link">
+      <a href="../09-class/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1835,8 +2115,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1851,11 +2129,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
@@ -1869,7 +2149,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             5. Diagrammes de classe
@@ -1880,30 +2160,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    🔸1🔸Notation UML
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../5.%20Diagrammes%20de%20classe/01-notation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1912,62 +2172,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#types-principaux-de-diagrammes-uml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types principaux de diagrammes UML
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagrammes-de-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagrammes de classes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemple-simple-en-plantuml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple simple en PlantUML
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#citations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Citations
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1980,7 +2184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-exemples/" class="md-nav__link">
+      <a href="../../5.%20Diagrammes%20de%20classe/02-exemples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2733,38 +2937,242 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#types-principaux-de-diagrammes-uml" class="md-nav__link">
+  <a href="#definition-et-proprietes-cles" class="md-nav__link">
     <span class="md-ellipsis">
-      Types principaux de diagrammes UML
+      Définition et propriétés clés
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#diagrammes-de-classes" class="md-nav__link">
+  <a href="#exemples-de-fonctions-de-hachage-simples" class="md-nav__link">
     <span class="md-ellipsis">
-      Diagrammes de classes
+      Exemples de fonctions de hachage simples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples de fonctions de hachage simples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-somme-ascii-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Somme ASCII modulo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-methode-par-division-pour-entiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Méthode par division (pour entiers)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-methode-de-pliage-pour-chaines" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Méthode de pliage pour chaînes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Méthode de pliage pour chaînes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methode-de-pliage-principe-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Méthode de pliage : principe général
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-java-avec-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Java avec addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristiques-cles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caractéristiques clés
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantagesinconvenients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avantages/inconvénients
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-dutilisation-typiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cas d&rsquo;utilisation typiques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variante-avec-xor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variante avec XOR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse-de-collision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyse de collision
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimisations-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimisations possibles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hash-polynomial-utilise-en-java-pour-les-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Hash polynomial (utilisé en Java pour les strings)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications-au-dela-de-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications au-delà de Java
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applications au-delà de Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structures-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures de données
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securite-informatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sécurité informatique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reseau-et-systemes-distribues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Réseau et systèmes distribués
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparaison-fonctions-simples-vs-cryptographiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparaison fonctions simples vs cryptographiques
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemple-simple-en-plantuml" class="md-nav__link">
+  <a href="#fonction-de-hachage-concept-cle-pour-hashcode" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemple simple en PlantUML
+      Fonction de hachage : concept clé pour hashCode()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonction de hachage : concept clé pour hashCode()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristiques-essentielles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caractéristiques essentielles
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#citations" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#application-a-hashcode" class="md-nav__link">
     <span class="md-ellipsis">
-      Citations
+      Application à hashCode()
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proprietes-cles-contrat-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propriétés clés (contrat Java)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-concret" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple concret
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2786,91 +3194,336 @@
   
 
 
-<h1 id="1notation-uml">🔸1🔸Notation UML<a class="headerlink" href="#1notation-uml" title="Permanent link">&para;</a></h1>
-<p>Le langage UML (Unified Modeling Language) est un standard de modélisation visuelle utilisé pour représenter la
-structure et le comportement des systèmes logiciels[2].</p>
-<h2 id="types-principaux-de-diagrammes-uml">Types principaux de diagrammes UML<a class="headerlink" href="#types-principaux-de-diagrammes-uml" title="Permanent link">&para;</a></h2>
-<p>Les diagrammes UML se divisent en deux catégories principales :</p>
-<p><strong>Diagrammes structurels</strong></p>
+<h1 id="8-fonctions-et-code-de-hachage">8. Fonctions et code de hachage<a class="headerlink" href="#8-fonctions-et-code-de-hachage" title="Permanent link">&para;</a></h1>
+<p>Les fonctions de hachage sont des outils fondamentaux en informatique qui transforment des données de taille variable en
+une valeur numérique fixe. Voici une explication détaillée avec des exemples concrets :</p>
+<h2 id="definition-et-proprietes-cles">Définition et propriétés clés<a class="headerlink" href="#definition-et-proprietes-cles" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Diagrammes de classes (fondement de la programmation orientée objet)</li>
-<li>Diagrammes de composants</li>
-<li>Diagrammes de paquetages</li>
+<li><strong>Transformation unidirectionnelle</strong> : Conversion de données arbitraires en empreinte numérique fixe (ex : 32/64 bits)</li>
+<li><strong>Déterministe</strong> : Mêmes entrées ➔ même sortie (même après redémarrage)</li>
+<li><strong>Efficacité</strong> : Calcul rapide même pour de gros volumes de données</li>
+<li><strong>Résistance aux collisions</strong> : Difficulté à trouver deux entrées distinctes avec le même hash (idéalement)</li>
 </ul>
-<p><strong>Diagrammes comportementaux</strong></p>
-<ul>
-<li>Diagrammes d&rsquo;activités</li>
-<li>Diagrammes de séquence</li>
-<li>Diagrammes de cas d&rsquo;utilisation[7]</li>
-</ul>
-<h2 id="diagrammes-de-classes">Diagrammes de classes<a class="headerlink" href="#diagrammes-de-classes" title="Permanent link">&para;</a></h2>
-<p>Un diagramme de classes représente la structure statique d&rsquo;un système orienté objet en montrant les classes, leurs
-attributs, leurs méthodes et les relations entre elles[9].</p>
-<p><strong>Notation de base</strong></p>
-<p>Une classe est représentée par un rectangle divisé en trois compartiments :</p>
-<ol type="1">
-<li>Nom de la classe (obligatoire)</li>
-<li>Attributs (optionnel)</li>
-<li>Méthodes (optionnel)[9]</li>
-</ol>
-<p><strong>Visibilité des membres</strong></p>
-<ul>
-<li><code>+</code> : public</li>
-<li><code>-</code> : private</li>
-<li><code>#</code> : protected</li>
-<li><code>~</code> : package[5]</li>
-</ul>
-<h2 id="exemple-simple-en-plantuml">Exemple simple en PlantUML<a class="headerlink" href="#exemple-simple-en-plantuml" title="Permanent link">&para;</a></h2>
-<div class='puml-container'><div class="puml light" style="display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="301px" preserveAspectRatio="xMidYMid meet" style="width:274px;height:301px;background:#FFFFFF;" version="1.1" viewBox="0 0 274 301" width="274px" zoomAndPan="magnify" class="diagram"><defs/><g><g id="elem_Compte"><rect codeLine="3" fill="#F1F1F1" height="113.1875" id="Compte" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="260.0557" x="7" y="180.89"/><ellipse cx="105.2939" cy="196.89" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M108.2627,202.5306 Q107.6846,202.8275 107.0439,202.9681 Q106.4033,203.1244 105.7002,203.1244 Q103.2002,203.1244 101.8721,201.4838 Q100.5596,199.8275 100.5596,196.7025 Q100.5596,193.5775 101.8721,191.9213 Q103.2002,190.265 105.7002,190.265 Q106.4033,190.265 107.0439,190.4213 Q107.7002,190.5775 108.2627,190.8744 L108.2627,193.5931 Q107.6377,193.015 107.0439,192.7494 Q106.4502,192.4681 105.8252,192.4681 Q104.4814,192.4681 103.7939,193.5463 Q103.1064,194.6088 103.1064,196.7025 Q103.1064,198.7963 103.7939,199.8744 Q104.4814,200.9369 105.8252,200.9369 Q106.4502,200.9369 107.0439,200.6713 Q107.6377,200.39 108.2627,199.8119 L108.2627,202.5306 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.9678" x="125.7939" y="201.7367">Compte</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="266.0557" y1="212.89" y2="212.89"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.3184" x="13" y="229.8851">-numero: String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99.1826" x="13" y="246.182">-solde: double</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="266.0557" y1="253.4838" y2="253.4838"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="234.4521" x="13" y="270.4789">+deposer(montant: double): void</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="248.0557" x="13" y="286.7757">+retirer(montant: double): boolean</text></g><g id="elem_Client"><rect codeLine="10" fill="#F1F1F1" height="96.8906" id="Client" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="200.125" x="36.97" y="7"/><ellipse cx="112.5174" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M115.4861,28.6406 Q114.908,28.9375 114.2674,29.0781 Q113.6267,29.2344 112.9236,29.2344 Q110.4236,29.2344 109.0955,27.5938 Q107.783,25.9375 107.783,22.8125 Q107.783,19.6875 109.0955,18.0313 Q110.4236,16.375 112.9236,16.375 Q113.6267,16.375 114.2674,16.5313 Q114.9236,16.6875 115.4861,16.9844 L115.4861,19.7031 Q114.8611,19.125 114.2674,18.8594 Q113.6736,18.5781 113.0486,18.5781 Q111.7049,18.5781 111.0174,19.6563 Q110.3299,20.7188 110.3299,22.8125 Q110.3299,24.9063 111.0174,25.9844 Q111.7049,27.0469 113.0486,27.0469 Q113.6736,27.0469 114.2674,26.7813 Q114.8611,26.5 115.4861,25.9219 L115.4861,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.5303" x="133.0174" y="27.8467">Client</text><line style="stroke:#181818;stroke-width:0.5;" x1="37.97" x2="236.095" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.0762" x="42.97" y="55.9951">-nom: String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.332" x="42.97" y="72.292">-prenom: String</text><line style="stroke:#181818;stroke-width:0.5;" x1="37.97" x2="236.095" y1="79.5938" y2="79.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="188.125" x="42.97" y="96.5889">+getNomComplet(): String</text></g><g id="link_Client_Compte"><path codeLine="16" d="M137.03,104.22 C137.03,127.66 137.03,156.04 137.03,180.5 " fill="none" id="Client-Compte" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53.9995" x="138.03" y="146.9569">possède</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="128.5104" y="123.8577">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.5" x="130.6951" y="169.716">*</text></g></g></svg></div></div>
-
-<details class="important">
-<summary>Source PlantUML</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@startuml
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>skinparam classAttributeIconSize 0
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>class Compte {
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    -numero: String
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    -solde: double
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    +deposer(montant: double): void
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    +retirer(montant: double): boolean
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>}
+<h2 id="exemples-de-fonctions-de-hachage-simples">Exemples de fonctions de hachage simples<a class="headerlink" href="#exemples-de-fonctions-de-hachage-simples" title="Permanent link">&para;</a></h2>
+<h3 id="1-somme-ascii-modulo">1. Somme ASCII modulo<a class="headerlink" href="#1-somme-ascii-modulo" title="Permanent link">&para;</a></h3>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SimpleHash</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// Fonction de hachage simple : somme ASCII modulo taille</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hashAsciiMod</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tableSize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">  </span><span class="c1">// Ajoute le code ASCII de chaque caractère</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">tableSize</span><span class="p">;</span><span class="w">    </span><span class="c1">// Applique le modulo</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>class Client {
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    -nom: String
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    -prenom: String
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    +getNomComplet(): String
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>}
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>Client &quot;1&quot; -- &quot;*&quot; Compte : possède
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>@enduml
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">tableSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">hashValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hashAsciiMod</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">tableSize</span><span class="p">);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hash de \&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hashValue</span><span class="p">);</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span>
 </span></code></pre></div>
+<p><strong>Explications :</strong>
+1. On parcourt chaque caractère de la chaîne
+2. On accumule la somme des codes ASCII (via <code>charAt()</code>)
+3. On applique le modulo avec la taille de la table pour obtenir un index valide</p>
+<p><strong>Exemple de sortie :</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Hash de &quot;hello&quot;: 52
+</span></code></pre></div></p>
+<p><strong>Amélioration possible</strong> :
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Version avec pondération (base 256)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">weightedHash</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tableSize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">);</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">tableSize</span><span class="p">;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>Cette version pondérée réduit les collisions pour des chaînes avec mêmes caractères mais ordres différents (ex: &ldquo;abc&rdquo; 
+vs &ldquo;cba&rdquo;).</p>
+<details class="note">
+<summary>Citations</summary>
+<ul>
+<li>[1] https://python.developpez.com/actu/343966/Apprendre-comment-faire-une-implementation-naive-d-une-table-de-hachage-en-Python-un-billet-blog-de-Denis-Hulo/</li>
+<li>[2] https://fr.wikipedia.org/wiki/Fonction_de_hachage</li>
+<li>[3] https://www.irif.fr/~hf/verif/ens/an11-12/poo/courscomplet.pdf</li>
+<li>[4] http://www.iro.umontreal.ca/~major/IFT1020/notes/Hachage-2pp.pdf</li>
+<li>[5] https://stackoverflow.com/questions/10416550/how-to-implement-hash-function-hk-a-k-mod-2w-w-r-in-java</li>
+<li>[6] https://fr.wikibooks.org/wiki/Les_fonctions_de_hachage_cryptographiques</li>
+<li>[7] https://www.lirmm.fr/~seriai/encadrements/theses/rafat/uploads/Main/rafat.pdf</li>
+<li>[8] https://www-inf.telecom-sudparis.eu/COURS/CSC3101/Supports/fise/cours-tp.pdf</li>
+</ul>
 </details>
-<p>Dans cet exemple :</p>
+<h3 id="2-methode-par-division-pour-entiers">2. Méthode par division (pour entiers)<a class="headerlink" href="#2-methode-par-division-pour-entiers" title="Permanent link">&para;</a></h3>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">hashDivision</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tailleTable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">tailleTable</span><span class="p">;</span><span class="w"> </span><span class="c1">// Préférer tailleTable = nombre premier</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="3-methode-de-pliage-pour-chaines">3. Méthode de pliage pour chaînes<a class="headerlink" href="#3-methode-de-pliage-pour-chaines" title="Permanent link">&para;</a></h3>
+<h4 id="methode-de-pliage-principe-general">Méthode de pliage : principe général<a class="headerlink" href="#methode-de-pliage-principe-general" title="Permanent link">&para;</a></h4>
+<p>Le pliage est une technique de hachage qui consiste à :</p>
+<ol type="1">
+<li><strong>Découper</strong> la chaîne en blocs de taille fixe</li>
+<li><strong>Combiner</strong> ces blocs via des opérations arithmétiques/bit à bit</li>
+<li><strong>Réduire</strong> le résultat final à la taille de la table</li>
+</ol>
+<h4 id="exemple-java-avec-addition">Exemple Java avec addition<a class="headerlink" href="#exemple-java-avec-addition" title="Permanent link">&para;</a></h4>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FoldingHash</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="c1">// Méthode de pliage pour chaîne avec blocs de 4 caractères</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">foldHash</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tableSize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">blockSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">blockSize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">            </span><span class="c1">// Création du bloc</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">blockSize</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="na">length</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">                    </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">block</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">);</span><span class="w"> </span><span class="c1">// Décalage + OR</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">block</span><span class="p">;</span><span class="w"> </span><span class="c1">// Combinaison par addition</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">sum</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">tableSize</span><span class="p">);</span><span class="w"> </span><span class="c1">// Réduction finale</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hachage&quot;</span><span class="p">;</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hash de &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">foldHash</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">));</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Exécution :</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Hash de &#39;hachage&#39;: 879
+</span></code></pre></div></p>
+<h4 id="caracteristiques-cles">Caractéristiques clés<a class="headerlink" href="#caracteristiques-cles" title="Permanent link">&para;</a></h4>
 <ul>
-<li>La classe <code>Compte</code> a deux attributs privés (<code>numero</code> et <code>solde</code>) et deux méthodes publiques (<code>deposer</code> et <code>retirer</code>)</li>
-<li>La classe <code>Client</code> a deux attributs privés (<code>nom</code> et <code>prenom</code>) et une méthode publique (<code>getNomComplet</code>)</li>
-<li>L&rsquo;association entre les classes indique qu&rsquo;un client peut posséder plusieurs comptes (association &ldquo;1 à plusieurs&rdquo;)[9]</li>
+<li><strong>Taille de bloc</strong> : Généralement 32 ou 64 bits (4/8 caractères ASCII)</li>
+<li><strong>Opérations</strong> : Addition, XOR ou combinaison de bits</li>
+<li><strong>Performance</strong> : O(n) pour des chaînes de longueur modérée</li>
 </ul>
-<h2 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">&para;</a></h2>
+<h4 id="avantagesinconvenients">Avantages/inconvénients<a class="headerlink" href="#avantagesinconvenients" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Avantage</th>
+<th>Inconvénient</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bonne distribution pour données structurées</td>
+<td>Collisions avec permutations</td>
+</tr>
+<tr>
+<td>Rapide à calculer</td>
+<td>Sensible aux motifs répétitifs</td>
+</tr>
+<tr>
+<td>Simple à implémenter</td>
+<td>Taille de bloc critique</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cas-dutilisation-typiques">Cas d&rsquo;utilisation typiques<a class="headerlink" href="#cas-dutilisation-typiques" title="Permanent link">&para;</a></h4>
 <ul>
-<li>[1] https://plantuml.com/class-diagram</li>
-<li>[2] https://www.lucidchart.com/pages/fr/langage-uml</li>
-<li>[3] https://gitmind.com/fr/types-diagrammes-uml.html</li>
-<li>[4] https://creately.com/blog/fr/uncategorized-fr/tutoriel-sur-les-diagrammes-de-classe/</li>
-<li>[5] https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/</li>
-<li>[6] https://plantuml.com/fr-dark/class-diagram</li>
-<li>[7] https://miro.com/fr/diagramme/qu-est-ce-qu-un-diagramme-uml/</li>
-<li>[8] https://ideascale.com/fr/blogues/differents-types-de-diagrammes-duml/</li>
-<li>[9] https://miro.com/fr/diagramme/qu-est-ce-qu-un-diagramme-de-classe-uml/</li>
-<li>[10] https://www.lucidchart.com/blog/fr/types-de-diagrammes-UML</li>
+<li><strong>Bases de données</strong> : Indexation de clés composites</li>
+<li><strong>Cache mémoire</strong> : Adressage de blocs de données</li>
+<li><strong>Vérification d&rsquo;intégrité</strong> : Somme de contrôle rapide</li>
 </ul>
+<h4 id="variante-avec-xor">Variante avec XOR<a class="headerlink" href="#variante-avec-xor" title="Permanent link">&para;</a></h4>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// Remplacement de la ligne d&#39;addition</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">sum</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="n">block</span><span class="p">;</span><span class="w"> </span><span class="c1">// XOR au lieu de l&#39;addition</span>
+</span></code></pre></div>
+<h4 id="analyse-de-collision">Analyse de collision<a class="headerlink" href="#analyse-de-collision" title="Permanent link">&para;</a></h4>
+<p>Pour &ldquo;chat&rdquo; et &ldquo;tcha&rdquo; (mêmes caractères, ordre différent) :</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">foldHash</span><span class="p">(</span><span class="s">&quot;chat&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">));</span><span class="w"> </span><span class="c1">// 295</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">foldHash</span><span class="p">(</span><span class="s">&quot;tcha&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">));</span><span class="w"> </span><span class="c1">// 295 (collision)</span>
+</span></code></pre></div>
+<h4 id="optimisations-possibles">Optimisations possibles<a class="headerlink" href="#optimisations-possibles" title="Permanent link">&para;</a></h4>
+<ol type="1">
+<li><strong>Padding intelligent</strong> : Remplissage avec valeurs aléatoires au lieu de zéros</li>
+<li><strong>Taille de bloc dynamique</strong> : Adaptation basée sur la longueur de la chaîne</li>
+<li><strong>Combinaison d&rsquo;opérations</strong> : Mélange d&rsquo;addition et de XOR</li>
+</ol>
+<p>Cette méthode est particulièrement efficace pour les chaînes longues et structurées, mais nécessite un choix judicieux de la taille de bloc et des opérations de combinaison pour minimiser les collisions[1][3].</p>
+<details class="note">
+<summary>Citations</summary>
+<ul>
+<li>[1] https://fr.wikipedia.org/wiki/Fonction_de_hachage</li>
+<li>[2] https://fr.wikipedia.org/wiki/Java_hashCode()</li>
+<li>[3] https://jipe.developpez.com/articles/algo/table-hachage/?page=theorie</li>
+<li>[4] https://codegym.cc/fr/groups/posts/fr.210.code-de-hachage-java-</li>
+<li>[5] https://jipe.developpez.com/articles/algo/table-hachage/?page=pratique-implementation-en-java</li>
+<li>[6] https://codegym.cc/fr/groups/posts/fr.849.chanes-java</li>
+<li>[7] http://gallium.inria.fr/~maranget/X/421/poly/assoc.html</li>
+<li>[8] https://fr.wikibooks.org/wiki/Les_fonctions_de_hachage_cryptographiques</li>
+</ul>
+</details>
+<h3 id="4-hash-polynomial-utilise-en-java-pour-les-strings">4. Hash polynomial (utilisé en Java pour les strings)<a class="headerlink" href="#4-hash-polynomial-utilise-en-java-pour-les-strings" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[ h(s) = s_0 \times 31^{n-1} + s_1 \times 31^{n-2} + ... + s_{n-1} \]</div>
+<h2 id="applications-au-dela-de-java">Applications au-delà de Java<a class="headerlink" href="#applications-au-dela-de-java" title="Permanent link">&para;</a></h2>
+<h3 id="structures-de-donnees">Structures de données<a class="headerlink" href="#structures-de-donnees" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Utilisation du hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tables de hachage</td>
+<td>Indexation rapide des clés</td>
+</tr>
+<tr>
+<td>Caches</td>
+<td>Identification des données fréquentes</td>
+</tr>
+<tr>
+<td>Bloom filters</td>
+<td>Test d&rsquo;appartenance à un ensemble</td>
+</tr>
+</tbody>
+</table>
+<h3 id="securite-informatique">Sécurité informatique<a class="headerlink" href="#securite-informatique" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Stockage de mots de passe</strong> : Salage + hash (ex : bcrypt, PBKDF2)</li>
+<li><strong>Vérification d&rsquo;intégrité</strong> : Checksums (MD5, SHA-256)</li>
+<li><strong>Signatures numériques</strong> : Hash du document signé cryptographiquement</li>
+</ul>
+<h3 id="reseau-et-systemes-distribues">Réseau et systèmes distribués<a class="headerlink" href="#reseau-et-systemes-distribues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Partitionnement de données</strong> : Sharding dans les bases distribuées</li>
+<li><strong>Load balancing</strong> : Répartition des requêtes via consistent hashing</li>
+<li><strong>Déduplication</strong> : Identification des fichiers dupliqués</li>
+</ul>
+<h2 id="comparaison-fonctions-simples-vs-cryptographiques">Comparaison fonctions simples vs cryptographiques<a class="headerlink" href="#comparaison-fonctions-simples-vs-cryptographiques" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Caractéristique</th>
+<th>Hash simple</th>
+<th>Hash cryptographique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vitesse</td>
+<td>Rapide (ns)</td>
+<td>Lent (μs-ms)</td>
+</tr>
+<tr>
+<td>Collisions</td>
+<td>Tolérées</td>
+<td>Inacceptables</td>
+</tr>
+<tr>
+<td>Usage typique</td>
+<td>Tables de hachage</td>
+<td>Signature digitale</td>
+</tr>
+<tr>
+<td>Exemples</td>
+<td>Java hashCode()</td>
+<td>SHA-256, Blake3</td>
+</tr>
+</tbody>
+</table>
+<p>Un cas concret en cryptomonnaie : Bitcoin utilise double SHA-256 pour :</p>
+<ol type="1">
+<li>Vérifier l&rsquo;intégrité de la blockchain</li>
+<li>Miner des blocs via preuve de travail</li>
+<li>Générer des adresses wallet à partir de clés publiques</li>
+</ol>
+<p>Ces principes montrent comment une fonction mathématique apparemment simple devient un pilier des systèmes informatiques
+modernes, des structures de données basiques à la sécurité des transactions financières.</p>
+<details class="note">
+<summary>Citations</summary>
+<ul>
+<li>[1] https://en.wikipedia.org/wiki/Hash_function</li>
+<li>[2] https://en.wikipedia.org/wiki/Cryptographic_hash_function</li>
+<li>[3] https://www.crowdstrike.com/en-us/cybersecurity-101/data-protection/data-hashing/</li>
+<li>[4] https://corporatefinanceinstitute.com/resources/cryptocurrency/hash-function/</li>
+<li>[5] https://www.prasams.com/the-basics-of-hashing-a-key-concept-in-computer-science/</li>
+<li>[6] https://codefinity.com/blog/Overview-of-Hashing-and-its-Applications</li>
+<li>[7] https://www.cs.hmc.edu/~geoff/classes/hmc.cs070.200101/homework10/hashfuncs.html</li>
+<li>[8] https://opendsa-server.cs.vt.edu/ODSA/Books/CS3/html/HashFuncExamp.html</li>
+<li>[9] https://www.investopedia.com/terms/h/hash.asp</li>
+<li>[10] https://emeritus.org/blog/cybersecurity-what-is-hashing-in-cybersecurity/</li>
+<li>[11] https://www.practicalnetworking.net/series/cryptography/hashing-algorithm/</li>
+<li>[12] https://www.okta.com/identity-101/hashing-algorithms/</li>
+<li>[13] https://www.ionos.ca/digitalguide/server/security/hash-function/</li>
+<li>[14] https://softwareengineering.stackexchange.com/questions/372153/what-is-an-example-for-a-one-way-hash-function</li>
+<li>[15] https://enthec.com/en/what-is-hashing-how-it-works-and-uses-it-in-cybersecurity/</li>
+<li>[16] https://www.tutorialspoint.com/cryptography/cryptography_hash_functions.htm</li>
+<li>[17] https://www.spiceworks.com/it-security/data-security/articles/what-is-hashing/</li>
+</ul>
+</details>
+<h2 id="fonction-de-hachage-concept-cle-pour-hashcode">Fonction de hachage : concept clé pour <code>hashCode()</code><a class="headerlink" href="#fonction-de-hachage-concept-cle-pour-hashcode" title="Permanent link">&para;</a></h2>
+<p>Une fonction de hachage est un mécanisme qui transforme des données de taille variable (comme un objet Java) en une
+valeur numérique fixe (généralement un entier). Dans le contexte de Java, cette valeur est utilisée par des structures
+de données comme <code>HashMap</code> ou <code>HashSet</code> pour stocker et retrouver rapidement des objets.</p>
+<h3 id="caracteristiques-essentielles">Caractéristiques essentielles<a class="headerlink" href="#caracteristiques-essentielles" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Déterministe</strong> : Même entrée → même sortie (crucial pour les collections)</li>
+<li><strong>Performance</strong> : Calcul rapide (appelée fréquemment dans les collections)</li>
+<li><strong>Distribution</strong> : Doit disperser uniformément les codes pour éviter les collisions</li>
+</ul>
+<h3 id="application-a-hashcode">Application à <code>hashCode()</code><a class="headerlink" href="#application-a-hashcode" title="Permanent link">&para;</a></h3>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nd">@Override</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hashCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Objects</span><span class="p">.</span><span class="na">hash</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w"> </span><span class="c1">// Combine les hashs des champs</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Pourquoi est-ce important ?</strong><br />
+Quand vous stockez un objet dans un <code>HashMap</code>, Java :</p>
+<ol type="1">
+<li>Calcule le <code>hashCode()</code> pour déterminer le &ldquo;seau&rdquo; (bucket) de stockage</li>
+<li>Utilise <code>equals()</code> seulement si plusieurs objets ont le même hash (collision)</li>
+</ol>
+<h3 id="proprietes-cles-contrat-java">Propriétés clés (contrat Java)<a class="headerlink" href="#proprietes-cles-contrat-java" title="Permanent link">&para;</a></h3>
+<ol type="1">
+<li><strong>Cohérence</strong> : Même objet → même hash (pendant toute sa durée de vie)</li>
+<li><strong>Compatibilité avec equals()</strong> : Si <code>a.equals(b)</code> alors <code>a.hashCode() == b.hashCode()</code></li>
+<li><strong>Pas l&rsquo;inverse</strong> : Deux objets différents peuvent avoir le même hash (collision acceptable)</li>
+</ol>
+<h3 id="exemple-concret">Exemple concret<a class="headerlink" href="#exemple-concret" title="Permanent link">&para;</a></h3>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Map</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">Point</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="p">);</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1">// Recherche basée sur hashCode() puis equals()</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)));</span><span class="w"> </span><span class="c1">// &quot;test&quot; si bien implémenté</span>
+</span></code></pre></div>
+<p>Les fonctions de hachage cryptographiques (comme SHA) partagent certains principes, mais <code>hashCode()</code> en Java a des
+exigences différentes : performance &gt; sécurité.</p>
+<details class="note">
+<summary>Citations</summary>
+<ul>
+<li>[1] https://zestedesavoir.com/tutoriels/1895/les-fonctions-de-hachage-cryptographiques/</li>
+<li>[2] https://fr.wikipedia.org/wiki/Fonction_de_hachage_cryptographique</li>
+<li>[3] https://fr.wikipedia.org/wiki/Fonction_de_hachage</li>
+<li>[4] https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/12399801/code-de-hachage</li>
+<li>[5] https://www.okta.com/fr/identity-101/hashing-algorithms/</li>
+<li>[6] https://www.ionos.fr/digitalguide/sites-internet/developpement-web/hachage/</li>
+<li>[7] https://www.mailinblack.com/ressources/glossaire/le-hachage-une-methode-de-securite-infaillible/</li>
+<li>[8] https://www.dashlane.com/fr/blog/quest-ce-que-le-hachage-des-mots-de-passe</li>
+</ul>
+</details>
 <hr />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<details class="info">
+<summary>Utilisation de l&rsquo;IA</summary>
 <p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em>
 <strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
 structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
-</div>
+</details>
 
 
 
@@ -2906,7 +3559,7 @@ structure. Toutes les informations ont été vérifiées, éditées et complét�
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../4.%20Interfaces/03-exemples/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🔸3🔸Exemples">
+          <a href="../07-equals/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 7. La méthode equals">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2916,20 +3569,20 @@ structure. Toutes les informations ont été vérifiées, éditées et complét�
                 Previous
               </span>
               <div class="md-ellipsis">
-                🔸3🔸Exemples
+                7. La méthode equals
               </div>
             </div>
           </a>
         
         
           
-          <a href="../02-exemples/" class="md-footer__link md-footer__link--next" aria-label="Next: 🔸2🔸Exemples">
+          <a href="../09-class/" class="md-footer__link md-footer__link--next" aria-label="Next: 9. La classe Class">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                🔸2🔸Exemples
+                9. La classe Class
               </div>
             </div>
             <div class="md-footer__button md-icon">

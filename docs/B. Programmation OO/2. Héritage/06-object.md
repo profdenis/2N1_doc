@@ -49,3 +49,12 @@ base offertes à tous les objets en Java et améliorer la conception de leurs pr
       - [11] https://blog.paumard.org/cours/java/chap03-object-string-object.html
       - [12] https://gayerie.dev/epsi-b3-java/langage_java/heritage_composition.html
 
+
+
+-------
+
+??? info "Utilisation de l'IA"
+      Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
+      **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
+      structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+     

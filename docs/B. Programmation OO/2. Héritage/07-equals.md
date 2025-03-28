@@ -103,7 +103,7 @@ besoin.
 
 ## La méthode `hashCode`
 
-La méthode hashCode() est une méthode fondamentale en Java, héritée de la classe Object et présente dans toutes les
+La méthode `hashCode()` est une méthode fondamentale en Java, héritée de la classe `Object` et présente dans toutes les
 classes Java. Voici ses principales caractéristiques :
 
 ### Définition et rôle
@@ -113,22 +113,22 @@ classes Java. Voici ses principales caractéristiques :
 
 ### Fonctionnement
 
-- Par défaut, l'implémentation de Object.hashCode() retourne généralement une valeur basée sur l'adresse mémoire de
+- Par défaut, l'implémentation de `Object.hashCode()` retourne généralement une valeur basée sur l'adresse mémoire de
   l'objet[5].
 - Les classes peuvent redéfinir cette méthode pour fournir un code de hachage plus approprié à leurs données
   spécifiques[1].
 
 ### Importance
 
-1. **Collections** : Utilisée par les structures de données basées sur le hachage (comme HashMap, HashSet) pour stocker
-   et récupérer efficacement les objets[7].
-2. **Performance** : Un bon hashCode() permet une distribution uniforme des objets dans ces structures, améliorant les
+1. **Collections** : Utilisée par les structures de données basées sur le hachage (comme `HashMap`, `HashSet`) pour 
+   stocker et récupérer efficacement les objets[7].
+2. **Performance** : Un bon `hashCode()` permet une distribution uniforme des objets dans ces structures, améliorant les
    performances[6].
 
 ### Contrat avec equals()
 
-- Si deux objets sont égaux selon equals(), ils doivent avoir le même hashCode()[1][7].
-- Deux objets avec le même hashCode() ne sont pas nécessairement égaux[7].
+- Si deux objets sont égaux selon `equals()`, ils doivent avoir le même `hashCode()`[1][7].
+- Deux objets avec le même `hashCode()` ne sont pas nécessairement égaux[7].
 
 ### Implémentation
 
@@ -161,3 +161,11 @@ implémentée en conjonction avec la méthode equals().
       - [8] https://www.youtube.com/watch?v=6YXiy9JavDc
       - [9] https://javarush.com/fr/groups/posts/fr.1340.surcharge-des-mthodes-equals-et-hashcode-en-java
 
+
+-------
+
+??? info "Utilisation de l'IA"
+    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
+    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
+    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+   

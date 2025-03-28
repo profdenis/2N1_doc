@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://profdenis.github.io/2N1_doc/B.%20Programmation%20OO/5.%20Diagrammes%20de%20classe/01-notation/">
+        <link rel="canonical" href="https://profdenis.github.io/2N1_doc/B.%20Programmation%20OO/2.%20H%C3%A9ritage/06-object/">
       
       
-        <link rel="prev" href="../../4.%20Interfaces/03-exemples/">
+        <link rel="prev" href="../05-vehicules/">
       
       
-        <link rel="next" href="../02-exemples/">
+        <link rel="next" href="../07-equals/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>🔸1🔸Notation UML - Cours de programmation OO 1</title>
+        <title>6. La classe Object - Cours de programmation OO 1</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1notation-uml" class="md-skip">
+        <a href="#6-la-classe-object" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🔸1🔸Notation UML
+              6. La classe Object
             
           </span>
         </div>
@@ -1361,8 +1361,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1375,13 +1377,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
@@ -1395,7 +1395,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             2. Héritage
@@ -1409,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/01-heritage/" class="md-nav__link">
+      <a href="../01-heritage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1430,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/02-this_super/" class="md-nav__link">
+      <a href="../02-this_super/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1451,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/03-toString/" class="md-nav__link">
+      <a href="../03-toString/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1472,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/04-polymorphisme/" class="md-nav__link">
+      <a href="../04-polymorphisme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1493,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/05-vehicules/" class="md-nav__link">
+      <a href="../05-vehicules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,10 +1511,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/06-object/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    6. La classe Object
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1523,6 +1543,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#role-fondamental" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rôle fondamental
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodes-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Méthodes importantes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polymorphisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polymorphisme
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1535,7 +1611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/07-equals/" class="md-nav__link">
+      <a href="../07-equals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1556,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/08-hachage/" class="md-nav__link">
+      <a href="../08-hachage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1577,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.%20H%C3%A9ritage/09-class/" class="md-nav__link">
+      <a href="../09-class/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1835,8 +1911,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1851,11 +1925,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
@@ -1869,7 +1945,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             5. Diagrammes de classe
@@ -1880,30 +1956,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    🔸1🔸Notation UML
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../5.%20Diagrammes%20de%20classe/01-notation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1912,62 +1968,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#types-principaux-de-diagrammes-uml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types principaux de diagrammes UML
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagrammes-de-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagrammes de classes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemple-simple-en-plantuml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple simple en PlantUML
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#citations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Citations
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1980,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-exemples/" class="md-nav__link">
+      <a href="../../5.%20Diagrammes%20de%20classe/02-exemples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2733,36 +2733,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#types-principaux-de-diagrammes-uml" class="md-nav__link">
+  <a href="#role-fondamental" class="md-nav__link">
     <span class="md-ellipsis">
-      Types principaux de diagrammes UML
+      Rôle fondamental
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#diagrammes-de-classes" class="md-nav__link">
+  <a href="#methodes-importantes" class="md-nav__link">
     <span class="md-ellipsis">
-      Diagrammes de classes
+      Méthodes importantes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemple-simple-en-plantuml" class="md-nav__link">
+  <a href="#utilisation" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemple simple en PlantUML
+      Utilisation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#citations" class="md-nav__link">
+  <a href="#polymorphisme" class="md-nav__link">
     <span class="md-ellipsis">
-      Citations
+      Polymorphisme
     </span>
   </a>
   
@@ -2786,91 +2786,62 @@
   
 
 
-<h1 id="1notation-uml">🔸1🔸Notation UML<a class="headerlink" href="#1notation-uml" title="Permanent link">&para;</a></h1>
-<p>Le langage UML (Unified Modeling Language) est un standard de modélisation visuelle utilisé pour représenter la
-structure et le comportement des systèmes logiciels[2].</p>
-<h2 id="types-principaux-de-diagrammes-uml">Types principaux de diagrammes UML<a class="headerlink" href="#types-principaux-de-diagrammes-uml" title="Permanent link">&para;</a></h2>
-<p>Les diagrammes UML se divisent en deux catégories principales :</p>
-<p><strong>Diagrammes structurels</strong></p>
+<h1 id="6-la-classe-object">6. La classe <code>Object</code><a class="headerlink" href="#6-la-classe-object" title="Permanent link">&para;</a></h1>
+<p>La classe Object est la classe racine de la hiérarchie des classes en Java. Elle est la superclasse directe ou indirecte
+de toutes les autres classes[1][8]. Voici les principales caractéristiques de la classe Object :</p>
+<h2 id="role-fondamental">Rôle fondamental<a class="headerlink" href="#role-fondamental" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Diagrammes de classes (fondement de la programmation orientée objet)</li>
-<li>Diagrammes de composants</li>
-<li>Diagrammes de paquetages</li>
+<li>Toute classe en Java hérite implicitement de Object si aucune autre superclasse n&rsquo;est spécifiée[2][9].</li>
+<li>Elle fournit des méthodes de base communes à tous les objets Java.</li>
 </ul>
-<p><strong>Diagrammes comportementaux</strong></p>
-<ul>
-<li>Diagrammes d&rsquo;activités</li>
-<li>Diagrammes de séquence</li>
-<li>Diagrammes de cas d&rsquo;utilisation[7]</li>
-</ul>
-<h2 id="diagrammes-de-classes">Diagrammes de classes<a class="headerlink" href="#diagrammes-de-classes" title="Permanent link">&para;</a></h2>
-<p>Un diagramme de classes représente la structure statique d&rsquo;un système orienté objet en montrant les classes, leurs
-attributs, leurs méthodes et les relations entre elles[9].</p>
-<p><strong>Notation de base</strong></p>
-<p>Une classe est représentée par un rectangle divisé en trois compartiments :</p>
+<h2 id="methodes-importantes">Méthodes importantes<a class="headerlink" href="#methodes-importantes" title="Permanent link">&para;</a></h2>
+<p>La classe Object définit plusieurs méthodes essentielles[1][11] :</p>
 <ol type="1">
-<li>Nom de la classe (obligatoire)</li>
-<li>Attributs (optionnel)</li>
-<li>Méthodes (optionnel)[9]</li>
+<li><code>toString()</code> : Retourne une représentation en chaîne de caractères de l&rsquo;objet.</li>
+<li><code>equals(Object obj)</code> : Compare l&rsquo;objet avec un autre pour déterminer l&rsquo;égalité.</li>
+<li><code>hashCode()</code> : Retourne une valeur de hachage pour l&rsquo;objet.</li>
+<li><code>getClass()</code> : Retourne un objet de type Class représentant la classe de l&rsquo;objet.</li>
+<li><code>clone()</code> : Crée et retourne une copie de l&rsquo;objet.</li>
+<li><code>finalize()</code> : Appelée par le ramasse-miettes avant que l&rsquo;objet ne soit détruit.</li>
 </ol>
-<p><strong>Visibilité des membres</strong></p>
+<h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>+</code> : public</li>
-<li><code>-</code> : private</li>
-<li><code>#</code> : protected</li>
-<li><code>~</code> : package[5]</li>
+<li>Grâce à l&rsquo;héritage de Object, toutes les classes Java peuvent utiliser ces méthodes de base[9].</li>
+<li>Il est courant de redéfinir certaines de ces méthodes (comme toString() ou equals()) dans les classes personnalisées
+  pour adapter leur comportement[1].</li>
 </ul>
-<h2 id="exemple-simple-en-plantuml">Exemple simple en PlantUML<a class="headerlink" href="#exemple-simple-en-plantuml" title="Permanent link">&para;</a></h2>
-<div class='puml-container'><div class="puml light" style="display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="301px" preserveAspectRatio="xMidYMid meet" style="width:274px;height:301px;background:#FFFFFF;" version="1.1" viewBox="0 0 274 301" width="274px" zoomAndPan="magnify" class="diagram"><defs/><g><g id="elem_Compte"><rect codeLine="3" fill="#F1F1F1" height="113.1875" id="Compte" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="260.0557" x="7" y="180.89"/><ellipse cx="105.2939" cy="196.89" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M108.2627,202.5306 Q107.6846,202.8275 107.0439,202.9681 Q106.4033,203.1244 105.7002,203.1244 Q103.2002,203.1244 101.8721,201.4838 Q100.5596,199.8275 100.5596,196.7025 Q100.5596,193.5775 101.8721,191.9213 Q103.2002,190.265 105.7002,190.265 Q106.4033,190.265 107.0439,190.4213 Q107.7002,190.5775 108.2627,190.8744 L108.2627,193.5931 Q107.6377,193.015 107.0439,192.7494 Q106.4502,192.4681 105.8252,192.4681 Q104.4814,192.4681 103.7939,193.5463 Q103.1064,194.6088 103.1064,196.7025 Q103.1064,198.7963 103.7939,199.8744 Q104.4814,200.9369 105.8252,200.9369 Q106.4502,200.9369 107.0439,200.6713 Q107.6377,200.39 108.2627,199.8119 L108.2627,202.5306 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.9678" x="125.7939" y="201.7367">Compte</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="266.0557" y1="212.89" y2="212.89"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.3184" x="13" y="229.8851">-numero: String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99.1826" x="13" y="246.182">-solde: double</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="266.0557" y1="253.4838" y2="253.4838"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="234.4521" x="13" y="270.4789">+deposer(montant: double): void</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="248.0557" x="13" y="286.7757">+retirer(montant: double): boolean</text></g><g id="elem_Client"><rect codeLine="10" fill="#F1F1F1" height="96.8906" id="Client" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="200.125" x="36.97" y="7"/><ellipse cx="112.5174" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M115.4861,28.6406 Q114.908,28.9375 114.2674,29.0781 Q113.6267,29.2344 112.9236,29.2344 Q110.4236,29.2344 109.0955,27.5938 Q107.783,25.9375 107.783,22.8125 Q107.783,19.6875 109.0955,18.0313 Q110.4236,16.375 112.9236,16.375 Q113.6267,16.375 114.2674,16.5313 Q114.9236,16.6875 115.4861,16.9844 L115.4861,19.7031 Q114.8611,19.125 114.2674,18.8594 Q113.6736,18.5781 113.0486,18.5781 Q111.7049,18.5781 111.0174,19.6563 Q110.3299,20.7188 110.3299,22.8125 Q110.3299,24.9063 111.0174,25.9844 Q111.7049,27.0469 113.0486,27.0469 Q113.6736,27.0469 114.2674,26.7813 Q114.8611,26.5 115.4861,25.9219 L115.4861,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.5303" x="133.0174" y="27.8467">Client</text><line style="stroke:#181818;stroke-width:0.5;" x1="37.97" x2="236.095" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.0762" x="42.97" y="55.9951">-nom: String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.332" x="42.97" y="72.292">-prenom: String</text><line style="stroke:#181818;stroke-width:0.5;" x1="37.97" x2="236.095" y1="79.5938" y2="79.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="188.125" x="42.97" y="96.5889">+getNomComplet(): String</text></g><g id="link_Client_Compte"><path codeLine="16" d="M137.03,104.22 C137.03,127.66 137.03,156.04 137.03,180.5 " fill="none" id="Client-Compte" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53.9995" x="138.03" y="146.9569">possède</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="128.5104" y="123.8577">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.5" x="130.6951" y="169.716">*</text></g></g></svg></div></div>
-
-<details class="important">
-<summary>Source PlantUML</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@startuml
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>skinparam classAttributeIconSize 0
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>class Compte {
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    -numero: String
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    -solde: double
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    +deposer(montant: double): void
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    +retirer(montant: double): boolean
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>}
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>class Client {
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    -nom: String
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    -prenom: String
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    +getNomComplet(): String
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>}
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>Client &quot;1&quot; -- &quot;*&quot; Compte : possède
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>@enduml
-</span></code></pre></div>
+<h2 id="polymorphisme">Polymorphisme<a class="headerlink" href="#polymorphisme" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Comme toutes les classes héritent de Object, une variable de type Object peut référencer n&rsquo;importe quel objet
+  Java[12].</li>
+<li>Cela permet une grande flexibilité dans la manipulation des objets, notamment pour les collections génériques.</li>
+</ul>
+<p>En comprenant bien la classe Object et ses méthodes, les développeurs peuvent mieux exploiter les fonctionnalités de
+base offertes à tous les objets en Java et améliorer la conception de leurs propres classes.</p>
+<details class="note">
+<summary>Citations</summary>
+<ul>
+<li>[1] https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html</li>
+<li>[2] https://fr.wikibooks.org/wiki/Programmation_Java/H%C3%A9ritage</li>
+<li>[3] https://datascientest.com/programmation-orientee-objet-guide-ultime</li>
+<li>[4] https://www.w3schools.com/java/java_classes.asp</li>
+<li>[5] https://codegym.cc/fr/groups/posts/fr.942.hritage-en-java</li>
+<li>[6] https://www.u-picardie.fr/ferment/java/cours/chap08_d.html</li>
+<li>[7] https://miashs-www.u-ga.fr/prevert/Prog/Java/CoursJava/classes1.html</li>
+<li>[8] https://blog.paumard.org/cours/java/chap07-heritage-interface-heritage.html</li>
+<li>[9] https://www.jmdoudoux.fr/java/dej/chap-poo.htm</li>
+<li>[10] https://www.digitalocean.com/community/tutorials/inheritance-java-example</li>
+<li>[11] https://blog.paumard.org/cours/java/chap03-object-string-object.html</li>
+<li>[12] https://gayerie.dev/epsi-b3-java/langage_java/heritage_composition.html</li>
+</ul>
 </details>
-<p>Dans cet exemple :</p>
-<ul>
-<li>La classe <code>Compte</code> a deux attributs privés (<code>numero</code> et <code>solde</code>) et deux méthodes publiques (<code>deposer</code> et <code>retirer</code>)</li>
-<li>La classe <code>Client</code> a deux attributs privés (<code>nom</code> et <code>prenom</code>) et une méthode publique (<code>getNomComplet</code>)</li>
-<li>L&rsquo;association entre les classes indique qu&rsquo;un client peut posséder plusieurs comptes (association &ldquo;1 à plusieurs&rdquo;)[9]</li>
-</ul>
-<h2 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>[1] https://plantuml.com/class-diagram</li>
-<li>[2] https://www.lucidchart.com/pages/fr/langage-uml</li>
-<li>[3] https://gitmind.com/fr/types-diagrammes-uml.html</li>
-<li>[4] https://creately.com/blog/fr/uncategorized-fr/tutoriel-sur-les-diagrammes-de-classe/</li>
-<li>[5] https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/</li>
-<li>[6] https://plantuml.com/fr-dark/class-diagram</li>
-<li>[7] https://miro.com/fr/diagramme/qu-est-ce-qu-un-diagramme-uml/</li>
-<li>[8] https://ideascale.com/fr/blogues/differents-types-de-diagrammes-duml/</li>
-<li>[9] https://miro.com/fr/diagramme/qu-est-ce-qu-un-diagramme-de-classe-uml/</li>
-<li>[10] https://www.lucidchart.com/blog/fr/types-de-diagrammes-UML</li>
-</ul>
 <hr />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<details class="info">
+<summary>Utilisation de l&rsquo;IA</summary>
 <p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA, principalement à l&rsquo;aide de Perplexity AI, avec le <em>LLM</em>
-<strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
-structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
-</div>
+  <strong>Claude 3.5 Sonnet</strong>. L&rsquo;IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
+  structure. Toutes les informations ont été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
+</details>
 
 
 
@@ -2906,7 +2877,7 @@ structure. Toutes les informations ont été vérifiées, éditées et complét�
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../4.%20Interfaces/03-exemples/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🔸3🔸Exemples">
+          <a href="../05-vehicules/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5. Exercices sur un système de gestion de véhicules">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2916,20 +2887,20 @@ structure. Toutes les informations ont été vérifiées, éditées et complét�
                 Previous
               </span>
               <div class="md-ellipsis">
-                🔸3🔸Exemples
+                5. Exercices sur un système de gestion de véhicules
               </div>
             </div>
           </a>
         
         
           
-          <a href="../02-exemples/" class="md-footer__link md-footer__link--next" aria-label="Next: 🔸2🔸Exemples">
+          <a href="../07-equals/" class="md-footer__link md-footer__link--next" aria-label="Next: 7. La méthode equals">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                🔸2🔸Exemples
+                7. La méthode equals
               </div>
             </div>
             <div class="md-footer__button md-icon">
