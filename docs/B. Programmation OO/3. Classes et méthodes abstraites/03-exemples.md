@@ -3,9 +3,9 @@
 !!! warning "Avertissement"
 
     Les exemples ci-dessous sont des illustrations simplifiées de concepts de programmation orientée objet. Ils ne
-    représentent pas des implémentations complètes de jeux vidéo et nécessitent des adaptations pour être utilisés
-    dans un contexte réel. Par exemple, les méthodes ne contiendraient pas seulement des `println` mais des logiques
-    plus complexes.
+    représentent pas des implémentations complètes de transactions bancaires et nécessitent des adaptations pour être 
+    utilisés dans un contexte réel. Par exemple, les méthodes ne contiendraient pas seulement des `println` mais des 
+    logiques plus complexes.
 
 ## Classe Abstraite Transaction
 
@@ -267,6 +267,6 @@ transactions peuvent être ajoutés sans modifier le code existant.
 -------
 
 !!! note "Note"
-Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
-**Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
-structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+   Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
+   **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
+   structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.

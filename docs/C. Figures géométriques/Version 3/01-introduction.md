@@ -54,6 +54,272 @@ En résumé, `Shape` fournit un modèle commun pour les formes, gère les propri
 concrètes de définir comment elles se dessinent.
 
 
+## Diagrammes de classes
+
+### Version IntelliJ
+
+![](../../images/shapesv3.png)
+
+### Version PlantUML
+
+```puml
+@startuml
+
+skinparam linetype ortho
+skinparam classAttributeIconSize 0
+
+class Circle {
+  + Circle(Point, int, Color): 
+  + Circle(Point, int): 
+  - center: Point
+  - radius: int
+  + setCenter(Point): void
+  + getRadius(): int
+  + draw(Image): void
+  + setRadius(int): void
+  - drawCirclePoints(Image, int, int, int, int): void
+  + getCenter(): Point
+}
+class HLine {
+  + HLine(Point, int, Color): 
+  + HLine(Point, int): 
+  - start: Point
+  - width: int
+  + draw(Image): void
+  + getWidth(): int
+  + setWidth(int): void
+  + getStart(): Point
+  + setStart(Point): void
+}
+class Line {
+  + Line(Point, Point): 
+  + Line(Point, Point, Color): 
+  # start: Point
+  # end: Point
+  - drawCloserToHorizontal(Image, int, int, double, double): void
+  + getEnd(): Point
+  - drawVerticalLine(Image, int, int, int): void
+  - drawCloserToVertical(Image, int, int, double, double): void
+  + setStart(Point): void
+  + draw(Image): void
+  + getStart(): Point
+  + setEnd(Point): void
+}
+class Point {
+  + Point(int, int): 
+  + Point(int, int, Color): 
+  - y: int
+  - x: int
+  + setX(int): void
+  + setY(int): void
+  + draw(Image): void
+  + getY(): int
+  + toString(): String
+  + getX(): int
+}
+class Rectangle {
+  + Rectangle(Point, int, int, Color): 
+  + Rectangle(Point, int, int): 
+  - width: int
+  - height: int
+  - topLeft: Point
+  + getWidth(): int
+  + draw(Image): void
+  + getHeight(): int
+  + setHeight(int): void
+  + setTopLeft(Point): void
+  + getTopLeft(): Point
+  + setWidth(int): void
+}
+class Shape {
+  # Shape(Color): 
+  # Shape(): 
+  + defaultDrawColor: Color
+  + drawColor: Color
+  + setDrawColor(Color): void
+  + getDrawColor(): Color
+  + draw(Image): void
+}
+class Square {
+  + Square(Point, int, Color): 
+  + Square(Point, int): 
+  - topLeft: Point
+  - width: int
+  + getWidth(): int
+  + getTopLeft(): Point
+  + draw(Image): void
+  + setTopLeft(Point): void
+  + setWidth(int): void
+}
+class Triangle {
+  + Triangle(Point, Point, Point): 
+  + Triangle(Point, Point, Point, Color): 
+  - b: Point
+  - c: Point
+  - a: Point
+  + getB(): Point
+  + setB(Point): void
+  + setC(Point): void
+  + draw(Image): void
+  + getC(): Point
+  + setA(Point): void
+  + getA(): Point
+}
+class VLine {
+  + VLine(Point, int, Color): 
+  + VLine(Point, int): 
+  - start: Point
+  - height: int
+  + getHeight(): int
+  + setStart(Point): void
+  + draw(Image): void
+  + setHeight(int): void
+  + getStart(): Point
+}
+
+Circle     --^  Shape     
+HLine      -[#000082,plain]-^  Shape     
+Line       -[#000082,plain]-^  Shape     
+Point      -[#000082,plain]-^  Shape     
+Rectangle  -[#000082,plain]-^  Shape     
+Square     -[#000082,plain]-^  Shape     
+Triangle   -[#000082,plain]-^  Shape     
+VLine      -[#000082,plain]-^  Shape
+     
+@enduml
+```
+
+
+??? important "Source PlantUML"
+
+        ```plantuml
+        @startuml
+        
+        skinparam linetype ortho
+        skinparam classAttributeIconSize 0
+        
+        class Circle {
+          + Circle(Point, int, Color): 
+          + Circle(Point, int): 
+          - center: Point
+          - radius: int
+          + setCenter(Point): void
+          + getRadius(): int
+          + draw(Image): void
+          + setRadius(int): void
+          - drawCirclePoints(Image, int, int, int, int): void
+          + getCenter(): Point
+        }
+        class HLine {
+          + HLine(Point, int, Color): 
+          + HLine(Point, int): 
+          - start: Point
+          - width: int
+          + draw(Image): void
+          + getWidth(): int
+          + setWidth(int): void
+          + getStart(): Point
+          + setStart(Point): void
+        }
+        class Line {
+          + Line(Point, Point): 
+          + Line(Point, Point, Color): 
+          # start: Point
+          # end: Point
+          - drawCloserToHorizontal(Image, int, int, double, double): void
+          + getEnd(): Point
+          - drawVerticalLine(Image, int, int, int): void
+          - drawCloserToVertical(Image, int, int, double, double): void
+          + setStart(Point): void
+          + draw(Image): void
+          + getStart(): Point
+          + setEnd(Point): void
+        }
+        class Point {
+          + Point(int, int): 
+          + Point(int, int, Color): 
+          - y: int
+          - x: int
+          + setX(int): void
+          + setY(int): void
+          + draw(Image): void
+          + getY(): int
+          + toString(): String
+          + getX(): int
+        }
+        class Rectangle {
+          + Rectangle(Point, int, int, Color): 
+          + Rectangle(Point, int, int): 
+          - width: int
+          - height: int
+          - topLeft: Point
+          + getWidth(): int
+          + draw(Image): void
+          + getHeight(): int
+          + setHeight(int): void
+          + setTopLeft(Point): void
+          + getTopLeft(): Point
+          + setWidth(int): void
+        }
+        class Shape {
+          # Shape(Color): 
+          # Shape(): 
+          + defaultDrawColor: Color
+          + drawColor: Color
+          + setDrawColor(Color): void
+          + getDrawColor(): Color
+          + draw(Image): void
+        }
+        class Square {
+          + Square(Point, int, Color): 
+          + Square(Point, int): 
+          - topLeft: Point
+          - width: int
+          + getWidth(): int
+          + getTopLeft(): Point
+          + draw(Image): void
+          + setTopLeft(Point): void
+          + setWidth(int): void
+        }
+        class Triangle {
+          + Triangle(Point, Point, Point): 
+          + Triangle(Point, Point, Point, Color): 
+          - b: Point
+          - c: Point
+          - a: Point
+          + getB(): Point
+          + setB(Point): void
+          + setC(Point): void
+          + draw(Image): void
+          + getC(): Point
+          + setA(Point): void
+          + getA(): Point
+        }
+        class VLine {
+          + VLine(Point, int, Color): 
+          + VLine(Point, int): 
+          - start: Point
+          - height: int
+          + getHeight(): int
+          + setStart(Point): void
+          + draw(Image): void
+          + setHeight(int): void
+          + getStart(): Point
+        }
+        
+        Circle     --^  Shape     
+        HLine      -[#000082,plain]-^  Shape     
+        Line       -[#000082,plain]-^  Shape     
+        Point      -[#000082,plain]-^  Shape     
+        Rectangle  -[#000082,plain]-^  Shape     
+        Square     -[#000082,plain]-^  Shape     
+        Triangle   -[#000082,plain]-^  Shape     
+        VLine      -[#000082,plain]-^  Shape
+             
+        @enduml
+        ```
+
+
 
 -------
 

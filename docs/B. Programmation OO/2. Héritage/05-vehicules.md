@@ -78,9 +78,9 @@ VehiculeMotorise <|-- Camion
 
 ??? important "Source PlantUML"
 
-```plantuml
-@startuml
-skinparam classAttributeIconSize 0
+    ```plantuml
+    @startuml
+    skinparam classAttributeIconSize 0
 
     class Vehicule {
         - nom: String
