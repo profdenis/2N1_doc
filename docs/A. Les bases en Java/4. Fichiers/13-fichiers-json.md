@@ -75,16 +75,15 @@ Le programme attend un fichier JSON simple avec des paires clé-valeur, par exem
     - `IOException` pour les erreurs de lecture
     - `ParseException` pour les erreurs de format JSON
 
-### Citations
-
-- [1] https://waytolearnx.com/2020/03/lire-un-fichier-json-avec-java.html
-- [2] https://stackoverflow.com/questions/443499/convert-json-to-map
-- [3] https://www.twilio.com/fr-fr/blog/trois-facons-utiliser-jackson-json-java
-- [4] https://www.journaldunet.fr/developpeur/developpement/1203033-comment-parser-un-json-en-java/
-- [5] https://jmdoudoux.developpez.com/cours/developpons/java/chap-json-p.php
-- [6] https://javarush.com/fr/groups/posts/fr.3970.pause-caf-175-comment-lire-un-fichier-json-en-java--quest-ce-que-le-kit-de-dveloppement-jav
-- [7] https://openclassrooms.com/forum/sujet/lire-dans-un-fichier-json-1
-- [8] https://developers.google.com/maps/documentation/javascript/importing_data?hl=fr
+??? note "Citations"
+    - [1] https://waytolearnx.com/2020/03/lire-un-fichier-json-avec-java.html
+    - [2] https://stackoverflow.com/questions/443499/convert-json-to-map
+    - [3] https://www.twilio.com/fr-fr/blog/trois-facons-utiliser-jackson-json-java
+    - [4] https://www.journaldunet.fr/developpeur/developpement/1203033-comment-parser-un-json-en-java/
+    - [5] https://jmdoudoux.developpez.com/cours/developpons/java/chap-json-p.php
+    - [6] https://javarush.com/fr/groups/posts/fr.3970.pause-caf-175-comment-lire-un-fichier-json-en-java--quest-ce-que-le-kit-de-dveloppement-jav
+    - [7] https://openclassrooms.com/forum/sujet/lire-dans-un-fichier-json-1
+    - [8] https://developers.google.com/maps/documentation/javascript/importing_data?hl=fr
 
 ## Exemple avec `com.google.gson.Gson`
 
@@ -336,7 +335,7 @@ utilisant le mécanisme `TypeToken` nécessaire pour une désérialisation corre
 
 -------
 
-!!! note "Note"
-    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
-    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
-    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    été vérifiées, éditées et complétées par l'auteur.

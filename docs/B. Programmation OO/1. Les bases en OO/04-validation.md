@@ -83,20 +83,19 @@ L'utilisation d'exceptions est particulièrement pertinente ici car il s'agit d'
 échouer en raison de facteurs externes (entrées utilisateur)[3], ce qui correspond exactement au cas d'usage recommandé
 pour la gestion des exceptions.
 
-## Citations
-
-- [1] https://www.osedea.com/fr/perspective/gerer-et-reduire-les-exceptions
-- [2] https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_gestion_d'exceptions
-- [3] https://canada.lenovo.com/fr/ca/en/glossary/exception-handling/
-- [4] https://javarush.com/fr/groups/posts/fr.701.erreurs-courantes-dans-la-gestion-des-exceptions
-- [5] https://www.jmdoudoux.fr/java/dej/chap-validation_donnees.htm
+??? note "Citations"
+      - [1] https://www.osedea.com/fr/perspective/gerer-et-reduire-les-exceptions
+      - [2] https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_gestion_d'exceptions
+      - [3] https://canada.lenovo.com/fr/ca/en/glossary/exception-handling/
+      - [4] https://javarush.com/fr/groups/posts/fr.701.erreurs-courantes-dans-la-gestion-des-exceptions
+      - [5] https://www.jmdoudoux.fr/java/dej/chap-validation_donnees.htm
 
 
 
 
 -------
 
-!!! note "Note"
-    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM* 
-    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
-    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    été vérifiées, éditées et complétées par l'auteur.

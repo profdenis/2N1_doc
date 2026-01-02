@@ -91,22 +91,21 @@ Dans cet exemple :
 - La classe `Client` a deux attributs privés (`nom` et `prenom`) et une méthode publique (`getNomComplet`)
 - L'association entre les classes indique qu'un client peut posséder plusieurs comptes (association "1 à plusieurs")[9]
 
-## Citations
-
-- [1] https://plantuml.com/class-diagram
-- [2] https://www.lucidchart.com/pages/fr/langage-uml
-- [3] https://gitmind.com/fr/types-diagrammes-uml.html
-- [4] https://creately.com/blog/fr/uncategorized-fr/tutoriel-sur-les-diagrammes-de-classe/
-- [5] https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/
-- [6] https://plantuml.com/fr-dark/class-diagram
-- [7] https://miro.com/fr/diagramme/qu-est-ce-qu-un-diagramme-uml/
-- [8] https://ideascale.com/fr/blogues/differents-types-de-diagrammes-duml/
-- [9] https://miro.com/fr/diagramme/qu-est-ce-qu-un-diagramme-de-classe-uml/
-- [10] https://www.lucidchart.com/blog/fr/types-de-diagrammes-UML
+??? note "Citations"
+      - [1] https://plantuml.com/class-diagram
+      - [2] https://www.lucidchart.com/pages/fr/langage-uml
+      - [3] https://gitmind.com/fr/types-diagrammes-uml.html
+      - [4] https://creately.com/blog/fr/uncategorized-fr/tutoriel-sur-les-diagrammes-de-classe/
+      - [5] https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/
+      - [6] https://plantuml.com/fr-dark/class-diagram
+      - [7] https://miro.com/fr/diagramme/qu-est-ce-qu-un-diagramme-uml/
+      - [8] https://ideascale.com/fr/blogues/differents-types-de-diagrammes-duml/
+      - [9] https://miro.com/fr/diagramme/qu-est-ce-qu-un-diagramme-de-classe-uml/
+      - [10] https://www.lucidchart.com/blog/fr/types-de-diagrammes-UML
 
 -------
 
-!!! note "Note"
-    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
-    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
-    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    été vérifiées, éditées et complétées par l'auteur.

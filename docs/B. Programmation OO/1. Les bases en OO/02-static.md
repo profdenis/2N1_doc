@@ -56,20 +56,19 @@ Exemple.incrementer();  // Appel sans instance
 System.out.println(Exemple.compteur);  // Accès direct
 ```
 
-## Citations
-
-- [1] https://waytolearnx.com/2018/11/le-mot-cle-static-en-java.html
-- [2] https://perso.telecom-paristech.fr/hudry/coursJava/avance/static.html
-- [3] https://www.guru99.com/fr/static-variable-in-java.html
-- [4] https://javarush.com/fr/groups/posts/fr.3874.pause-caf-142-quel-rle-le-mot-cl-static-joue-t-il-en-java-
-- [5] https://blog.paumard.org/cours/java/chap04-structure-classe-statique.html
+??? note "Citations"
+    - [1] https://waytolearnx.com/2018/11/le-mot-cle-static-en-java.html
+    - [2] https://perso.telecom-paristech.fr/hudry/coursJava/avance/static.html
+    - [3] https://www.guru99.com/fr/static-variable-in-java.html
+    - [4] https://javarush.com/fr/groups/posts/fr.3874.pause-caf-142-quel-rle-le-mot-cl-static-joue-t-il-en-java-
+    - [5] https://blog.paumard.org/cours/java/chap04-structure-classe-statique.html
 
 
 
 
 -------
 
-!!! note "Note"
-    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM* 
-    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
-    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    été vérifiées, éditées et complétées par l'auteur.

@@ -137,24 +137,23 @@ Ces exemples illustrent comment :
 - Une classe peut hériter d'une seule classe abstraite mais implémenter plusieurs interfaces
 - Les interfaces favorisent la réutilisation de code à travers des hiérarchies non liées
 
-## Citations
-
-- [1] https://www.studysmarter.fr/resumes/informatique/programmation-informatique/interfaces-java/
-- [2] https://members.loria.fr/ABelaid/Enseignement/FC/Cours7-Classes-abstraites.pdf
-- [3] https://codegym.cc/fr/groups/posts/fr.1008.interface-en-java
-- [4] https://www.studysmarter.fr/resumes/informatique/programmation-informatique/abstraction-en-java/
-- [5] https://www.studysmarter.fr/resumes/informatique/programmation-informatique/interface-set-java/
-- [6] https://dev.to/bassaoudev/poo-comprendre-les-classes-abstraites-et-les-interfaces-en-java-3imn
-- [7] https://dev.to/bassaoudev/poo-les-interfaces-en-java-simplement-5fdd
-- [8] https://codegym.cc/fr/groups/posts/les-classes-abstraites-en-java
-- [9] https://blog.paumard.org/cours/java/chap07-heritage-interface-interface.html
-- [10] https://gayerie.dev/epsi-b3-java/langage_java/interface.html
+??? note "Citations"
+      - [1] https://www.studysmarter.fr/resumes/informatique/programmation-informatique/interfaces-java/
+      - [2] https://members.loria.fr/ABelaid/Enseignement/FC/Cours7-Classes-abstraites.pdf
+      - [3] https://codegym.cc/fr/groups/posts/fr.1008.interface-en-java
+      - [4] https://www.studysmarter.fr/resumes/informatique/programmation-informatique/abstraction-en-java/
+      - [5] https://www.studysmarter.fr/resumes/informatique/programmation-informatique/interface-set-java/
+      - [6] https://dev.to/bassaoudev/poo-comprendre-les-classes-abstraites-et-les-interfaces-en-java-3imn
+      - [7] https://dev.to/bassaoudev/poo-les-interfaces-en-java-simplement-5fdd
+      - [8] https://codegym.cc/fr/groups/posts/les-classes-abstraites-en-java
+      - [9] https://blog.paumard.org/cours/java/chap07-heritage-interface-interface.html
+      - [10] https://gayerie.dev/epsi-b3-java/langage_java/interface.html
 
 
 
 -------
 
-!!! note "Note"
-    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM* 
-    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
-    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    été vérifiées, éditées et complétées par l'auteur.

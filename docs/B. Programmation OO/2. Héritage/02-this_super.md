@@ -54,20 +54,19 @@ public class Etudiant extends Personne {
 | Constructeur    | Appelle autre constructeur de la même classe      | Appelle constructeur de la classe parente         |
 | Position        | Première instruction si utilisé dans constructeur | Première instruction si utilisé dans constructeur |
 
-## Citations
-
-- [1] https://www.studysmarter.fr/resumes/informatique/programmation-informatique/mot-cle-this-de-java/
-- [2] https://www.justacademy.co/blog-detail/difference-between-this-and-super-in-java
-- [3] https://www.scientecheasy.com/2019/11/difference-between-super-and-this-keyword-in-java.html/
-- [4] https://www.javatpoint.com/this-vs-super-in-java
-- [5] https://www.scaler.com/topics/java/this-and-super-keyword-in-java/
+??? note "Citations"
+      - [1] https://www.studysmarter.fr/resumes/informatique/programmation-informatique/mot-cle-this-de-java/
+      - [2] https://www.justacademy.co/blog-detail/difference-between-this-and-super-in-java
+      - [3] https://www.scientecheasy.com/2019/11/difference-between-super-and-this-keyword-in-java.html/
+      - [4] https://www.javatpoint.com/this-vs-super-in-java
+      - [5] https://www.scaler.com/topics/java/this-and-super-keyword-in-java/
 
 
 
 
 -------
 
-!!! note "Note"
-    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM* 
-    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
-    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    été vérifiées, éditées et complétées par l'auteur.

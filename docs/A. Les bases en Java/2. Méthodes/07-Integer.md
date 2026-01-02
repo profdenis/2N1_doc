@@ -49,19 +49,18 @@ public class NombreModifiable {
 Cette limitation des Integer est intentionnelle et fait partie de la conception de Java[2]. Quand on tente de modifier
 un Integer, Java crée en fait un nouvel objet plutôt que de modifier l'existant[4].
 
-## Citations
-
-- [1] https://www.geeksforgeeks.org/how-to-pass-integer-by-reference-in-java/
-- [2] https://namekdev.net/2012/07/immutability-of-java-integer/
-- [3] https://www.scaler.com/topics/integer-class-in-java/
-- [4] https://stackoverflow.com/questions/26185527/how-can-i-change-integer-value-when-it-is-an-argument-like-change-arrays-value/26185597
-- [5] https://www.geeksforgeeks.org/primitive-wrapper-classes-are-immutable-in-java/
+??? note "Citations"
+    - [1] https://www.geeksforgeeks.org/how-to-pass-integer-by-reference-in-java/
+    - [2] https://namekdev.net/2012/07/immutability-of-java-integer/
+    - [3] https://www.scaler.com/topics/integer-class-in-java/
+    - [4] https://stackoverflow.com/questions/26185527/how-can-i-change-integer-value-when-it-is-an-argument-like-change-arrays-value/26185597
+    - [5] https://www.geeksforgeeks.org/primitive-wrapper-classes-are-immutable-in-java/
 
 
 
 -------
 
-!!! note "Note"
-    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM* 
-    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
-    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    été vérifiées, éditées et complétées par l'auteur.

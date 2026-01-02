@@ -193,20 +193,19 @@ Cette approche est efficace, car elle :
 - Gère correctement les ressources
 - Ajoute un formatage clair et lisible aux numéros de ligne.
 
-### Citations
-
-- [1] https://www.digitalocean.com/community/tutorials/java-read-file-line-by-line
-- [2] https://howtodoinjava.com/java/io/linenumber-reader-example/
-- [3] https://stackoverflow.com/questions/23023472/how-to-add-line-numbers-to-a-text-file
-- [4] https://www.geeksforgeeks.org/java-program-to-read-content-from-one-file-and-write-it-into-another-file/
-- [5] https://www.reddit.com/r/golang/comments/jmc6ow/append_line_numbers_to_a_text_file/
-- [6] https://www.youtube.com/watch?v=IodQ6yhBbbU
+??? note "Citations"
+    - [1] https://www.digitalocean.com/community/tutorials/java-read-file-line-by-line
+    - [2] https://howtodoinjava.com/java/io/linenumber-reader-example/
+    - [3] https://stackoverflow.com/questions/23023472/how-to-add-line-numbers-to-a-text-file
+    - [4] https://www.geeksforgeeks.org/java-program-to-read-content-from-one-file-and-write-it-into-another-file/
+    - [5] https://www.reddit.com/r/golang/comments/jmc6ow/append_line_numbers_to_a_text_file/
+    - [6] https://www.youtube.com/watch?v=IodQ6yhBbbU
 
 
 
 -------
 
-!!! note "Note"
-      Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM*
-      **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de
-      structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    été vérifiées, éditées et complétées par l'auteur.

@@ -239,25 +239,24 @@ public class ScoreSurvie extends SystemeScore {
 Cette approche est particulièrement utile dans les jeux vidéo car elle permet de définir des comportements standards
 tout en laissant la flexibilité nécessaire pour les variations spécifiques à chaque type d'entité du jeu.
 
-## Citations
-
-- [1] https://www.saagie.com/fr/blog/blog-l-intelligence-artificielle-dans-les-jeux-video/
-- [2] https://artificialpaintings.com/fr/blog/2024/07/01/explorer-lart-abstrait-dans-les-jeux-video/
-- [3] https://www.youtube.com/watch?v=MLqplTsgga0
-- [4] https://zestedesavoir.com/tutoriels/646/apprenez-a-programmer-en-java/557_java-oriente-objet/2698_les-classes-abstraites-et-les-interfaces/
-- [5] https://www.firstpersonscholar.com/the-importance-of-abstraction/
-- [6] https://dev.to/carlillo/understanding-design-patterns-abstract-factory-23e7
-- [7] http://www.iro.umontreal.ca/~dift1170/A09/docPDF/chapit09.pdf
-- [8] https://ludobel.be/2022/11/03/limportance-des-jeux-abstraits/
-- [9] https://refactoring.guru/fr/design-patterns/template-method
-- [10] https://blackshellmedia.com/2015/09/15/game-design-101-the-beauty-of-abstraction/
+??? note "Citations"
+      - [1] https://www.saagie.com/fr/blog/blog-l-intelligence-artificielle-dans-les-jeux-video/
+      - [2] https://artificialpaintings.com/fr/blog/2024/07/01/explorer-lart-abstrait-dans-les-jeux-video/
+      - [3] https://www.youtube.com/watch?v=MLqplTsgga0
+      - [4] https://zestedesavoir.com/tutoriels/646/apprenez-a-programmer-en-java/557_java-oriente-objet/2698_les-classes-abstraites-et-les-interfaces/
+      - [5] https://www.firstpersonscholar.com/the-importance-of-abstraction/
+      - [6] https://dev.to/carlillo/understanding-design-patterns-abstract-factory-23e7
+      - [7] http://www.iro.umontreal.ca/~dift1170/A09/docPDF/chapit09.pdf
+      - [8] https://ludobel.be/2022/11/03/limportance-des-jeux-abstraits/
+      - [9] https://refactoring.guru/fr/design-patterns/template-method
+      - [10] https://blackshellmedia.com/2015/09/15/game-design-101-the-beauty-of-abstraction/
 
 
 
 
 -------
 
-!!! note "Note"
-    Page rédigée en partie avec l'aide d'un assistant IA, principalement à l'aide de Perplexity AI, avec le *LLM* 
-    **Claude 3.5 Sonnet**. L'IA a été utilisée pour générer des explications, des exemples et/ou des suggestions de 
-    structure. Toutes les informations ont été vérifiées, éditées et complétées par l'auteur.
+??? info "Utilisation de l'IA"
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    été vérifiées, éditées et complétées par l'auteur.

@@ -189,7 +189,6 @@ En suivant ces méthodes, vous pouvez facilement convertir entre `ArrayList` et 
 grande flexibilité dans vos programmes.
 
 ??? note "Citations"
-
       - [1] https://www.geeksforgeeks.org/arraylist-array-conversion-java-toarray-methods/
       - [2] https://stackoverflow.com/questions/32677003/how-to-convert-arraylist-to-array
       - [3] https://www.geeksforgeeks.org/arraylist-toarray-method-in-java-with-examples/
