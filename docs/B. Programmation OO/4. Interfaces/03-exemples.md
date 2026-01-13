@@ -1,4 +1,8 @@
-# 🔸3🔸Exemples
+---
+icon: material/file-document-outline
+---
+
+# 3. Exemples
 
 !!! warning "Avertissement"
 

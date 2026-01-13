@@ -1,4 +1,8 @@
-# 🔸2🔸Exemples
+---
+icon: material/file-document-outline
+---
+
+# 2. Exemples
 
 ## Exemple 1
 

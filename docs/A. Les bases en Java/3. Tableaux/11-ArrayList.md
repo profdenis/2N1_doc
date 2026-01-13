@@ -1,4 +1,8 @@
-# 🔸11🔸ArrayList
+---
+icon: material/file-document-outline
+---
+
+# 11. ArrayList
 
 ## ArrayList en Java
 

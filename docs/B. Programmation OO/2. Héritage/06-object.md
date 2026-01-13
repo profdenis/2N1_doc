@@ -1,3 +1,7 @@
+---
+icon: material/file-document-outline
+---
+
 # 6. La classe `Object`
 
 La classe Object est la classe racine de la hiérarchie des classes en Java. Elle est la superclasse directe ou indirecte

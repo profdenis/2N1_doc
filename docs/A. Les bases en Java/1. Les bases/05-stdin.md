@@ -1,4 +1,8 @@
-# 🔸5🔸stdin
+---
+icon: material/file-document-outline
+---
+
+# 5. stdin
 
 ## Lecture depuis le stdin
 

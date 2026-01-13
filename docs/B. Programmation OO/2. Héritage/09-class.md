@@ -1,3 +1,7 @@
+---
+icon: material/file-document-outline
+---
+
 # 9. La classe `Class`
 
 ## La classe `Class` en Java

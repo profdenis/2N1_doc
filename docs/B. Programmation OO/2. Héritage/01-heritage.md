@@ -1,4 +1,8 @@
-# 🔸1🔸L'héritage
+---
+icon: material/file-document-outline
+---
+
+# 1. L'héritage
 
 L'héritage est un concept fondamental en programmation orientée objet qui permet de créer une nouvelle classe à partir
 d'une classe existante. La nouvelle classe hérite des attributs et méthodes de la classe parente.

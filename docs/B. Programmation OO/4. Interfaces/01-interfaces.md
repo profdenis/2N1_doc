@@ -1,4 +1,8 @@
-# 🔸1🔸Interfaces
+---
+icon: material/file-document-outline
+---
+
+# 1. Interfaces
 
 Une interface en Java est un contrat qui définit un ensemble de méthodes qu'une classe doit implémenter. Elle permet de
 définir un comportement commun que plusieurs classes non liées peuvent partager.

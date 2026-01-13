@@ -1,4 +1,8 @@
-# 🔸2🔸Variables et types
+---
+icon: material/file-document-outline
+---
+
+# 2. Variables et types
 
 ## Déclaration de variables
 

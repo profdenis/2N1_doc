@@ -1,4 +1,8 @@
-# 🔸10🔸Tableaux
+---
+icon: material/file-document-outline
+---
+
+# 10. Tableaux
 
 ## Tableaux de types primitifs
 

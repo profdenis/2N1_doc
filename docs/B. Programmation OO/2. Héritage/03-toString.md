@@ -1,4 +1,8 @@
-# 🔸3🔸Méthode `toString` et introduction au polymorphisme
+---
+icon: material/file-document-outline
+---
+
+# 3. Méthode `toString` et introduction au polymorphisme
 
 La redéfinition de méthodes est un excellent exemple pour introduire le polymorphisme.
 

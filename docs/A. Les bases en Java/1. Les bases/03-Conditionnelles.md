@@ -1,4 +1,8 @@
-# 🔸3🔸Conditionnelles
+---
+icon: material/file-document-outline
+---
+
+# 3. Conditionnelles
 
 ## Instructions conditionnelles
 

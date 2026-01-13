@@ -1,3 +1,7 @@
+---
+icon: material/file-document-outline
+---
+
 # 5. Exercices sur un système de gestion de véhicules
 
 Voici un exercice sur un système de gestion de véhicules, basé en partie sur l'exemple précédent.

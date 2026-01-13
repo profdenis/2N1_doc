@@ -1,4 +1,8 @@
-# 🔸9🔸Récursivité 
+---
+icon: material/file-document-outline
+---
+
+# 9. Récursivité 
 
 ## Comprendre la récursivité
 

@@ -1,4 +1,8 @@
-# 🔸1🔸Programmation OO
+---
+icon: material/file-document-outline
+---
+
+# 1. Programmation OO
 
 La programmation orientée objet (POO) est une approche de programmation qui organise le code autour du concept d'objets,
 qui sont des instances de classes.

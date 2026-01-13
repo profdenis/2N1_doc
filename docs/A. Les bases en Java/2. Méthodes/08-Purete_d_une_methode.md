@@ -1,4 +1,8 @@
-# 🔸8🔸Pureté d'une méthode
+---
+icon: material/file-document-outline
+---
+
+# 8. Pureté d'une méthode
 
 ## Méthodes pures vs impures
 

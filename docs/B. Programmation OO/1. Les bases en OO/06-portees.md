@@ -1,4 +1,8 @@
-# 🔸6🔸Mots-clés de portée
+---
+icon: material/file-document-outline
+---
+
+# 6. Mots-clés de portée
 
 ## Résumé des Portées
 

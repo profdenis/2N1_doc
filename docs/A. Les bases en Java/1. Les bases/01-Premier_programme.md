@@ -1,4 +1,8 @@
-# 🔸1🔸Premier programme en Java
+---
+icon: material/file-document-outline
+---
+
+# 1. Premier programme en Java
 
 ## Création d'un projet Java
 
