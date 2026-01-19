@@ -13,7 +13,7 @@ Pour démarrer un nouveau projet Java dans IntelliJ IDEA :
 3. Configurez le projet :
     - Donnez un nom au projet
     - Sélectionnez "IntelliJ" comme système de build
-    - Choisissez OpenJDK 23[1]
+    - Choisissez OpenJDK 25[1]
 
 ## Structure du projet
 
