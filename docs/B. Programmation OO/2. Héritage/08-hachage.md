@@ -1,3 +1,7 @@
+---
+icon: material/file-document-outline
+---
+
 # 8. Fonctions et code de hachage
 
 Les fonctions de hachage sont des outils fondamentaux en informatique qui transforment des données de taille variable en

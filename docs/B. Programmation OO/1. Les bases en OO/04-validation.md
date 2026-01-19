@@ -1,4 +1,8 @@
-# 🔸4🔸Validation dans les mutateurs
+---
+icon: material/file-document-outline
+---
+
+# 4. Validation dans les mutateurs
 
 L'utilisation d'exceptions pour gérer les cas invalides est souvent préférable car elle force le code appelant à gérer
 explicitement les erreurs, contrairement à un retour silencieux qui pourrait passer inaperçu.

@@ -1,4 +1,8 @@
-# 🔸2🔸Classes Abstraites vs. les Interfaces
+---
+icon: material/file-document-outline
+---
+
+# 2. Classes Abstraites vs. les Interfaces
 
 ## Classes Abstraites : La Relation "Est-un"
 

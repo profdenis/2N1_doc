@@ -5,11 +5,12 @@ repo_url: https://github.com/profdenis/2N1_doc
 
 theme:
   name: material
-  locale: en
-  language: en
+  locale: fr
+  language: fr
   color_mode: auto
   user_color_mode_toggle: true
   icon:
+    logo: material/language-java
     repo: fontawesome/brands/github
   features:
     - content.code.copy
@@ -51,36 +52,42 @@ extra_css:
   - style.css
 
 markdown_extensions:
-    smarty: { }
-    toc:
-      permalink: true
-    sane_lists: { }
-    admonition: { }
-    pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-    pymdownx.inlinehilite: { }
-    pymdownx.snippets: {}
-    pymdownx.superfences: { }
-    pymdownx.fancylists: { }
-    pymdownx.saneheaders: { }
-    pymdownx.mark: { }
-    pymdownx.tabbed: { }
-    pymdownx.tasklist: { }
-    pymdownx.tilde: { }
-    pymdownx.details: { }
-    pymdownx.arithmatex:
-      generic: true
+  smarty: { }
+  toc:
+    permalink: true
+  sane_lists: { }
+  admonition: { }
+  attr_list: {}
+  pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+  pymdownx.inlinehilite: { }
+  pymdownx.snippets: {}
+  pymdownx.superfences: { }
+  pymdownx.fancylists: { }
+  pymdownx.saneheaders: { }
+  pymdownx.mark: { }
+  pymdownx.tabbed: { }
+  pymdownx.tasklist: { }
+  pymdownx.tilde: { }
+  pymdownx.details: { }
+  pymdownx.arithmatex:
+    generic: true
 
 extra_javascript:
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
-    - plantuml:
-        puml_url: https://www.plantuml.com/plantuml/
-        theme:
-          enabled: false
-    - search: {}
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      theme:
+        enabled: false
+  - search: {}

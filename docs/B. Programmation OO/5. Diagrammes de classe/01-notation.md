@@ -1,4 +1,8 @@
-# 🔸1🔸Notation UML
+---
+icon: material/file-document-outline
+---
+
+# 1. Notation UML
 
 Le langage UML (Unified Modeling Language) est un standard de modélisation visuelle utilisé pour représenter la
 structure et le comportement des systèmes logiciels[2].

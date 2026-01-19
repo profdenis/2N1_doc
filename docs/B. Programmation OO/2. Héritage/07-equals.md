@@ -1,3 +1,7 @@
+---
+icon: material/file-document-outline
+---
+
 # 7. La méthode `equals`
 
 En Java, la redéfinition de la méthode `equals()` est souvent nécessaire pour comparer des objets selon leur contenu

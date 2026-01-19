@@ -1,4 +1,8 @@
-# 🔸2🔸Exemples pour les jeux vidéos
+---
+icon: material/file-document-outline
+---
+
+# 2. Exemples pour les jeux vidéos
 
 !!! warning "Avertissement"
 

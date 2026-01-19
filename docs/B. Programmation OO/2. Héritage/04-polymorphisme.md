@@ -1,4 +1,8 @@
-# 🔸4🔸Définition du polymorphisme
+---
+icon: material/file-document-outline
+---
+
+# 4. Définition du polymorphisme
 
 Le polymorphisme est un concept fondamental en programmation orientée objet qui permet à des objets de différentes
 classes d'être traités comme des objets d'une classe commune.

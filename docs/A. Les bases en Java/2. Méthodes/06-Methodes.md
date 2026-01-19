@@ -1,4 +1,8 @@
-# 🔸6🔸Méthodes
+---
+icon: material/file-document-outline
+---
+
+# 6. Méthodes
 
 ## Déclaration de méthodes
 

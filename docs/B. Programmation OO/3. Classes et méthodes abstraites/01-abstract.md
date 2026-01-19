@@ -1,4 +1,8 @@
-# 🔸1🔸Mot-clé `abstract`
+---
+icon: material/file-document-outline
+---
+
+# 1. Mot-clé `abstract`
 
 ## Classes Concrètes vs Classes Abstraites
 

@@ -1,4 +1,8 @@
-# 🔸2🔸Les mots-clé `this` et `super`
+---
+icon: material/file-document-outline
+---
+
+# 2. Les mots-clé `this` et `super`
 
 Dans le contexte de la programmation orientée objet en Java, voici les différences clés entre `this` et `super` :
 

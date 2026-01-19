@@ -1,4 +1,8 @@
-# 🔸5🔸Le mot-clé `this`
+---
+icon: material/file-document-outline
+---
+
+# 5. Le mot-clé `this`
 
 Voici une version améliorée de la classe Personne utilisant la classe `LocalDate` de Java pour gérer les dates.
 

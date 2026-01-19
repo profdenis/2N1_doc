@@ -1,4 +1,8 @@
-# 🔸3🔸Exemples pour une banque
+---
+icon: material/file-document-outline
+---
+
+# 3. Exemples pour une banque
 
 !!! warning "Avertissement"
 

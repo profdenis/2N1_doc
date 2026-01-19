@@ -1,4 +1,8 @@
-# 🔸4🔸Boucles
+---
+icon: material/file-document-outline
+---
+
+# 4. Boucles
 
 ## Boucle while
 

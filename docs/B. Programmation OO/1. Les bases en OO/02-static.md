@@ -1,4 +1,8 @@
-# 🔸2🔸Mot-clé `static`
+---
+icon: material/file-document-outline
+---
+
+# 2. Mot-clé `static`
 
 Le mot-clé `static` est un modificateur qui permet de définir des éléments (attributs ou méthodes) qui appartiennent à
 la classe elle-même plutôt qu'aux instances de cette classe[1].

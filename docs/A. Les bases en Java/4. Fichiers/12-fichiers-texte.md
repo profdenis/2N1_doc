@@ -1,4 +1,8 @@
-# 🔸12🔸Gestion des fichiers texte
+---
+icon: material/file-document-outline
+---
+
+# 12. Gestion des fichiers texte
 
 ## *try-with-resources* vs. *try* classique
 

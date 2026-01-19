@@ -1,4 +1,8 @@
-# 🔸7🔸Les énumérations (enum) en Java
+---
+icon: material/file-document-outline
+---
+
+# 7. Les énumérations (enum) en Java
 
 Une énumération est un type spécial qui définit un ensemble fixe de constantes. Voici un exemple basique
 d'énumération des saisons :

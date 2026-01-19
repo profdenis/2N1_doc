@@ -1,4 +1,8 @@
-# 🔸3🔸Éviter `public` si possible
+---
+icon: material/file-document-outline
+---
+
+# 3. Éviter `public` si possible
 
 ## Pourquoi Éviter les Attributs Publics
 
