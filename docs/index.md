@@ -7,13 +7,13 @@
 1. [Source de ces notes de cours](https://github.com/profdenis/2N1_doc)
 2. [Projet Shapes](https://github.com/profdenis/Shapes)
 3. [Projet menu](https://github.com/profdenis/menu)
-4. [API JDK 23](https://docs.oracle.com/en/java/javase/23/docs/api/index.html)
+4. [API JDK 25](https://docs.oracle.com/en/java/javase/25/docs/api/index.html)
 
 
 ### Logiciels
 
-1. [OpenJDK 23](https://openjdk.org/projects/jdk/23/)
-2. [Documentation JDK 23](https://docs.oracle.com/en/java/javase/23/)
+1. [OpenJDK 25](https://openjdk.org/projects/jdk/25/)
+2. [Documentation JDK 25](https://docs.oracle.com/en/java/javase/25/)
 3. [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 
 ### Livres
