@@ -182,7 +182,27 @@ public class ControleBoucles {
 }
 ```
 
+### Pourquoi éviter `while (true)` et les `break` et `continue` si possible ?
 
+- **Lisibilité** : Une boucle `while True` peut rendre le code moins clair, car elle ne montre pas explicitement la
+  condition de sortie.
+- **Maintenabilité** : Dans un code complexe, il est facile d'oublier un `break` ou un `continue`, ou placer `continue`
+  à la place de `break`, ce qui peut entraîner des boucles infinies ou des boucles qui ne fonctionnent pas 
+  correctement.
+- **Style** : Certaines équipes de développement préfèrent éviter les boucles infinies explicites et les `break` et 
+  `continue` si possible pour des raisons de style et de robustesse.
+
+!!! warning "Attention"
+    **Règle générale** : Évitez les boucles infinies explicites, sauf dans des cas très précis où il n'y a aucune autre
+    option possible. Exemple : un serveur qui doit accepter un nombre de requêtes indéterminé, et qui doit 
+    s'exécuter pour un temps indéterminé, sans condition d'arrêt précise, donc qui doit s'exécuter le plus 
+    longtemps possible.
+
+!!! warning "Attention également aux `return`"
+    L'utilisation de `return` dans une boucle peut également rendre le code moins lisible et plus difficile à maintenir, 
+    car il peut être difficile de suivre le flux de contrôle lorsque des `return` sont utilisés dans des boucles 
+    imbriquées. Il est souvent préférable d'utiliser des variables pour stocker les résultats et de les retourner 
+    en dehors de la boucle, plutôt que de retourner directement à partir de la boucle.
 
 -------
 

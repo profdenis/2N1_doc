@@ -128,6 +128,38 @@ public class ExemplesSwitchModerne {
 }
 ```
 
+On pourrait réécrire un `switch` traditionnel en utilisant un `switch` avec `when` en Java (version 17 ou
+ultérieure), en exploitant le **pattern matching** et les **conditions `when`** pour simuler un comportement similaire à
+au `if-else` :
+
+```java
+int note = 85;
+String evaluation = switch (note) {
+    case int n when n >= 90 -> "Excellent";
+    case int n when n >= 80 -> "Très bien";
+    case int n when n >= 70 -> "Bien";
+    default -> "À améliorer";
+};
+System.out.
+
+println(evaluation);
+```
+
+### Explications :
+
+- **`case int n when n >= 90`** : Le motif `int n` capture la valeur de `note` dans la variable `n`, et la condition
+  `when n >= 90` permet de tester la plage de valeurs.
+- **Retour direct** : Le `switch` retourne une chaîne de caractères (`String`) en fonction de la condition remplie.
+- **`default`** : Gère tous les cas non couverts par les conditions précédentes.
+
+### Remarques pour ton cours :
+
+- Cette syntaxe est **plus lisible** que des `if-else` imbriqués, surtout pour des plages de valeurs.
+- Elle est idéale pour des **notes de cours** ou des exemples où tu veux montrer une alternative moderne au `if-else`.
+- Assure-toi que tes étudiants utilisent **Java 17 ou plus récent** pour que ce code fonctionne.
+
+---
+
 ## Exemple pratique combiné
 
 ```java
@@ -170,6 +202,6 @@ structures de contrôle peuvent travailler ensemble.
 -------
 
 ??? info "Utilisation de l'IA"
-    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
-    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont
     été vérifiées, éditées et complétées par l'auteur.

@@ -67,67 +67,13 @@ public class GestionExceptions {
 }
 ```
 
-## Exemple pratique complet
+!!! warning "En général, évitez les `while (true)`"
+    - **À utiliser avec parcimonie** : Peut rendre le code moins lisible.
+    - **Préférer une condition claire** quand c'est possible.
+    - En général, **if faut donc éviter les boucles `while (true)`, et essayer d'utiliser `break` et `continue` le moins 
+      possible**, pour écrire du code plus lisible et moins complexe. Le code peut rapidement devenir trop complexe et
+      illisible si on utilise des boucles `while True`.
 
-```java
-import java.util.Scanner;
-
-public class CalculatriceInteractive {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            try {
-                // Lecture du premier nombre
-                System.out.print("Premier nombre (ou 'q' pour quitter): ");
-                String input = scanner.nextLine();
-
-                if (input.equalsIgnoreCase("q")) {
-                    break;
-                }
-
-                double nombre1 = Double.parseDouble(input);
-
-                // Lecture de l'opération
-                System.out.print("Opération (+, -, *, /): ");
-                String operation = scanner.nextLine();
-
-                // Lecture du deuxième nombre
-                System.out.print("Deuxième nombre: ");
-                double nombre2 = Double.parseDouble(scanner.nextLine());
-
-                // Calcul et affichage du résultat
-                double resultat = switch (operation) {
-                    case "+" -> nombre1 + nombre2;
-                    case "-" -> nombre1 - nombre2;
-                    case "*" -> nombre1 * nombre2;
-                    case "/" -> {
-                        if (nombre2 == 0) {
-                            throw new ArithmeticException("Division par zéro");
-                        }
-                        yield nombre1 / nombre2;
-                    }
-                    default -> throw new IllegalArgumentException("Opération non valide");
-                };
-
-                System.out.printf("Résultat: %.2f%n", resultat);
-
-            } catch (NumberFormatException e) {
-                System.out.println("Erreur: Veuillez entrer un nombre valide");
-            } catch (ArithmeticException e) {
-                System.out.println("Erreur: Division par zéro impossible");
-            } catch (IllegalArgumentException e) {
-                System.out.println("Erreur: " + e.getMessage());
-            }
-
-            System.out.println(); // Ligne vide pour la lisibilité
-        }
-
-        System.out.println("Au revoir!");
-        scanner.close();
-    }
-}
-```
 
 ## Points importants à retenir
 
