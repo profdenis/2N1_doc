@@ -1467,6 +1467,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-exercice-voiture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercice - Jeu de Devinettes de Mots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3058,11 +3079,319 @@ classe qui la contient[2].</p>
 <li>[5] https://blog.paumard.org/cours/java/chap04-structure-classe-statique.html</li>
 </ul>
 </details>
+<h1 id="exemple-classes-voiture">Exemple : classes <code>Voiture</code><a class="headerlink" href="#exemple-classes-voiture" title="Permanent link">&para;</a></h1>
+<h2 id="diagramme-uml">📊 Diagramme UML<a class="headerlink" href="#diagramme-uml" title="Permanent link">&para;</a></h2>
+<p>Voici une représentation visuelle de la différence entre ces deux types d&rsquo;attributs :</p>
+<div class='puml-container'><div class="puml light" style="display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="704px" preserveAspectRatio="xMidYMid meet" style="width:787px;height:704px;background:#FEFEFE;" version="1.1" viewBox="0 0 787 704" width="787px" zoomAndPan="magnify" class="diagram"><defs/><g><rect fill="#FEFEFE" height="704" style="stroke:none;stroke-width:1;" width="787" x="0" y="0"/><g class="cluster" data-qualified-name="classMemory" data-source-line="43" id="ent0008"><path d="M445.25,497.84 L614.1475,497.84 A3.75,3.75 0 0 1 616.6475,500.34 L623.6475,520.1369 L669.25,520.1369 A2.5,2.5 0 0 1 671.75,522.6369 L671.75,584.64 A2.5,2.5 0 0 1 669.25,587.14 L445.25,587.14 A2.5,2.5 0 0 1 442.75,584.64 L442.75,500.34 A2.5,2.5 0 0 1 445.25,497.84" fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="442.75" x2="623.6475" y1="520.1369" y2="520.1369"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="167.8975" x="446.75" y="512.8351">Mémoire de la Classe</text></g><g class="entity" data-qualified-name="classMemory.staticAttr" data-source-line="44" id="ent0009"><rect fill="#ADD8E6" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="161.9277" x="466.79" y="540.84"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141.9277" x="476.79" y="556.8351">nombreVoitures = 3</text></g><g class="entity" data-qualified-name="Voiture" data-source-line="5" id="ent0002"><rect fill="#F1F1F1" height="145.7813" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="203.502" x="7" y="13.64"/><ellipse cx="79.1191" cy="29.64" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M82.0879,35.2806 Q81.5098,35.5775 80.8691,35.7181 Q80.2285,35.8744 79.5254,35.8744 Q77.0254,35.8744 75.6973,34.2337 Q74.3848,32.5775 74.3848,29.4525 Q74.3848,26.3275 75.6973,24.6712 Q77.0254,23.015 79.5254,23.015 Q80.2285,23.015 80.8691,23.1712 Q81.5254,23.3275 82.0879,23.6244 L82.0879,26.3431 Q81.4629,25.765 80.8691,25.4994 Q80.2754,25.2181 79.6504,25.2181 Q78.3066,25.2181 77.6191,26.2962 Q76.9316,27.3587 76.9316,29.4525 Q76.9316,31.5462 77.6191,32.6244 Q78.3066,33.6869 79.6504,33.6869 Q80.2754,33.6869 80.8691,33.4212 Q81.4629,33.14 82.0879,32.5619 L82.0879,35.2806 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.7637" x="99.6191" y="34.4867">Voiture</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="209.502" y1="45.64" y2="45.64"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="149.3105" x="13" y="62.6351">-nombreVoitures : int</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114.7959" x="13" y="78.932">-marque : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112.7178" x="13" y="95.2289">-couleur : String</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="209.502" y1="102.5306" y2="102.5306"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="191.502" x="13" y="119.5257">+getNombreVoitures() : int</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153.8291" x="13" y="135.8226">+getMarque() : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="155.3877" x="13" y="152.1195">+getCouleur() : String</text></g><path d="M245.74,6 L245.74,37.2656 L162.3105,57.7884 L245.74,45.2656 L245.74,76.5313 A0,0 0 0 0 245.74,76.5313 L488.4827,76.5313 A0,0 0 0 0 488.4827,76.5313 L488.4827,16 L478.4827,6 L245.74,6 A0,0 0 0 0 245.74,6" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M478.4827,6 L478.4827,16 L488.4827,16 L478.4827,6" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="114.1943" x="251.74" y="23.0669">Attribut STATIC</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="221.7427" x="251.74" y="38.1997">• Partagé par toutes les instances</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="198.1357" x="251.74" y="53.3325">• Une seule copie en mémoire</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="152.7627" x="251.74" y="68.4653">• Appartient à la classe</text><path d="M245.74,86.5313 L245.74,117.7969 L127.7959,74.0853 L245.74,125.7969 L245.74,157.0625 A0,0 0 0 0 245.74,157.0625 L497.7629,157.0625 A0,0 0 0 0 497.7629,157.0625 L497.7629,96.5313 L487.7629,86.5313 L245.74,86.5313 A0,0 0 0 0 245.74,86.5313" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M487.7629,86.5313 L487.7629,96.5313 L497.7629,96.5313 L487.7629,86.5313" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="231.0229" x="251.74" y="103.5981">Attribut NON-STATIC (instance)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="180.9336" x="251.74" y="118.731">• Unique à chaque instance</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="139.3882" x="251.74" y="133.8638">• Une copie par objet</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136.8809" x="251.74" y="148.9966">• Appartient à l'objet</text><g class="entity" data-qualified-name="v1" data-source-line="28" id="ent0005"><rect fill="#F1F1F1" height="60.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147.8916" x="532.81" y="56.09"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122.7598" x="545.3759" y="71.0851">voiture1 : Voiture</text><line style="stroke:#181818;stroke-width:0.5;" x1="533.81" x2="679.7016" y1="76.3869" y2="76.3869"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135.8916" x="538.81" y="93.382">marque = &quot;Toyota&quot;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130.4434" x="538.81" y="109.6789">couleur = &quot;Rouge&quot;</text></g><g class="entity" data-qualified-name="v2" data-source-line="33" id="ent0006"><rect fill="#F1F1F1" height="60.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="145.2871" x="337.11" y="228.06"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122.7598" x="348.3737" y="243.0551">voiture2 : Voiture</text><line style="stroke:#181818;stroke-width:0.5;" x1="338.11" x2="481.3971" y1="248.3569" y2="248.3569"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133.2871" x="343.11" y="265.352">marque = &quot;Honda&quot;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116.7578" x="343.11" y="281.6489">couleur = &quot;Bleu&quot;</text></g><g class="entity" data-qualified-name="v3" data-source-line="38" id="ent0007"><rect fill="#F1F1F1" height="60.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="136.7598" x="341.37" y="365.95"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122.7598" x="348.37" y="380.9451">voiture3 : Voiture</text><line style="stroke:#181818;stroke-width:0.5;" x1="342.37" x2="477.1298" y1="386.2469" y2="386.2469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119.1162" x="347.37" y="403.242">marque = &quot;Ford&quot;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114.4609" x="347.37" y="419.5389">couleur = &quot;Noir&quot;</text></g><g class="entity" data-qualified-name="GMN12" data-source-line="51" id="ent0013"><path d="M547.04,642.14 L547.04,697.5384 L780.4707,697.5384 L780.4707,652.14 L770.4707,642.14 L547.04,642.14" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M770.4707,642.14 L770.4707,652.14 L780.4707,652.14 L770.4707,642.14" fill="#FEFFDD" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169.9775" x="553.04" y="659.2069">L'attribut static est stocké</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148.7129" x="553.04" y="674.3397">au niveau de la classe.</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="212.4307" x="553.04" y="689.4725">Toutes les instances y accèdent.</text></g><g class="entity" data-qualified-name="GMN15" data-source-line="57" id="ent0016"><path d="M517.19,230.81 L517.19,286.2084 A0,0 0 0 0 517.19,286.2084 L696.3038,286.2084 A0,0 0 0 0 696.3038,286.2084 L696.3038,240.81 L686.3038,230.81 L610.75,230.81 L606.75,117.14 L602.75,230.81 L517.19,230.81 A0,0 0 0 0 517.19,230.81" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M686.3038,230.81 L686.3038,240.81 L696.3038,240.81 L686.3038,230.81" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146.7515" x="523.19" y="247.8769">Chaque instance a ses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="158.1138" x="523.19" y="263.0097">propres valeurs pour les</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124.4268" x="523.19" y="278.1425">attributs non-static</text></g><g class="link" data-entity-1="ent0008" data-entity-2="ent0013" data-link-type="association" data-source-line="51" id="lnk14"><path d="M663.75,587.4839 C663.75,588.0447 663.75,588.609 663.75,589.1765 C663.75,590.3116 663.75,591.4597 663.75,592.6187 C663.75,594.9366 663.75,597.2982 663.75,599.6863 C663.75,604.4623 663.75,609.3444 663.75,614.1956 C663.75,623.8981 663.75,633.4775 663.75,641.84" fill="none" id="classMemory-GMN12" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/></g><g class="link" data-entity-1="ent0005" data-entity-2="ent0009" data-link-type="dependency" data-source-line="62" id="lnk18"><path codeLine="62" d="M639.03,117.44 C664.84,143.72 699.05,184.48 713.75,228.06 C722.4,253.71 721.29,262.96 713.75,288.95 C681.79,399.12 592.1616,502.9538 561.5816,536.2038" fill="none" id="v1-to-staticAttr" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#181818" points="557.52,540.62,566.5566,536.7034,560.9047,536.9398,560.6683,531.2879,557.52,540.62" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46.5093" x="703.75" y="332.0169">accède</text></g><g class="link" data-entity-1="ent0006" data-entity-2="ent0009" data-link-type="dependency" data-source-line="63" id="lnk19"><path codeLine="63" d="M438.53,289.05 C456.98,309.32 480.28,337.59 495.75,365.95 C529.14,427.19 541.8821,505.822 545.7221,534.812" fill="none" id="v2-to-staticAttr" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#181818" points="546.51,540.76,549.2936,531.3127,545.8534,535.8033,541.3628,532.3632,546.51,540.76" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46.5093" x="521.75" y="400.9669">accède</text></g><g class="link" data-entity-1="ent0007" data-entity-2="ent0009" data-link-type="dependency" data-source-line="64" id="lnk20"><path codeLine="64" d="M433.91,427.2 C445.7,441.5 460.23,458.76 473.75,473.84 C495.8,498.44 518.729,521.8757 533.239,536.4657" fill="none" id="v3-to-staticAttr" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#181818" points="537.47,540.72,533.9598,531.5179,533.9442,537.1748,528.2874,537.1592,537.47,540.72" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46.5093" x="474.75" y="469.9069">accède</text></g><?plantuml-src TLF1Rjf04BtxAqRE8GaLg8GRKYeHrAYH0gqAwQNgOLbFpHPxnrslQMaKAPzIzLI-Wp_fbtJMQnDZWIpBwvdPDs_VcnL9GZzIzLFfECXNIcV2Y1Ha8l9yPArHYyBYdIGzKxyGNZTA5aAkOaE5ZiQKa86psxVk2O9oBtmYPGk3y1W0FEPMM2MVeAifNHYiSZaCGMdB1TrKcEy5yl-CMp8J3aag4YnCCxR7UHMZdHv0NLpkmLnoKkALmVrk5nzxq6RYAGWqMGIZugK5-bep7muFoJ92frDB0hFvQ7utxdGu-k_v3tmGnefujmNM1YonPZaa_2hDbBKiTxkw1usG8tC0IPb2G0tfRfkICbXLZ3A6i0grXTrlI8It0WFK4JYU9zbw2GzPJjzFkvufNDHKBlUa7xHoedCRkHHkLPSqo7gQxbIq-8RsECbpdtkXwFwbXN3joVLPxOfd22A7TRySYyhqQmZdj24hGexLhdFm8nKnXiwV5jnL6-wg1VUETDH6k-75CR116spG0hib4xMmfknNYPNn7H0nGZYfJ8G8dMVZqhCIhxHlWYcPJGaiXOaWRDs3QnYKnNw-dNrmTkySladOKcx4YdK_BrKKeVxIvGC7VEPcO52DnOAifTJDHQClTxq_5_LC-1w0kLkINEssd1S5QBL6_lW3-A7hSMP-P9XX0qBAtLzkRdljoNoXiExp_l7XQ87W-NUt8JEKkQElXLCrXunOswHCrLHpXjLTpxVHXRNezTuqjHhMT9miftE3axd_?></g></svg></div></div>
+
+<details class="note">
+<summary>Code source du diagramme</summary>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>@startuml
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>allowmixing
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>skinparam classAttributeIconSize 0
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>skinparam backgroundColor #FEFEFE
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>class Voiture {
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  {static} -nombreVoitures : int
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  -marque : String
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  -couleur : String
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  {static} +getNombreVoitures() : int
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  +getMarque() : String
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  +getCouleur() : String
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>}
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>note right of Voiture::nombreVoitures
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>  **Attribut STATIC**
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>  • Partagé par toutes les instances
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>  • Une seule copie en mémoire
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>  • Appartient à la classe
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>end note
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>note right of Voiture::marque
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>  **Attribut NON-STATIC (instance)**
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>  • Unique à chaque instance
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>  • Une copie par objet
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>  • Appartient à l&#39;objet
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>end note
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>object &quot;voiture1 : Voiture&quot; as v1 {
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>  marque = &quot;Toyota&quot;
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>  couleur = &quot;Rouge&quot;
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>}
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>object &quot;voiture2 : Voiture&quot; as v2 {
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>  marque = &quot;Honda&quot;
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>  couleur = &quot;Bleu&quot;
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>}
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>object &quot;voiture3 : Voiture&quot; as v3 {
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>  marque = &quot;Ford&quot;
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>  couleur = &quot;Noir&quot;
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>}
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>package &quot;Mémoire de la Classe&quot; as classMemory {
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>  card &quot;nombreVoitures = 3&quot; as staticAttr #LightBlue
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>}
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>v1 -[hidden]- v2
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>v2 -[hidden]- v3
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>note bottom of classMemory
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>  L&#39;attribut static est stocké
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>  au niveau de la classe.
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>  Toutes les instances y accèdent.
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>end note
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>note bottom of v1
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>  Chaque instance a ses
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>  propres valeurs pour les
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>  attributs non-static
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>end note
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>v1 ..&gt; staticAttr : accède
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>v2 ..&gt; staticAttr : accède
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>v3 ..&gt; staticAttr : accède
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>@enduml
+</span></code></pre></div>
+</details>
+<p><strong>Observation importante</strong> : Sur le diagramme, vous pouvez voir que :</p>
+<ul>
+<li>Les trois objets (<code>voiture1</code>, <code>voiture2</code>, <code>voiture3</code>) ont chacun leurs propres valeurs pour <code>marque</code> et <code>couleur</code></li>
+<li>Mais ils partagent tous le même <code>nombreVoitures</code> stocké au niveau de la classe</li>
+</ul>
+<hr />
+<h2 id="implementation-en-java">💻 Implémentation en Java<a class="headerlink" href="#implementation-en-java" title="Permanent link">&para;</a></h2>
+<p>Voici le code Java complet qui correspond au diagramme ci-dessus :</p>
+<details class="note">
+<summary>Code</summary>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Voiture</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="c1">// Attribut STATIC - partagé par toutes les instances</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nombreVoitures</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="c1">// Attributs NON-STATIC (d&#39;instance) - propres à chaque objet</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">marque</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">couleur</span><span class="p">;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="c1">// Constructeur</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Voiture</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">marque</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">couleur</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">marque</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">marque</span><span class="p">;</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">couleur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">couleur</span><span class="p">;</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="n">nombreVoitures</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// Incrémente le compteur à chaque création</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="c1">// Méthode STATIC - peut être appelée sans instance</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNombreVoitures</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombreVoitures</span><span class="p">;</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="c1">// Méthodes NON-STATIC (d&#39;instance) - nécessitent une instance</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getMarque</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">marque</span><span class="p">;</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getCouleur</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">couleur</span><span class="p">;</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span><span class="c1">// Méthode pour afficher les informations de la voiture</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficherInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Voiture: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">marque</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Couleur: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">couleur</span><span class="p">);</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">    </span><span class="c1">// Main pour démonstration</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;=== Démonstration Static vs Non-Static ===\n&quot;</span><span class="p">);</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">        </span><span class="c1">// Appel de la méthode static AVANT de créer des instances</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre de voitures au départ: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Voiture</span><span class="p">.</span><span class="na">getNombreVoitures</span><span class="p">());</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="w">        </span><span class="c1">// Création des instances</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Création de voiture1...&quot;</span><span class="p">);</span>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="w">        </span><span class="n">Voiture</span><span class="w"> </span><span class="n">voiture1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Voiture</span><span class="p">(</span><span class="s">&quot;Toyota&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Rouge&quot;</span><span class="p">);</span>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="w">        </span><span class="n">voiture1</span><span class="p">.</span><span class="na">afficherInfo</span><span class="p">();</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre total de voitures: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Voiture</span><span class="p">.</span><span class="na">getNombreVoitures</span><span class="p">());</span>
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Création de voiture2...&quot;</span><span class="p">);</span>
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="w">        </span><span class="n">Voiture</span><span class="w"> </span><span class="n">voiture2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Voiture</span><span class="p">(</span><span class="s">&quot;Honda&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bleu&quot;</span><span class="p">);</span>
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="w">        </span><span class="n">voiture2</span><span class="p">.</span><span class="na">afficherInfo</span><span class="p">();</span>
+</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre total de voitures: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Voiture</span><span class="p">.</span><span class="na">getNombreVoitures</span><span class="p">());</span>
+</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>
+</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Création de voiture3...&quot;</span><span class="p">);</span>
+</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a><span class="w">        </span><span class="n">Voiture</span><span class="w"> </span><span class="n">voiture3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Voiture</span><span class="p">(</span><span class="s">&quot;Ford&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Noir&quot;</span><span class="p">);</span>
+</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a><span class="w">        </span><span class="n">voiture3</span><span class="p">.</span><span class="na">afficherInfo</span><span class="p">();</span>
+</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre total de voitures: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Voiture</span><span class="p">.</span><span class="na">getNombreVoitures</span><span class="p">());</span>
+</span><span id="__span-4-60"><a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+</span><span id="__span-4-61"><a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>
+</span><span id="__span-4-62"><a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a><span class="w">        </span><span class="c1">// Démonstration: chaque instance a ses propres attributs non-static</span>
+</span><span id="__span-4-63"><a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;=== Attributs NON-STATIC (propres à chaque instance) ===&quot;</span><span class="p">);</span>
+</span><span id="__span-4-64"><a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Marque de voiture1: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">voiture1</span><span class="p">.</span><span class="na">getMarque</span><span class="p">());</span>
+</span><span id="__span-4-65"><a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Marque de voiture2: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">voiture2</span><span class="p">.</span><span class="na">getMarque</span><span class="p">());</span>
+</span><span id="__span-4-66"><a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Marque de voiture3: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">voiture3</span><span class="p">.</span><span class="na">getMarque</span><span class="p">());</span>
+</span><span id="__span-4-67"><a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+</span><span id="__span-4-68"><a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>
+</span><span id="__span-4-69"><a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a><span class="w">        </span><span class="c1">// Démonstration: l&#39;attribut static est partagé</span>
+</span><span id="__span-4-70"><a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;=== Attribut STATIC (partagé par toutes les instances) ===&quot;</span><span class="p">);</span>
+</span><span id="__span-4-71"><a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Accès via la classe: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Voiture</span><span class="p">.</span><span class="na">getNombreVoitures</span><span class="p">());</span>
+</span><span id="__span-4-72"><a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Accès via voiture1: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">voiture1</span><span class="p">.</span><span class="na">getNombreVoitures</span><span class="p">());</span>
+</span><span id="__span-4-73"><a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Accès via voiture2: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">voiture2</span><span class="p">.</span><span class="na">getNombreVoitures</span><span class="p">());</span>
+</span><span id="__span-4-74"><a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Accès via voiture3: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">voiture3</span><span class="p">.</span><span class="na">getNombreVoitures</span><span class="p">());</span>
+</span><span id="__span-4-75"><a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;→ Tous retournent la même valeur car c&#39;est un attribut STATIC!&quot;</span><span class="p">);</span>
+</span><span id="__span-4-76"><a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-77"><a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<hr />
+<h2 id="analyse-du-code">🔍 Analyse du code<a class="headerlink" href="#analyse-du-code" title="Permanent link">&para;</a></h2>
+<h3 id="declaration-des-attributs">Déclaration des attributs<a class="headerlink" href="#declaration-des-attributs" title="Permanent link">&para;</a></h3>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nombreVoitures</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// STATIC</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">marque</span><span class="p">;</span><span class="w">                   </span><span class="c1">// NON-STATIC</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">couleur</span><span class="p">;</span><span class="w">                  </span><span class="c1">// NON-STATIC</span>
+</span></code></pre></div>
+<ul>
+<li><code>nombreVoitures</code> est <strong>static</strong> : il y a une seule variable partagée par toutes les voitures</li>
+<li><code>marque</code> et <code>couleur</code> sont <strong>non-static</strong> : chaque voiture a sa propre marque et couleur</li>
+</ul>
+<h3 id="dans-le-constructeur">Dans le constructeur<a class="headerlink" href="#dans-le-constructeur" title="Permanent link">&para;</a></h3>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Voiture</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">marque</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">couleur</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">marque</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">marque</span><span class="p">;</span><span class="w">        </span><span class="c1">// Initialise l&#39;attribut d&#39;instance</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">couleur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">couleur</span><span class="p">;</span><span class="w">      </span><span class="c1">// Initialise l&#39;attribut d&#39;instance</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">nombreVoitures</span><span class="o">++</span><span class="p">;</span><span class="w">            </span><span class="c1">// Incrémente l&#39;attribut static (partagé)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Chaque fois qu&rsquo;on crée une nouvelle <code>Voiture</code>, le compteur <strong>static</strong> <code>nombreVoitures</code> augmente de 1.</p>
+<h3 id="acces-aux-attributs">Accès aux attributs<a class="headerlink" href="#acces-aux-attributs" title="Permanent link">&para;</a></h3>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// Méthode static - peut être appelée sans objet</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNombreVoitures</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nombreVoitures</span><span class="p">;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1">// Méthode non-static - nécessite un objet</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getMarque</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">marque</span><span class="p">;</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="execution-et-resultat">🎬 Exécution et résultat<a class="headerlink" href="#execution-et-resultat" title="Permanent link">&para;</a></h2>
+<p><strong>Sortie attendue :</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>=== Démonstration Static vs Non-Static ===
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Nombre de voitures au départ: 0
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>Création de voiture1...
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>Voiture: Toyota, Couleur: Rouge
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Nombre total de voitures: 1
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Création de voiture2...
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>Voiture: Honda, Couleur: Bleu
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>Nombre total de voitures: 2
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>Création de voiture3...
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>Voiture: Ford, Couleur: Noir
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>Nombre total de voitures: 3
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>=== Attributs NON-STATIC (propres à chaque instance) ===
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>Marque de voiture1: Toyota
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>Marque de voiture2: Honda
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>Marque de voiture3: Ford
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>=== Attribut STATIC (partagé par toutes les instances) ===
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>Accès via la classe: 3
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>Accès via voiture1: 3
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>Accès via voiture2: 3
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>Accès via voiture3: 3
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>→ Tous retournent la même valeur car c&#39;est un attribut STATIC!
+</span></code></pre></div>
+<hr />
+<h2 id="tableau-recapitulatif">📝 Tableau récapitulatif<a class="headerlink" href="#tableau-recapitulatif" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Attribut NON-STATIC</th>
+<th>Attribut STATIC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Appartenance</strong></td>
+<td>À l&rsquo;objet (instance)</td>
+<td>À la classe</td>
+</tr>
+<tr>
+<td><strong>Copies en mémoire</strong></td>
+<td>Une par objet créé</td>
+<td>Une seule pour toute la classe</td>
+</tr>
+<tr>
+<td><strong>Accès</strong></td>
+<td><code>objet.attribut</code></td>
+<td><code>Classe.attribut</code> (recommandé)</td>
+</tr>
+<tr>
+<td><strong>Initialisation</strong></td>
+<td>Dans le constructeur</td>
+<td>À la déclaration ou dans un bloc static</td>
+</tr>
+<tr>
+<td><strong>Mot-clé</strong></td>
+<td>Aucun</td>
+<td><code>static</code></td>
+</tr>
+<tr>
+<td><strong>Cas d&rsquo;usage</strong></td>
+<td>Données propres à chaque objet</td>
+<td>Données partagées, constantes, compteurs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cas-dusage-courants">💡 Cas d&rsquo;usage courants<a class="headerlink" href="#cas-dusage-courants" title="Permanent link">&para;</a></h2>
+<h3 id="attributs-non-static-dinstance">Attributs non-static (d&rsquo;instance)<a class="headerlink" href="#attributs-non-static-dinstance" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Caractéristiques propres à un objet : nom, âge, couleur, prix, etc.</li>
+<li>Données qui varient d&rsquo;une instance à l&rsquo;autre</li>
+</ul>
+<h3 id="attributs-static-de-classe">Attributs static (de classe)<a class="headerlink" href="#attributs-static-de-classe" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Constantes</strong> : <code>public static final double PI = 3.14159;</code></li>
+<li><strong>Compteurs</strong> : nombre d&rsquo;instances créées</li>
+<li><strong>Configuration partagée</strong> : paramètres communs à tous les objets</li>
+<li><strong>Utilitaires</strong> : méthodes qui ne dépendent pas d&rsquo;un état d&rsquo;objet</li>
+</ul>
+<hr />
+<h2 id="bonnes-pratiques">⚠️ Bonnes pratiques<a class="headerlink" href="#bonnes-pratiques" title="Permanent link">&para;</a></h2>
+<ol type="1">
+<li><strong>Utilisez <code>static</code> avec parcimonie</strong> : seulement quand c&rsquo;est vraiment nécessaire</li>
+<li><strong>Nommage</strong> : les constantes static sont en MAJUSCULES : <code>MAX_SIZE</code></li>
+<li><strong>Accès</strong> : privilégiez <code>Classe.methodeStatic()</code> plutôt que <code>objet.methodeStatic()</code></li>
+<li><strong>Méthodes static</strong> : ne peuvent accéder qu&rsquo;aux membres static de la classe</li>
+<li><strong>Thread-safety</strong> : attention aux attributs static mutables en environnement multi-thread</li>
+</ol>
+<hr />
+<h2 id="exercice">🧪 Exercice<a class="headerlink" href="#exercice" title="Permanent link">&para;</a></h2>
+<p>Ajoutez à la classe <code>Voiture</code> :</p>
+<ul>
+<li>Un attribut static <code>prixEssence</code> (même prix pour toutes les voitures)</li>
+<li>Une méthode pour calculer le coût d&rsquo;un trajet en fonction de la distance</li>
+</ul>
+<hr />
+<h2 id="points-a-retenir">✅ Points à retenir<a class="headerlink" href="#points-a-retenir" title="Permanent link">&para;</a></h2>
+<ol type="1">
+<li><strong>Non-static = une copie par objet</strong> → pour les données spécifiques à chaque instance</li>
+<li><strong>Static = une copie pour toute la classe</strong> → pour les données partagées</li>
+<li>Les attributs static existent <strong>même sans créer d&rsquo;objet</strong></li>
+<li>Les méthodes static ne peuvent <strong>pas</strong> accéder aux attributs non-static</li>
+<li>Les attributs static sont utiles pour les <strong>compteurs</strong>, <strong>constantes</strong> et <strong>configurations partagées</strong></li>
+</ol>
 <hr />
 <details class="info">
 <summary>Utilisation de l&rsquo;IA</summary>
-<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA. L&rsquo;IA a été utilisée pour générer des 
-explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+<p>Page rédigée en partie avec l&rsquo;aide d&rsquo;un assistant IA. L&rsquo;IA a été utilisée pour générer des
+explications, des exemples et/ou des suggestions de structure. Toutes les informations ont
 été vérifiées, éditées et complétées par l&rsquo;auteur.</p>
 </details>
 
