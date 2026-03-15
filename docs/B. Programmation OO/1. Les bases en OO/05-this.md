@@ -4,7 +4,20 @@ icon: material/file-document-outline
 
 # 5. Le mot-clé `this`
 
-Voici une version améliorée de la classe Personne utilisant la classe `LocalDate` de Java pour gérer les dates.
+## Objectif
+
+En Java, `this` est une référence vers **l’objet courant** (l’instance qui exécute la méthode).  
+On l’utilise principalement pour :
+
+1. **Distinguer** un attribut d’un paramètre de même nom
+2. **Appeler un autre constructeur** de la même classe avec `this(...)`
+3. Mieux comprendre le fonctionnement des **références** (plusieurs variables peuvent pointer sur le même objet)
+
+---
+
+## Exemple : classe `Personne` (avec `LocalDate`)
+
+Voici une version améliorée de la classe `Personne` utilisant `LocalDate` pour gérer les dates.
 
 ```java
 import java.time.LocalDate;
@@ -58,7 +71,7 @@ public class Personne {
 }
 ```
 
-## Utilisation
+### Utilisation
 
 ```java
 // Création avec date spécifique
@@ -69,23 +82,61 @@ Personne personne1 = new Personne("Dupont", "Jean", dateNaissance);
 Personne personne2 = new Personne("Martin", "Marie");
 ```
 
-Points importants dans cet exemple :
+### À retenir dans cet exemple
 
-- L'utilisation de `this()` pour appeler un autre constructeur
-- L'utilisation de `LocalDate` pour une gestion robuste des dates
-- Les attributs sont privés avec leurs accesseurs et mutateurs
-- Une méthode utilitaire `getAge()` qui calcule l'âge à partir de la date de naissance
+- `this.nom = nom` : **désambiguïsation** entre attribut et paramètre
+- `this(nom, prenom, LocalDate.now())` : **appel d’un autre constructeur**
+- `LocalDate` : manipulation de dates plus fiable que des `String` ou des entiers
 
 !!! note "Note"
     Le calcul de l'âge dans cet exemple est simplifié. Pour un calcul plus précis, il faudrait tenir compte des mois
     et des jours.
 
-## Le mot-clé `this`
+---
 
-`this` est une référence à l'objet courant, utilisable uniquement dans les méthodes d'instance (non-statiques). Il
-représente l'instance de la classe qui exécute le code.
+## 1) `this` pour distinguer attributs et paramètres
 
-## Références et Objets
+Quand un paramètre a le même nom qu’un attribut, `this` permet de dire clairement qu’on parle de l’attribut.
+
+```java
+public class Personne {
+    private String nom;
+
+    public Personne(String nom) {
+        this.nom = nom;  // Sans this, nom référerait au paramètre
+    }
+}
+```
+
+---
+
+## 2) `this(...)` pour appeler un autre constructeur
+
+`this(...)` appelle **un autre constructeur de la même classe**. Il doit être la **première instruction** du constructeur.
+
+```java
+import java.time.LocalDate;
+
+public class Personne {
+    private String nom;
+    private LocalDate dateNaissance;
+
+    public Personne(String nom) {
+        this(nom, LocalDate.now());  // Date d'aujourd'hui par défaut
+    }
+
+    public Personne(String nom, LocalDate dateNaissance) {
+        this.nom = nom;
+        this.dateNaissance = dateNaissance;
+    }
+}
+```
+
+---
+
+## 3) Références : plusieurs variables, un seul objet
+
+En Java, une variable objet contient une **référence** vers un objet, pas l’objet lui-même.
 
 ```java
 public class Personne {
@@ -101,48 +152,27 @@ Personne p1 = new Personne();
 Personne p2 = p1;  // p2 réfère au même objet que p1
 ```
 
-## Différents Usages de `this`
-
-**1. Distinguer les attributs des paramètres :**
-
-```java
-public class Personne {
-    private String nom;
-
-    public Personne(String nom) {
-        this.nom = nom;  // Sans this, nom référerait au paramètre
-    }
-}
-```
-
-**2. Appeler un autre constructeur :**
-
-```java
-public class Personne {
-    private String nom;
-    private int age;
-
-    public Personne(String nom) {
-        this(nom, 0);  // Appelle l'autre constructeur
-    }
-
-    public Personne(String nom, int age) {
-        this.nom = nom;
-        this.age = age;
-    }
-}
-```
-
-## Références Multiples
+### Conséquence : modifier via une référence modifie l’objet partagé
 
 ```java
 Personne p1 = new Personne("Alice");
 Personne p2 = p1;  // Nouvelle référence au même objet
-p2.setNom("Bob");  // Modifie l'objet via p2
-System.out.println(p1.getNom());  // Affiche "Bob" car p1 et p2 réfèrent au même objet
+p2.
+
+setNom("Bob");  // Modifie l'objet via p2
+System.out.
+
+println(p1.getNom());  // Affiche "Bob" car p1 et p2 réfèrent au même objet
 ```
 
-## Comportement des Références
+---
+
+## 4) Passage de paramètres : modification vs réaffectation
+
+Un paramètre de méthode reçoit une **copie de la référence**.
+
+- Modifier l’objet via cette référence : impacte l’objet original
+- Réaffecter la variable paramètre : ne change pas la référence à l’extérieur
 
 ```java
 public class ExempleReferences {
@@ -159,21 +189,18 @@ public class ExempleReferences {
 }
 ```
 
-Dans cet exemple :
+---
 
-- La modification via une référence affecte l'objet pour toutes les références
-- La réaffectation d'une référence n'affecte pas les autres références au même objet
-- `this` reste toujours une référence à l'objet courant, peu importe le nombre de références externes
+## Synthèse
 
-Cette compréhension des références est fondamentale en POO car elle explique comment les objets sont partagés et
-modifiés à travers le programme.
-
-
-
+- `this` = **l’objet courant**
+- `this.attribut` sert souvent à éviter les ambiguïtés avec les paramètres
+- `this(...)` sert à **factoriser** des constructeurs
+- Plusieurs références peuvent pointer sur le même objet : une modification est visible via toutes ces références
 
 -------
 
 ??? info "Utilisation de l'IA"
-    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des 
-    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont 
+    Page rédigée en partie avec l'aide d'un assistant IA. L'IA a été utilisée pour générer des
+    explications, des exemples et/ou des suggestions de structure. Toutes les informations ont
     été vérifiées, éditées et complétées par l'auteur.

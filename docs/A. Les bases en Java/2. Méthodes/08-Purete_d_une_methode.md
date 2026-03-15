@@ -60,10 +60,43 @@ public class ExempleImpur {
 
 Une méthode devrait avoir une seule responsabilité. Voici un exemple de refactorisation :
 
+??? info "Classe `Etudiant`"
+    ```java
+    public class Etudiant {
+        private String nom;
+        private double note;
+    
+        public Etudiant(String nom, double note) {
+            this.nom = nom;
+            this.note = note;
+        }
+    
+        // Utilisé par calculerMoyenne et identifierEchecs
+        public double getNote() {
+            return note;
+        }
+    
+        // Utilisé pour afficher les informations ou envoyer des courriels
+        public String getNom() {
+            return nom;
+        }
+    
+        @Override
+        public String toString() {
+            return nom + " (Note: " + note + ")";
+        }
+    }
+    ```
+
+
+
 ```java
 // Mauvais exemple : trop de responsabilités
+import java.util.ArrayList;
+import java.util.List;
+
 public class GestionEtudiants {
-    void traiterResultatsExamen(List<Etudiant> etudiants) {
+    public static void traiterResultatsExamen(List<Etudiant> etudiants) {
         double somme = 0;
         int nombreEchecs = 0;
 
@@ -80,11 +113,15 @@ public class GestionEtudiants {
         System.out.println("Moyenne: " + moyenne);
         System.out.println("Nombre d'échecs: " + nombreEchecs);
     }
+
+    public static void envoyerCourriel(Etudiant etudiant) {
+        System.out.println("Envoi d'un courriel à " + etudiant.getNom() + " : Votre note est de " + etudiant.getNote());
+    }
 }
 
 // Version améliorée : responsabilités séparées
 public class GestionEtudiants {
-    double calculerMoyenne(List<Etudiant> etudiants) {
+    public static double calculerMoyenne(List<Etudiant> etudiants) {
         double somme = 0;
         for (Etudiant etudiant : etudiants) {
             somme += etudiant.getNote();
@@ -92,30 +129,39 @@ public class GestionEtudiants {
         return somme / etudiants.size();
     }
 
-    List<Etudiant> identifierEchecs(List<Etudiant> etudiants) {
-        return etudiants.stream()
-                .filter(e -> e.getNote() < 60)
-                .collect(Collectors.toList());
+    public static List<Etudiant> identifierEchecs(List<Etudiant> etudiants) {
+        List<Etudiant> echecs = new ArrayList<>();
+        for (Etudiant e : etudiants) {
+            if (e.getNote() < 60) {
+                echecs.add(e);
+            }
+        }
+        return echecs;
     }
 
-    void notifierEchecs(List<Etudiant> etudiantsEnEchec) {
+    public static void notifierEchecs(List<Etudiant> etudiantsEnEchec) {
         for (Etudiant etudiant : etudiantsEnEchec) {
             envoyerCourriel(etudiant);
         }
     }
 
-    void genererRapport(double moyenne, List<Etudiant> echecs) {
+    public static void genererRapport(double moyenne, List<Etudiant> echecs) {
         System.out.println("Moyenne: " + moyenne);
         System.out.println("Nombre d'échecs: " + echecs.size());
     }
 
     // Méthode principale qui orchestre les autres
-    void traiterResultatsExamen(List<Etudiant> etudiants) {
+    public static void traiterResultatsExamen(List<Etudiant> etudiants) {
         double moyenne = calculerMoyenne(etudiants);
         List<Etudiant> echecs = identifierEchecs(etudiants);
         notifierEchecs(echecs);
         genererRapport(moyenne, echecs);
     }
+    
+    public static void envoyerCourriel(Etudiant etudiant) {
+        System.out.println("Envoi d'un courriel à " + etudiant.getNom() + " : Votre note est de " + etudiant.getNote());
+    }
+
 }
 ```
 
@@ -132,7 +178,7 @@ public class GestionEtudiants {
 ```java
 public class AnalyseurTexte {
     // Version initiale : trop de responsabilités
-    void analyserTexte(String texte) {
+    public static void analyserTexte(String texte) {
         // Compte les mots
         String[] mots = texte.split("\\s+");
         System.out.println("Nombre de mots: " + mots.length);
@@ -154,28 +200,33 @@ public class AnalyseurTexte {
 
 // Version refactorisée
 public class AnalyseurTexte {
-    int compterMots(String texte) {
+    public static int compterMots(String texte) {
         return texte.split("\\s+").length;
     }
 
-    int compterCaracteres(String texte) {
+    public static int compterCaracteres(String texte) {
         return texte.length();
     }
 
-    String trouverMotLePlusLong(String texte) {
-        return Arrays.stream(texte.split("\\s+"))
-                .max(Comparator.comparingInt(String::length))
-                .orElse("");
+    public static String trouverMotLePlusLong(String texte) {
+        String[] mots = texte.split("\\s+");
+        String motLePlusLong = "";
+        for (String mot : mots) {
+            if (mot.length() > motLePlusLong.length()) {
+                motLePlusLong = mot;
+            }
+        }
+        return motLePlusLong;
     }
 
-    void afficherResultats(int nombreMots, int nombreCaracteres, String motLePlusLong) {
+    public static void afficherResultats(int nombreMots, int nombreCaracteres, String motLePlusLong) {
         System.out.println("Nombre de mots: " + nombreMots);
         System.out.println("Nombre de caractères: " + nombreCaracteres);
         System.out.println("Mot le plus long: " + motLePlusLong);
     }
 
     // Méthode principale qui orchestre l'analyse
-    void analyserTexte(String texte) {
+    public static void analyserTexte(String texte) {
         int nombreMots = compterMots(texte);
         int nombreCaracteres = compterCaracteres(texte);
         String motLePlusLong = trouverMotLePlusLong(texte);

@@ -20,17 +20,17 @@ Exemples simples :
 ```java
 public class ExemplesMethodes {
     // Méthode sans paramètre et sans retour
-    void afficherBonjour() {
+    public static void afficherBonjour() {
         System.out.println("Bonjour!");
     }
 
     // Méthode avec paramètres et retour
-    int additionner(int a, int b) {
+    public static int additionner(int a, int b) {
         return a + b;
     }
 
     // Méthode avec plusieurs paramètres
-    double calculerMoyenne(double... notes) {
+    public static double calculerMoyenne(double... notes) {
         double somme = 0;
         for (double note : notes) {
             somme += note;
@@ -50,7 +50,7 @@ passée par valeur.
 ```java
 public class ExempleSwap {
     // Cette méthode ne fonctionne PAS
-    void swapQuiNeMarchePas(int a, int b) {
+    public static void swapQuiNeMarchePas(int a, int b) {
         int temp = a;
         a = b;
         b = temp;
@@ -60,8 +60,7 @@ public class ExempleSwap {
         int x = 5;
         int y = 10;
 
-        ExempleSwap exemple = new ExempleSwap();
-        exemple.swapQuiNeMarchePas(x, y);
+        swapQuiNeMarchePas(x, y);
 
         // x est toujours 5, y est toujours 10
         System.out.printf("x=%d, y=%d%n", x, y);
@@ -74,7 +73,7 @@ public class ExempleSwap {
 ```java
 public class ExempleSwapFonctionnel {
     // Classe pour contenir une valeur modifiable
-    class Nombre {
+    static class Nombre {
         int valeur;
 
         Nombre(int valeur) {
@@ -82,20 +81,18 @@ public class ExempleSwapFonctionnel {
         }
     }
 
-    void swap(Nombre a, Nombre b) {
+    public static void swap(Nombre a, Nombre b) {
         int temp = a.valeur;
         a.valeur = b.valeur;
         b.valeur = temp;
     }
 
     public static void main(String[] args) {
-        ExempleSwapFonctionnel exemple = new ExempleSwapFonctionnel();
-
-        Nombre x = exemple.new Nombre(5);
-        Nombre y = exemple.new Nombre(10);
+        Nombre x = new Nombre(5);
+        Nombre y = new Nombre(10);
 
         System.out.printf("Avant: x=%d, y=%d%n", x.valeur, y.valeur);
-        exemple.swap(x, y);
+        swap(x, y);
         System.out.printf("Après: x=%d, y=%d%n", x.valeur, y.valeur);
     }
 }
@@ -106,14 +103,14 @@ public class ExempleSwapFonctionnel {
 ```java
 public class ManipulationTableaux {
     // Méthode qui modifie un tableau (le tableau est modifié car c'est une référence)
-    void doubleElements(int[] tableau) {
+    public static void doubleElements(int[] tableau) {
         for (int i = 0; i < tableau.length; i++) {
             tableau[i] *= 2;
         }
     }
 
     // Méthode qui retourne un nouveau tableau
-    int[] creerTableauDouble(int[] original) {
+    public static int[] creerTableauDouble(int[] original) {
         int[] resultat = new int[original.length];
         for (int i = 0; i < original.length; i++) {
             resultat[i] = original[i] * 2;
@@ -122,7 +119,7 @@ public class ManipulationTableaux {
     }
 
     // Méthode avec plusieurs paramètres de types différents
-    String formaterNote(String nomEtudiant, double note, boolean afficherMention) {
+    public static String formaterNote(String nomEtudiant, double note, boolean afficherMention) {
         String mention = "";
         if (afficherMention) {
             mention = note >= 60 ? " (Réussite)" : " (Échec)";
@@ -131,15 +128,13 @@ public class ManipulationTableaux {
     }
 
     public static void main(String[] args) {
-        ManipulationTableaux manip = new ManipulationTableaux();
-
         // Test avec tableau (passage par référence)
         int[] nombres = {1, 2, 3, 4, 5};
         System.out.println("Avant modification:");
         for (int n : nombres) System.out.print(n + " ");
         System.out.println();
 
-        manip.doubleElements(nombres);
+        doubleElements(nombres);
 
         System.out.println("Après modification:");
         for (int n : nombres) System.out.print(n + " ");
@@ -147,7 +142,7 @@ public class ManipulationTableaux {
 
         // Test avec création d'un nouveau tableau
         int[] original = {1, 2, 3};
-        int[] double1 = manip.creerTableauDouble(original);
+        int[] double1 = creerTableauDouble(original);
 
         System.out.println("\nTableau original inchangé:");
         for (int n : original) System.out.print(n + " ");
@@ -158,7 +153,7 @@ public class ManipulationTableaux {
         System.out.println();
 
         // Test du formatage de note
-        String resultat = manip.formaterNote("Alice", 85.5, true);
+        String resultat = formaterNote("Alice", 85.5, true);
         System.out.println("\n" + resultat);
     }
 }
