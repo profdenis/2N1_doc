@@ -28,7 +28,7 @@ try (BufferedReader lecteur = new BufferedReader(new FileReader(fichier));
 - Impossible d'oublier de fermer une ressource
 - Les ressources sont fermées même si on quitte la méthode avec un `return`
 
-### Try classique
+### *Try* classique
 
 ```java
 BufferedReader lecteur = null;
