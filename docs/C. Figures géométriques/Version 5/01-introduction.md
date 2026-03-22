@@ -104,14 +104,14 @@ class Rectangle {
   + getHeight(): int
   + draw(Image): void
 }
-class Shape {
+abstract class Shape {
   # Shape(Color): 
   # Shape(): 
-  + defaultDrawColor: Color
+  + {static} defaultDrawColor: Color
   + drawColor: Color
-  + getDrawColor(): Color
   + setDrawColor(Color): void
-  + draw(Image): void
+  + getDrawColor(): Color
+  + {abstract} draw(Image): void 
 }
 class Square {
   + Square(Point, int): 
