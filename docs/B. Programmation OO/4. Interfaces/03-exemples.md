@@ -101,7 +101,7 @@ public abstract class Animal {
 ### Interfaces - Comportements
 
 ```java
-public interface Nageable {
+public interface Nageant {
     void nager();
 }
 
@@ -109,7 +109,7 @@ public interface Volant {
     void voler();
 }
 
-public class Dauphin extends Animal implements Nageable {
+public class Dauphin extends Animal implements Nageant {
     @Override
     public void respirer() {
         System.out.println("Le dauphin remonte à la surface");
@@ -121,7 +121,7 @@ public class Dauphin extends Animal implements Nageable {
     }
 }
 
-public class Chauve_Souris extends Animal implements Volant {
+public class ChauveSouris extends Animal implements Volant {
     @Override
     public void respirer() {
         System.out.println("La chauve-souris respire");

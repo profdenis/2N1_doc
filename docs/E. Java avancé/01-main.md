@@ -1,4 +1,4 @@
-# Guide : La méthode `main` simplifiée en Java (incluant `String[] args`)
+# Guide : La méthode `main` simplifiée en Java
 
 ---
 

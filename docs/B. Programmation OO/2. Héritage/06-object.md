@@ -4,17 +4,17 @@ icon: material/file-document-outline
 
 # 6. La classe `Object`
 
-La classe Object est la classe racine de la hiérarchie des classes en Java. Elle est la superclasse directe ou indirecte
-de toutes les autres classes[1][8]. Voici les principales caractéristiques de la classe Object :
+La classe `Object` est la classe racine de la hiérarchie des classes en Java. Elle est la superclasse directe ou indirecte
+de toutes les autres classes[1][8]. Voici les principales caractéristiques de la classe `Object` :
 
 ## Rôle fondamental
 
-- Toute classe en Java hérite implicitement de Object si aucune autre superclasse n'est spécifiée[2][9].
+- Toute classe en Java hérite implicitement de `Object` si aucune autre superclasse n'est spécifiée[2][9].
 - Elle fournit des méthodes de base communes à tous les objets Java.
 
 ## Méthodes importantes
 
-La classe Object définit plusieurs méthodes essentielles[1][11] :
+La classe `Object` définit plusieurs méthodes essentielles[1][11] :
 
 1. `toString()` : Retourne une représentation en chaîne de caractères de l'objet.
 2. `equals(Object obj)` : Compare l'objet avec un autre pour déterminer l'égalité.
@@ -25,17 +25,17 @@ La classe Object définit plusieurs méthodes essentielles[1][11] :
 
 ## Utilisation
 
-- Grâce à l'héritage de Object, toutes les classes Java peuvent utiliser ces méthodes de base[9].
+- Grâce à l'héritage de `Object`, toutes les classes Java peuvent utiliser ces méthodes de base[9].
 - Il est courant de redéfinir certaines de ces méthodes (comme toString() ou equals()) dans les classes personnalisées
   pour adapter leur comportement[1].
 
 ## Polymorphisme
 
-- Comme toutes les classes héritent de Object, une variable de type Object peut référencer n'importe quel objet
+- Comme toutes les classes héritent de `Object`, une variable de type `Object` peut référencer n'importe quel objet
   Java[12].
 - Cela permet une grande flexibilité dans la manipulation des objets, notamment pour les collections génériques.
 
-En comprenant bien la classe Object et ses méthodes, les développeurs peuvent mieux exploiter les fonctionnalités de
+En comprenant bien la classe `Object` et ses méthodes, les développeurs peuvent mieux exploiter les fonctionnalités de
 base offertes à tous les objets en Java et améliorer la conception de leurs propres classes.
 
 ??? note "Citations"
