@@ -1935,10 +1935,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Comparaison entre Interfaces et Classes Abstraites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#les-methodes-par-defaut-dans-les-interfaces-java-8-et" class="md-nav__link">
     <span class="md-ellipsis">
       Les méthodes par défaut dans les interfaces (Java 8 et +)
@@ -1988,8 +1987,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#le-concept-de-contrat-dans-les-interfaces" class="md-nav__link">
     <span class="md-ellipsis">
       Le concept de contrat dans les interfaces
@@ -2035,15 +2034,10 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#synthese-pedagogique" class="md-nav__link">
+  <a href="#synthese" class="md-nav__link">
     <span class="md-ellipsis">
-      Synthèse pédagogique
+      Synthèse
     </span>
   </a>
   
@@ -3294,10 +3288,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Comparaison entre Interfaces et Classes Abstraites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#les-methodes-par-defaut-dans-les-interfaces-java-8-et" class="md-nav__link">
     <span class="md-ellipsis">
       Les méthodes par défaut dans les interfaces (Java 8 et +)
@@ -3347,8 +3340,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#le-concept-de-contrat-dans-les-interfaces" class="md-nav__link">
     <span class="md-ellipsis">
       Le concept de contrat dans les interfaces
@@ -3394,15 +3387,10 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#synthese-pedagogique" class="md-nav__link">
+  <a href="#synthese" class="md-nav__link">
     <span class="md-ellipsis">
-      Synthèse pédagogique
+      Synthèse
     </span>
   </a>
   
@@ -3514,11 +3502,11 @@ définir un comportement commun que plusieurs classes non liées peuvent partage
 </tr>
 </tbody>
 </table>
-<h3 id="les-methodes-par-defaut-dans-les-interfaces-java-8-et"><strong>Les méthodes par défaut dans les interfaces (Java 8 et +)</strong><a class="headerlink" href="#les-methodes-par-defaut-dans-les-interfaces-java-8-et" title="Permanent link">&para;</a></h3>
+<h2 id="les-methodes-par-defaut-dans-les-interfaces-java-8-et"><strong>Les méthodes par défaut dans les interfaces (Java 8 et +)</strong><a class="headerlink" href="#les-methodes-par-defaut-dans-les-interfaces-java-8-et" title="Permanent link">&para;</a></h2>
 <p>Depuis Java 8, les interfaces peuvent contenir des <strong>méthodes par défaut</strong> (ou <em>default methods</em>), qui permettent
 d’ajouter une implémentation concrète à une méthode sans forcer les classes qui implémentent l’interface à la redéfinir.
 Cela répond à un besoin crucial : <strong>faire évoluer une interface sans casser le code existant</strong>.</p>
-<h4 id="pourquoi-utiliser-des-methodes-par-defaut"><strong>Pourquoi utiliser des méthodes par défaut ?</strong><a class="headerlink" href="#pourquoi-utiliser-des-methodes-par-defaut" title="Permanent link">&para;</a></h4>
+<h3 id="pourquoi-utiliser-des-methodes-par-defaut"><strong>Pourquoi utiliser des méthodes par défaut ?</strong><a class="headerlink" href="#pourquoi-utiliser-des-methodes-par-defaut" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Compatibilité ascendante</strong> : Avant Java 8, ajouter une nouvelle méthode à une interface obligeait toutes les classes
   l’implémentant à fournir une implémentation, sous peine de ne plus compiler. Les méthodes par défaut résolvent ce
@@ -3528,7 +3516,7 @@ Cela répond à un besoin crucial : <strong>faire évoluer une interface sans ca
 <li><strong>Flexibilité</strong> : Les classes peuvent choisir de redéfinir la méthode par défaut si nécessaire, ou d’utiliser
   l’implémentation fournie.</li>
 </ul>
-<h4 id="syntaxe-et-exemple"><strong>Syntaxe et exemple</strong><a class="headerlink" href="#syntaxe-et-exemple" title="Permanent link">&para;</a></h4>
+<h3 id="syntaxe-et-exemple"><strong>Syntaxe et exemple</strong><a class="headerlink" href="#syntaxe-et-exemple" title="Permanent link">&para;</a></h3>
 <p>Une méthode par défaut est déclarée avec le mot-clé <code>default</code> :</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Volant</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">voler</span><span class="p">();</span><span class="w"> </span><span class="c1">// Méthode abstraite</span>
@@ -3540,13 +3528,13 @@ Cela répond à un besoin crucial : <strong>faire évoluer une interface sans ca
 </span></code></pre></div>
 <p>Ici, toute classe implémentant <code>Volant</code> <strong>héritera automatiquement</strong> de l’implémentation d’<code>atterrir()</code>, mais pourra la
 redéfinir si besoin.</p>
-<h4 id="cas-dusage-typique"><strong>Cas d’usage typique</strong><a class="headerlink" href="#cas-dusage-typique" title="Permanent link">&para;</a></h4>
+<h3 id="cas-dusage-typique"><strong>Cas d’usage typique</strong><a class="headerlink" href="#cas-dusage-typique" title="Permanent link">&para;</a></h3>
 <p>Les méthodes par défaut sont souvent utilisées pour :</p>
 <ul>
 <li>Ajouter des fonctionnalités optionnelles à une interface (ex : <code>Iterator.forEach</code>).</li>
 <li>Fournir des comportements génériques (ex : <code>Collection.stream()</code>).</li>
 </ul>
-<h4 id="conflits-et-regles-de-resolution"><strong>Conflits et règles de résolution</strong><a class="headerlink" href="#conflits-et-regles-de-resolution" title="Permanent link">&para;</a></h4>
+<h3 id="conflits-et-regles-de-resolution"><strong>Conflits et règles de résolution</strong><a class="headerlink" href="#conflits-et-regles-de-resolution" title="Permanent link">&para;</a></h3>
 <p>Si une classe implémente deux interfaces contenant une méthode par défaut de même signature, elle <strong>doit redéfinir</strong>
 cette méthode pour lever l’ambiguïté. Par exemple :</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">interface</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span>
@@ -3569,7 +3557,7 @@ cette méthode pour lever l’ambiguïté. Par exemple :</p>
 </span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">}</span>
 </span></code></pre></div>
 <hr />
-<h3 id="le-concept-de-contrat-dans-les-interfaces"><strong>Le concept de contrat dans les interfaces</strong><a class="headerlink" href="#le-concept-de-contrat-dans-les-interfaces" title="Permanent link">&para;</a></h3>
+<h2 id="le-concept-de-contrat-dans-les-interfaces"><strong>Le concept de contrat dans les interfaces</strong><a class="headerlink" href="#le-concept-de-contrat-dans-les-interfaces" title="Permanent link">&para;</a></h2>
 <p>En programmation orientée objet, une <strong>interface</strong> définit un <strong>contrat</strong> que toute classe l’implémentant <strong>doit
 respecter</strong>. Ce contrat est un ensemble de :</p>
 <ul>
@@ -3577,7 +3565,7 @@ respecter</strong>. Ce contrat est un ensemble de :</p>
 <li><strong>Constantes</strong> (<code>public static final</code>).</li>
 <li><strong>Comportements attendus</strong> (via les méthodes par défaut ou statiques).</li>
 </ul>
-<h4 id="pourquoi-parler-de-contrat"><strong>Pourquoi parler de &ldquo;contrat&rdquo; ?</strong><a class="headerlink" href="#pourquoi-parler-de-contrat" title="Permanent link">&para;</a></h4>
+<h3 id="pourquoi-parler-de-contrat"><strong>Pourquoi parler de &ldquo;contrat&rdquo; ?</strong><a class="headerlink" href="#pourquoi-parler-de-contrat" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Garantie de comportement</strong> : Une interface garantit que toute classe qui l’implémente <strong>fournira</strong> les méthodes
   déclarées, ce qui permet aux autres parties du code de s’y fier sans connaître les détails d’implémentation.</li>
@@ -3587,7 +3575,7 @@ respecter</strong>. Ce contrat est un ensemble de :</p>
 </span></code></pre></div>
   Ici, <code>maListe</code> peut être utilisée comme une <code>List</code>, peu importe son implémentation concrète.</li>
 </ul>
-<h4 id="exemple-de-contrat"><strong>Exemple de contrat</strong><a class="headerlink" href="#exemple-de-contrat" title="Permanent link">&para;</a></h4>
+<h3 id="exemple-de-contrat"><strong>Exemple de contrat</strong><a class="headerlink" href="#exemple-de-contrat" title="Permanent link">&para;</a></h3>
 <p>Prenons l’interface <code>List</code> en Java :</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">E</span><span class="w"> </span><span class="n">element</span><span class="p">);</span><span class="w"> </span><span class="c1">// Contrat : toute List doit permettre d’ajouter un élément</span>
@@ -3598,20 +3586,20 @@ respecter</strong>. Ce contrat est un ensemble de :</p>
 </span></code></pre></div>
 <p>Toute classe implémentant <code>List</code> (comme <code>ArrayList</code> ou <code>LinkedList</code>) <strong>doit</strong> fournir une implémentation de <code>add</code> et
 <code>get</code>, sinon elle ne compilera pas.</p>
-<h4 id="avantages-du-contrat"><strong>Avantages du contrat</strong><a class="headerlink" href="#avantages-du-contrat" title="Permanent link">&para;</a></h4>
+<h3 id="avantages-du-contrat"><strong>Avantages du contrat</strong><a class="headerlink" href="#avantages-du-contrat" title="Permanent link">&para;</a></h3>
 <ol type="1">
 <li><strong>Découplage</strong> : Le code utilisant l’interface n’a pas besoin de connaître les détails d’implémentation.</li>
 <li><strong>Extensibilité</strong> : On peut ajouter de nouvelles implémentations sans modifier le code client.</li>
 <li><strong>Testabilité</strong> : Les interfaces facilitent l’utilisation de <em>mocks</em> ou de <em>stubs</em> pour les tests unitaires.</li>
 </ol>
-<h4 id="difference-avec-lheritage"><strong>Différence avec l’héritage</strong><a class="headerlink" href="#difference-avec-lheritage" title="Permanent link">&para;</a></h4>
+<h3 id="difference-avec-lheritage"><strong>Différence avec l’héritage</strong><a class="headerlink" href="#difference-avec-lheritage" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Héritage (classe abstraite)</strong> : Définit une relation &ldquo;est-un&rdquo; (ex : un <code>Chien</code> <strong>est un</strong> <code>Animal</code>).</li>
 <li><strong>Interface (contrat)</strong> : Définit une relation &ldquo;peut-faire&rdquo; (ex : un <code>Oiseau</code> <strong>peut voler</strong>, donc il implémente
   <code>Volant</code>).</li>
 </ul>
 <hr />
-<h3 id="synthese-pedagogique"><strong>Synthèse pédagogique</strong><a class="headerlink" href="#synthese-pedagogique" title="Permanent link">&para;</a></h3>
+<h3 id="synthese"><strong>Synthèse</strong><a class="headerlink" href="#synthese" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Méthodes par défaut</strong> : Outils pour faire évoluer les interfaces sans casser le code existant, tout en permettant
   une personnalisation.</li>
